@@ -29,17 +29,34 @@ class ExcelImportHelper {
      */
     private final Map<String, CellValueTransfer>[] transers;
 
-    /**
-     * 返回null的转换器。
-     * <p>
-     * 当transers中没有获取到正常的转换器时，将使用它来直接返回null
-     */
-    private static final CellValueTransfer NULL_TRANSFER = new CellValueTransfer() {
-        @Override
-        public Object getValue(Cell cell) {
-            return null;
+    private class TransferMap extends HashMap<String, CellValueTransfer> {
+        private static final long serialVersionUID = 5355242374583108179L;
+
+        public TransferMap(int capability) {
+            super(capability);
         }
-    };
+
+        /**
+         * 返回null的转换器。
+         * <p>
+         * 当transers中没有获取到正常的转换器时，将使用它来直接返回null
+         */
+        private CellValueTransfer initTransfer = new CellValueTransfer() {
+            @Override
+            public Object getValue(Cell cell) {
+                return null;
+            }
+        };
+
+        @Override
+        public CellValueTransfer get(Object key) {
+            if (this.containsKey(key)) {
+                return super.get(key);
+            } else {
+                return this.initTransfer;
+            }
+        }
+    }
 
     /**
      * 初始化 {@link #transers}。
@@ -50,7 +67,7 @@ class ExcelImportHelper {
         this.transers = new HashMap[6];
 
         // CELL_TYPE_NUMERIC
-        Map<String, CellValueTransfer> transferMap4Num = new HashMap<>();
+        Map<String, CellValueTransfer> transferMap4Num = new TransferMap(11);
         // -> Integer
         transferMap4Num.put(Integer.class.getName(),
             new CellValueTransfer4Num2Int());
@@ -66,7 +83,7 @@ class ExcelImportHelper {
         this.transers[Cell.CELL_TYPE_NUMERIC] = transferMap4Num;
 
         // CELL_TYPE_STRING
-        Map<String, CellValueTransfer> transferMap4Str = new HashMap<>();
+        Map<String, CellValueTransfer> transferMap4Str = new TransferMap(11);
         // -> Integer
         transferMap4Str.put(Integer.class.getName(),
             new CellValueTransfer4Str2Int());
@@ -83,19 +100,19 @@ class ExcelImportHelper {
 
         // CELL_TYPE_FORMULA
         // 默认没有处理
-        this.transers[Cell.CELL_TYPE_FORMULA] = new HashMap<>(0);
+        this.transers[Cell.CELL_TYPE_FORMULA] = new TransferMap(0);
 
         // CELL_TYPE_BLANK
         // 默认没有处理
-        this.transers[Cell.CELL_TYPE_BLANK] = new HashMap<>(0);
+        this.transers[Cell.CELL_TYPE_BLANK] = new TransferMap(0);
 
         // CELL_TYPE_BOOLEAN
         // 默认没有处理
-        this.transers[Cell.CELL_TYPE_BOOLEAN] = new HashMap<>(0);
+        this.transers[Cell.CELL_TYPE_BOOLEAN] = new TransferMap(0);
 
         // CELL_TYPE_ERROR
         // 默认没有处理
-        this.transers[Cell.CELL_TYPE_ERROR] = new HashMap<>(0);
+        this.transers[Cell.CELL_TYPE_ERROR] = new TransferMap(0);
 
     }
 
@@ -132,9 +149,6 @@ class ExcelImportHelper {
             cell.getCellType(), fieldName, claz);
         CellValueTransfer transfer = this.transers[cell.getCellType()].get(claz
             .getName());
-        if (transfer == null) {
-            transfer = ExcelImportHelper.NULL_TRANSFER;
-        }
 
         Object value = transfer.getValue(cell);
         ExcelImportHelper.LOGGER.debug(LF.ns("claz", "transfer", "value"),

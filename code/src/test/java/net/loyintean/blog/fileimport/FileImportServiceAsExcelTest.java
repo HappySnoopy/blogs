@@ -23,7 +23,7 @@ public class FileImportServiceAsExcelTest {
     private FileImportServiceAsExcel<ExcelModel> service = new FileImportServiceAsExcel<>();
 
     @Before
-    public void setUp() throws ClassNotFoundException {
+    public void setUp() {
 
         this.service = new FileImportServiceAsExcel<>();
 
@@ -44,7 +44,7 @@ public class FileImportServiceAsExcelTest {
 
         this.service.setCellList(cells);
 
-        this.service.setClaz(ExcelModel.class.getName());
+        this.service.setClaz(ExcelModel.class);
 
     }
 
@@ -77,6 +77,33 @@ public class FileImportServiceAsExcelTest {
             this.service.importFile(excelFile, "linjun");
         } catch (RuntimeException e) {
             Assert.assertEquals("表头取值错误！应为[姓名]，实为[姓名1]", e.getMessage());
+        }
+
+    }
+
+    @Test
+    public void test_blank() {
+        byte[] excelFile = FileImportServiceAsExcelTest
+            .readFile("test_blank_row.xlsx");
+
+        try {
+            List<ExcelModel> list = this.service
+                .importFile(excelFile, "linjun");
+
+            Assert.assertEquals(1, list.size());
+
+            System.out.println(list);
+
+            Assert.assertEquals("林俊", list.get(0).getName());
+            Assert.assertEquals(new Integer(23), list.get(0).getAge());
+            Assert.assertEquals("2016-01-04",
+                new SimpleDateFormat("yyyy-MM-dd").format(list.get(0)
+                    .getBirthday()));
+            Assert.assertEquals("linjun", list.get(0).getSomeObject()
+                .toString());
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            Assert.fail(e.getMessage());
         }
 
     }
