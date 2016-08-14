@@ -15,8 +15,6 @@ import org.apache.poi.ss.usermodel.DateUtil;
 public abstract class CellValueTransfer4Num implements CellValueTransfer {
 
     /**
-     * @see cn.youcredit.thread.common.service.system.CellValueTransfer
-     *      #getValue(org.apache.poi.ss.usermodel.Cell)
      */
     @Override
     public Object getValue(Cell cell) {

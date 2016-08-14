@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EclipseCodeFormatter">
+    <option name="defaultSettings" value="true" />
+    <option name="eclipseVersion" value="ECLIPSE_44" />
+    <option name="enableJSFormatting" value="true" />
+    <option name="formatter" value="ECLIPSE" />
+    <option name="id" value="1470305935687" />
+    <option name="importOrdering" value="ECLIPSE_44" />
+    <option name="name" value="Thread" />
+    <option name="optimizeImports" value="false" />
+    <option name="pathToConfigFileJS" value="$PROJECT_DIR$/../thread/doc/eclipse conf/formatter-js.xml" />
+    <option name="pathToConfigFileJava" value="$PROJECT_DIR$/../thread/doc/eclipse conf/formatter-java.xml" />
+    <option name="pathToEclipse" value="D:/Program Files/eclipse" />
+    <option name="selectedJavaProfile" value="Default" />
+    <option name="selectedJavaScriptProfile" value="Default" />
+    <option name="useForLiveTemplates" value="true" />
+    <option name="useOldEclipseJavaFormatter" value="true" />
+  </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/code/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="PDMPlugin">
+    <option name="skipTestSources" value="false" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

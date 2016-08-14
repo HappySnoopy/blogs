@@ -21,7 +21,6 @@ public interface FileImportService<T> {
      * @param params
      *        额外数据
      * @return 导入文件的到的数据。
-     * @throws ServiceException
      */
     List<T> importFile(byte[] file, Object... params);
 
@@ -33,7 +32,7 @@ public interface FileImportService<T> {
     interface ImportFromFile {
 
         /**
-         * 将 {@link FileImportService#importFile(byte[], UserInfo)}
+         * 将 {@link FileImportService#importFile(byte[], Object[])}
          * 中的UserInfo注入相关实例中。
          *
          * @param sheetName
