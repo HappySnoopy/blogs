@@ -1,5 +1,4 @@
 /**
- * 
  * All Rights Reserved
  */
 package net.loyintean.blog.fileimport;
@@ -32,8 +31,6 @@ public abstract class CellValueTransfer4Num implements CellValueTransfer {
 class CellValueTransfer4Num2Int extends CellValueTransfer4Num {
 
     /**
-     * @see cn.youcredit.thread.common.service.system.CellValueTransfer4Num
-     *      #parseValue(java.lang.Double)
      */
     @Override
     protected Object parseValue(Double value) {
@@ -46,8 +43,6 @@ class CellValueTransfer4Num2Int extends CellValueTransfer4Num {
 class CellValueTransfer4Num2Str extends CellValueTransfer4Num {
 
     /**
-     * @see cn.youcredit.thread.common.service.system.CellValueTransfer4Num
-     *      #parseValue(java.lang.Double)
      */
     @Override
     protected Object parseValue(Double value) {
@@ -77,8 +72,6 @@ class CellValueTransfer4Num2Date implements CellValueTransfer {
 class CellValueTransfer4Num2BigDecimal extends CellValueTransfer4Num {
 
     /**
-     * @see cn.youcredit.thread.common.service.system.CellValueTransfer4Num
-     *      #parseValue(java.lang.Double)
      */
     @Override
     protected Object parseValue(Double value) {

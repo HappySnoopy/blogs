@@ -1,5 +1,4 @@
 /**
- * 
  * All Rights Reserved
  */
 package net.loyintean.blog.fileimport;
@@ -17,8 +16,6 @@ import org.apache.poi.ss.usermodel.Cell;
  */
 public abstract class CellValueTransfer4Str implements CellValueTransfer {
     /**
-     * @see cn.youcredit.thread.common.service.system.CellValueTransfer
-     *      #getValue(org.apache.poi.ss.usermodel.Cell)
      */
     @Override
     public Object getValue(Cell cell) {
@@ -34,10 +31,6 @@ public abstract class CellValueTransfer4Str implements CellValueTransfer {
 
 class CellValueTransfer4Str2Int extends CellValueTransfer4Str {
 
-    /**
-     * @see cn.youcredit.thread.common.service.system.CellValueTransfer4Str
-     *      #parseValue(java.lang.Double)
-     */
     @Override
     protected Object parseValue(String value) {
 
@@ -47,11 +40,6 @@ class CellValueTransfer4Str2Int extends CellValueTransfer4Str {
 }
 
 class CellValueTransfer4Str2Str extends CellValueTransfer4Str {
-
-    /**
-     * @see cn.youcredit.thread.common.service.system.CellValueTransfer4Str
-     *      #parseValue(java.lang.Double)
-     */
     @Override
     protected Object parseValue(String value) {
         // linjun 2016-01-19 THREAD-9904 排除空格的干扰。
@@ -71,8 +59,6 @@ class CellValueTransfer4Str2Date extends CellValueTransfer4Str {
         "yyyy/MM/dd" };
 
     /**
-     * @see cn.youcredit.thread.common.service.system.CellValueTransfer4Str
-     *      #parseValue(java.lang.Double)
      */
     @Override
     protected Object parseValue(String value) {
@@ -97,8 +83,6 @@ class CellValueTransfer4Str2Date extends CellValueTransfer4Str {
 class CellValueTransfer4Str2BigDecimal extends CellValueTransfer4Str {
 
     /**
-     * @see cn.youcredit.thread.common.service.system.CellValueTransfer4Str
-     *      #parseValue(java.lang.Double)
      */
     @Override
     protected Object parseValue(String value) {

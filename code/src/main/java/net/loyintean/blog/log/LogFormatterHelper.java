@@ -36,8 +36,6 @@ class LogFormatHelperAsKeyValue implements LogFormatterHelper {
      * 返回结果为：name1={},name2={},name3={},{},name4={},<br>
      * 末尾会有逗号。不做处理。
      * <p>
-     *
-     * @see cn.youcredit.thread.common.log.LF#ns(java.lang.String[])
      */
     @Override
     public String names(String... names) {
@@ -60,8 +58,6 @@ class LogFormatHelperAsKeyValue implements LogFormatterHelper {
     }
 
     /**
-     * @see cn.youcredit.thread.common.log.LogFormatterHelper#format(java.lang.String,
-     *      java.lang.String)
      * @return "name=value,"
      */
     @Override
