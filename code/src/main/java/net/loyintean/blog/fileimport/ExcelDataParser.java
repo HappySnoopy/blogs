@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 /**
  * parse a row into java Pojo.
  *
- * @author linjun
+ * @author winters1224@163.com
  */
 interface ExcelDataParser {
 

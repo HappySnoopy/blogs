@@ -7,7 +7,7 @@ package net.loyintean.blog.fileimport;
 import java.util.List;
 
 /**
- * @author linjun
+ * @author winters1224@163.com
  * @param <T>
  *        从导入文件中解析出来的数据类
  */
@@ -27,7 +27,7 @@ public interface FileImportService<T> {
     /**
      * 导入并解析文件时才需要使用的标记类接口。
      *
-     * @author linjun
+     * @author winters1224@163.com
      */
     interface ImportFromFile {
 

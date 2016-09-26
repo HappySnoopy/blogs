@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
  * <p>
  * 使用标准化的org.apache.poi.ss.usermodel.*接口，兼容2003和2007格式。
  *
- * @author linjun
+ * @author winters1224@163.com
  * @param <T>
  */
 class FileImportServiceAsExcel<T> implements FileImportService<T> {

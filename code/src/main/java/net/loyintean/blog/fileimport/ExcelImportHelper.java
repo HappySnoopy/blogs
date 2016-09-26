@@ -18,7 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author linjun
+ * @author winters1224@163.com
  */
 class ExcelImportHelper {
     private static final Logger LOGGER = LoggerFactory

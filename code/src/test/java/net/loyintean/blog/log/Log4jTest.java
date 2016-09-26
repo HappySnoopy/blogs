@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 
 /**
- * @author linjun
+ * @author winters1224@163.com
  */
 public class Log4jTest {
 

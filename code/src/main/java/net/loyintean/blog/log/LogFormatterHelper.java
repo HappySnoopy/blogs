@@ -5,7 +5,7 @@ package net.loyintean.blog.log;
  * <p>
  * 通过不同的子类实现，替换不同的格式。
  *
- * @author linjun
+ * @author winters1224@163.com
  */
 interface LogFormatterHelper {
     /**
@@ -27,7 +27,7 @@ interface LogFormatterHelper {
 /**
  * name=value的格式化字符串。
  *
- * @author linjun
+ * @author winters1224@163.com
  */
 class LogFormatHelperAsKeyValue implements LogFormatterHelper {
 

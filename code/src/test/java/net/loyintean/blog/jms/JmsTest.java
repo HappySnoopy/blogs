@@ -12,7 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * @author linjun
+ * @author winters1224@163.com
  */
 
 @ContextConfiguration("/jms.xml")

@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 /**
  * validate the headers while importing excel file
  *
- * @author linjun
+ * @author winters1224@163.com
  */
 interface ExcelHeaderValidator {
 

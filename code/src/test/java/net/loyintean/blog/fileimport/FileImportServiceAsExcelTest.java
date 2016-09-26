@@ -16,7 +16,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author linjun
+ * @author winters1224@163.com
  */
 public class FileImportServiceAsExcelTest {
 
@@ -57,7 +57,7 @@ public class FileImportServiceAsExcelTest {
         byte[] excelFile = FileImportServiceAsExcelTest.readFile("text.txt");
 
         try {
-            this.service.importFile(excelFile, "linjun");
+            this.service.importFile(excelFile, "winters1224@163.com");
         } catch (RuntimeException e) {
             Assert.assertEquals("请选择指定格式（后缀名为.xls或.xlsx）的Excel文件！",
                 e.getMessage());
@@ -74,7 +74,7 @@ public class FileImportServiceAsExcelTest {
             .readFile("test_wrong_header.xlsx");
 
         try {
-            this.service.importFile(excelFile, "linjun");
+            this.service.importFile(excelFile, "winters1224@163.com");
         } catch (RuntimeException e) {
             Assert.assertEquals("表头取值错误！应为[姓名]，实为[姓名1]", e.getMessage());
         }
@@ -88,7 +88,7 @@ public class FileImportServiceAsExcelTest {
 
         try {
             List<ExcelModel> list = this.service
-                .importFile(excelFile, "linjun");
+                .importFile(excelFile, "winters1224@163.com");
 
             Assert.assertEquals(1, list.size());
 
@@ -99,7 +99,7 @@ public class FileImportServiceAsExcelTest {
             Assert.assertEquals("2016-01-04",
                 new SimpleDateFormat("yyyy-MM-dd").format(list.get(0)
                     .getBirthday()));
-            Assert.assertEquals("linjun", list.get(0).getSomeObject()
+            Assert.assertEquals("winters1224@163.com", list.get(0).getSomeObject()
                 .toString());
         } catch (RuntimeException e) {
             e.printStackTrace();
@@ -117,7 +117,7 @@ public class FileImportServiceAsExcelTest {
 
         try {
             List<ExcelModel> list = this.service
-                .importFile(excelFile, "linjun");
+                .importFile(excelFile, "winters1224@163.com");
 
             System.out.println(list);
 
@@ -126,14 +126,14 @@ public class FileImportServiceAsExcelTest {
             Assert.assertEquals("2016-01-04",
                 new SimpleDateFormat("yyyy-MM-dd").format(list.get(0)
                     .getBirthday()));
-            Assert.assertEquals("linjun", list.get(0).getSomeObject()
+            Assert.assertEquals("winters1224@163.com", list.get(0).getSomeObject()
                 .toString());
             Assert.assertEquals("陈晓诗", list.get(1).getName());
             Assert.assertEquals(new Integer(22), list.get(1).getAge());
             Assert.assertEquals("2016-01-04",
                 new SimpleDateFormat("yyyy-MM-dd").format(list.get(1)
                     .getBirthday()));
-            Assert.assertEquals("linjun", list.get(1).getSomeObject()
+            Assert.assertEquals("winters1224@163.com", list.get(1).getSomeObject()
                 .toString());
         } catch (RuntimeException e) {
             e.printStackTrace();

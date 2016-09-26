@@ -9,7 +9,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
 
 /**
- * @author linjun
+ * @author winters1224@163.com
  */
 public abstract class CellValueTransfer4Num implements CellValueTransfer {
 

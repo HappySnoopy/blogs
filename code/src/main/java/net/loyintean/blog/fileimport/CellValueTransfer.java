@@ -9,7 +9,7 @@ import org.apache.poi.ss.usermodel.Cell;
 /**
  * excel单元格数据转换器
  *
- * @author linjun
+ * @author winters1224@163.com
  */
 public interface CellValueTransfer {
 

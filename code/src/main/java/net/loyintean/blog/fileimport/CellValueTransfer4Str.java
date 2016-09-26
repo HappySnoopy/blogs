@@ -12,7 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
 
 /**
- * @author linjun
+ * @author winters1224@163.com
  */
 public abstract class CellValueTransfer4Str implements CellValueTransfer {
     /**
@@ -42,7 +42,7 @@ class CellValueTransfer4Str2Int extends CellValueTransfer4Str {
 class CellValueTransfer4Str2Str extends CellValueTransfer4Str {
     @Override
     protected Object parseValue(String value) {
-        // linjun 2016-01-19 THREAD-9904 排除空格的干扰。
+        // winters1224@163.com 2016-01-19 THREAD-9904 排除空格的干扰。
         return StringUtils.trim(value);
     }
 
@@ -52,7 +52,7 @@ class CellValueTransfer4Str2Date extends CellValueTransfer4Str {
 
     /**
      * 按最长匹配开始尝试。<br>
-     * linjun 2016-01-19 THREAD-9904 增加一种格式
+     * winters1224@163.com 2016-01-19 THREAD-9904 增加一种格式
      */
     private static final String[] FORMAT = new String[] {
         "yyyy-MM-dd HH:mm:ss.S", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd",
