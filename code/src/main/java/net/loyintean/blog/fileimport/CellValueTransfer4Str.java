@@ -71,7 +71,6 @@ class CellValueTransfer4Str2Date extends CellValueTransfer4Str {
                 result = new SimpleDateFormat(
                     CellValueTransfer4Str2Date.FORMAT[i]).parse(value);
             } catch (ParseException e) {
-                result = null;
             }
         }
 

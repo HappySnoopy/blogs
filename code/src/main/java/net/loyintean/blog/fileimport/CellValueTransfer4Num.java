@@ -21,7 +21,7 @@ public abstract class CellValueTransfer4Num implements CellValueTransfer {
 
         Double value = cell.getNumericCellValue();
 
-        return value == null ? null : this.parseValue(value);
+        return this.parseValue(value);
     }
 
     protected abstract Object parseValue(Double value);

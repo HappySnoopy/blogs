@@ -10,6 +10,7 @@
         <excludePattern>.*\.jsp</excludePattern>
         <excludePattern>.*\.xml</excludePattern>
     </excludePatterns>
+    <includePatterns/>
     <rules>
         <rule>
             <name>CallSuperFirst</name>
@@ -241,10 +242,6 @@
         </rule>
         <rule>
             <name>DefaultPackage</name>
-            <ruleset>Controversial</ruleset>
-        </rule>
-        <rule>
-            <name>BooleanInversion</name>
             <ruleset>Controversial</ruleset>
         </rule>
         <rule>
@@ -941,10 +938,6 @@
         </rule>
         <rule>
             <name>AvoidThrowingNewInstanceOfSameException</name>
-            <ruleset>Strict Exceptions</ruleset>
-        </rule>
-        <rule>
-            <name>AvoidCatchingGenericException</name>
             <ruleset>Strict Exceptions</ruleset>
         </rule>
         <rule>
