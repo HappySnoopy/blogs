@@ -1,5 +1,4 @@
 /**
- * 
  * All Rights Reserved
  */
 package net.loyintean.blog.sixgod.dto;
@@ -29,13 +28,6 @@ public class ResultDto<T> implements Serializable {
     private boolean success = true;
 
     /**
-     * 操作结果代码
-     * <p>
-     * 默认为null
-     */
-    private String code;
-
-    /**
      * 操作结果消息
      * <p>
      * 默认为null。<br>
@@ -58,13 +50,6 @@ public class ResultDto<T> implements Serializable {
     }
 
     /**
-     * @return the {@link #code}
-     */
-    public String getCode() {
-        return this.code;
-    }
-
-    /**
      * @return the {@link #message}
      */
     public String getMessage() {
@@ -77,14 +62,6 @@ public class ResultDto<T> implements Serializable {
      */
     public void setSuccess(boolean success) {
         this.success = success;
-    }
-
-    /**
-     * @param code
-     *        the {@link #code} to set
-     */
-    public void setCode(String code) {
-        this.code = code;
     }
 
     /**

@@ -1,5 +1,4 @@
 /**
- * 
  * All Rights Reserved
  */
 package net.loyintean.blog.sixgod.service.impl;
@@ -8,6 +7,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.transaction.annotation.Transactional;
 
 import net.loyintean.blog.sixgod.dao.BasicDeleteDao;
 import net.loyintean.blog.sixgod.dao.BasicInsertDao;
@@ -26,6 +26,7 @@ import net.loyintean.blog.sixgod.service.BasicDbSaveService;
 /**
  * 基础数据库操作服务接口适配器
  * <p>
+ * 原则上，只有数据库写操作开启了事务。
  *
  * @author winters1224@163.com
  * @param <I>
@@ -74,6 +75,7 @@ public class BasicDbServiceAdapter<I, O>
      * @see net.loyintean.blog.sixgod.service.BasicDbSaveService
      *      #save(java.lang.Object)
      */
+    @Transactional
     @Override
     public O save(I param) {
         BasicDbServiceAdapter.LOGGER.info("save param:{}", param);
@@ -87,6 +89,7 @@ public class BasicDbServiceAdapter<I, O>
      * @see net.loyintean.blog.sixgod.service.BasicDbRemoveService
      *      #remove(java.lang.Object)
      */
+    @Transactional
     @Override
     public O remove(I param) {
         BasicDbServiceAdapter.LOGGER.info("remove param:{}", param);
@@ -126,6 +129,7 @@ public class BasicDbServiceAdapter<I, O>
      * @see net.loyintean.blog.sixgod.service.BasicDbEditService
      *      #edit(java.lang.Object)
      */
+    @Transactional
     @Override
     public O edit(I param) {
         BasicDbServiceAdapter.LOGGER.info("edit param:{}", param);

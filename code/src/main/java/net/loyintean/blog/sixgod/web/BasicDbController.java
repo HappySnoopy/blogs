@@ -3,9 +3,9 @@
  */
 package net.loyintean.blog.sixgod.web;
 
+import net.loyintean.blog.sixgod.dto.ResultDto;
 import net.loyintean.blog.sixgod.dto.ResultDto4List;
 import net.loyintean.blog.sixgod.dto.ResultDto4PagedList;
-import net.loyintean.blog.sixgod.dto.ResultDto;
 
 /**
  * 基本数据库操作的web入口
@@ -17,6 +17,9 @@ import net.loyintean.blog.sixgod.dto.ResultDto;
  *        接口出参数据类型
  */
 public interface BasicDbController<I, O> {
+
+
+
     /**
      * 查询一条数据
      *
@@ -64,4 +67,5 @@ public interface BasicDbController<I, O> {
      * @return
      */
     ResultDto<O> remove(I param);
+
 }
