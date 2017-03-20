@@ -28,6 +28,7 @@ public class BasicDbController4SpringMvc<I, O>
     @ResponseBody
     @Override
     public ResultDto<O> query(@RequestParam(required = false) I param) {
+        System.out.println("=================================");
         return super.query(param);
     }
 
