@@ -47,7 +47,7 @@ public class OverdueCalculate {
     private static List<XlsDto> calculae(List<XlsDto> dtos) {
         RestClientFactory factory = new RestClientFactory();
         factory.setUserName("10020865");
-        factory.setPassWord("dearIranChan0308");
+        factory.setPassWord("");
         ObjectMapper mapper = new ObjectMapper();
 
 
@@ -56,7 +56,7 @@ public class OverdueCalculate {
 
                 String result = factory.newClient()
                     .setUrl(
-                        "https://thread.ucredit.com/thread_portfolio/rest/bizcalculate/overdue/{lendId}")
+                        "")
                     .addPathVariable("lendId", dto.getLendId())
                     .addRequestParam("settleDate", "2017-06-01")
                     .responseAs(String.class).get();
