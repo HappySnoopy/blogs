@@ -1,5 +1,4 @@
 /**
- * 
  * All Rights Reserved
  */
 package net.loyintean.blog.repay;
@@ -25,7 +24,8 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
-import org.codehaus.jackson.map.ObjectMapper;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import net.loyintean.blog.rest.client.RestClientFactory;
 
@@ -52,7 +52,7 @@ public class Calculator {
     private static List<Result4Repay> calculae(List<Result4Calculate> dtos) {
         RestClientFactory factory = new RestClientFactory();
         factory.setUserName("10020865");
-        factory.setPassWord("dearIranChan0308");
+        factory.setPassWord("");
         ObjectMapper mapper = new ObjectMapper();
 
         ExecutorService executorService = Executors.newFixedThreadPool(16);
@@ -66,11 +66,13 @@ public class Calculator {
 
             Result4Calculate dto = iterator.next();
 
+            System.out.println(dto);
+
             Future<Result4Repay> future = executorService.submit(() -> {
 
                 String result = factory.newClient()
                     .setUrl(
-                        "https://thread.ucredit.com/thread_portfolio/rest/bizcalculate/repay/{lendId}")
+                        "")
                     .addPathVariable("lendId",
                         Integer.toString(dto.getLendId()))
                     .addRequestParam("settleDate", "2017-06-01")
@@ -89,9 +91,10 @@ public class Calculator {
                     restResult = new RestResult4Repay();
                     restResult.setSuccess(true);
                     restResult.setData(new Result4Repay());
-                    restResult.getData().getOverdue()
-                        .setLendId(dto.getLendId());
                 }
+                // 确保overdue中有lendId
+                restResult.getData().getOverdue().setLendId(dto.getLendId());
+
                 return restResult.getData();
             });
             futureList.add(future);
@@ -134,6 +137,7 @@ public class Calculator {
         xls = null;
         for (int i = 0; iterator.hasNext(); i++, iterator.remove()) {
 
+            System.out.println("xlsDto = " + xlsDto);
             // 创建一行
             HSSFRow row = sheet.createRow(i + 1);
             // 得到要插入的每一条记录
@@ -149,11 +153,13 @@ public class Calculator {
                     .add(overdue.getLiquidatedFee())
                     .subtract(overdue.getDeductAmount())
                     .subtract(overdue.getRepaidAmount());
-                HSSFCell li = row.createCell(0);
-                li.setCellValue(overdue.getLendId());
                 HSSFCell overdueCell = row.createCell(1);
                 // 逾期总额，本金+利息+服务费+杂费+罚息+违约金-减免-已还
                 overdueCell.setCellValue(overdueValue.toString());
+
+                // 由于overdue中铁定有数据，因此可以直接用这个值
+                HSSFCell li = row.createCell(0);
+                li.setCellValue(overdue.getLendId());
                 overdue = null;
                 overdueCell = null;
 
@@ -167,6 +173,7 @@ public class Calculator {
                     .subtract(current.getRepaidAmount());
                 HSSFCell currentCell = row.createCell(2);
                 currentCell.setCellValue(currentValue.toString());
+
                 current = null;
                 currentCell = null;
 
@@ -179,12 +186,15 @@ public class Calculator {
                     .subtract(advance.getRepaidAmount());
                 HSSFCell advanceCell = row.createCell(3);
                 advanceCell.setCellValue(advanceValue.toString());
+
                 advance = null;
                 advanceCell = null;
                 // 总额
                 HSSFCell totalCell = row.createCell(4);
                 totalCell.setCellValue(overdueValue.add(currentValue)
                     .add(advanceValue).toString());
+
+
                 totalCell = null;
             }
         }
