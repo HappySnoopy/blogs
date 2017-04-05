@@ -2,17 +2,15 @@
  * Copyright(c) 2011-2017 by YouCredit Inc.
  * All Rights Reserved
  */
-package net.loyintean.blog.sisgod;
+package net.loyintean.blog.sixgod;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author linjun
  */
-@ComponentScan
-@EnableAutoConfiguration
+@SpringBootApplication
 public class SpringMvcTest {
 
     public static void main(String[] args) {

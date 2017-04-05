@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="180"
+	packages="cn.youcredit.thread.common.log">
+
+	<properties>
+		<property name="LOG_HOME">C:/Users/Administrator/Desktop/log</property>
+		<property name="AUDIT_PATTERN">
+			%-5p^|%d{yyyy-MM-dd HH:mm:ss,SSS}^|thread^|%m%n
+		</property>
+		<property name="KEPLER_OUT_PATTERN">
+			%d{yyyy-MM-dd HH:mm:ss,SSS} (%t)[%C#%M:%L] %-5p %m%n
+		</property>
+		<property name="MONITOR_PATTERN">
+			%-5p^|%d{yyyy-MM-dd HH:mm:ss,SSS}^|kepler^|%C#%M:%L^|%m^|%t%n
+		</property>
+		<property name="CONSOLE_MONITOR_PATTERN">
+			%-5p^|%d{yyyy-MM-dd HH:mm:ss,SSS}^|kepler^|%C#%M:%L^|-^|-^|-^|-^|%m^|%t%n
+		</property>
+	</properties>
+	<Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${KEPLER_OUT_PATTERN}" />
+        </Console>
+
+		<!-- 审计日志 -->
+		<RollingFile name="ThreadAuditRollingFile" fileName="${LOG_HOME}/hdfs_phoenix_thread.log"
+			immediateFlush="true" filePattern="${LOG_HOME}/hdfs_phoenix_thread.log.%d{yyyy-MM-dd}"
+			append="true" bufferedIO="false">
+			<PatternLayout pattern="${AUDIT_PATTERN}" />
+			<Filters>
+				<ThresholdFilter level="ERROR" onMatch="DENY"
+					onMismatch="ACCEPT" />
+			</Filters>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+		</RollingFile>
+
+		<!-- [start] linjun 2016-7-12 kepler的新日志 -->
+
+		<!-- linjun 2016-07-12 Keler异常日志，只输出error -->
+		<RollingFile name="KeplerErrorLog" fileName="${LOG_HOME}/kepler.error.out"
+			immediateFlush="true" filePattern="${LOG_HOME}/kepler.error.out.%d{yyyy-MM-dd}"
+			append="true" bufferedIO="false">
+			<PatternLayout pattern="${KEPLER_OUT_PATTERN}" />
+			<Filters>
+				<ThresholdFilter level="WARN" onMatch="ACCEPT"
+					onMismatch="DENY" />
+			</Filters>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+		</RollingFile>
+
+
+		<!-- monitor用作监控，没有过滤级别 -->
+		<RollingFile name="KeplerMonitorLog" fileName="${LOG_HOME}/kepler.monitor.log"
+			immediateFlush="true" filePattern="${LOG_HOME}/kepler.monitor.log.%d{yyyy-MM-dd}"
+			append="true" bufferedIO="false">
+			<PatternLayout pattern="${MONITOR_PATTERN}" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+		</RollingFile>
+
+		<!-- 对root日志增加监控输出 -->
+		<RollingFile name="RootMonitorLog" fileName="${LOG_HOME}/kepler.monitor.log"
+			immediateFlush="true" filePattern="${LOG_HOME}/kepler.monitor.log.%d{yyyy-MM-dd}"
+			append="true" bufferedIO="false">
+			<PatternLayout pattern="${CONSOLE_MONITOR_PATTERN}" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+		</RollingFile>
+		<!-- [end] linjun 2016-7-12 kepler的新日志 -->
+	</Appenders>
+	<Loggers>
+
+		<!-- linjun 2016-07-12 根日志定位为WARN，确保不输出杂七杂八的日志 -->
+		<Root level="WARN" includeLocation="true">
+			<AppenderRef ref="KeplerErrorLog" />
+			<AppenderRef ref="RootMonitorLog" />
+			<!-- <AppenderRef ref="Console" /> -->
+		</Root>
+
+		<!-- linjun 2016-07-12 kepler日志，按监控格式输出 -->
+		<Logger name="cn.youcredit.thread" level="INFO"
+			includeLocation="true" additivity="true">
+		</Logger>
+
+		<!-- 审计日志记录器 -->
+		<Logger name="AUDIT" additivity="false" includeLocation="true">
+			<AppenderRef ref="ThreadAuditRollingFile" />
+		</Logger>
+
+		<!-- 监控日志记录器 -->
+		<Logger name="MONITOR" level="INFO" additivity="false"
+			includeLocation="true">
+			<AppenderRef ref="KeplerErrorLog" />
+			<AppenderRef ref="KeplerMonitorLog" />
+		</Logger>
+	</Loggers>
+</Configuration>

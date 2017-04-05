@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * All Rights Reserved
  */
 package net.loyintean.blog.overdue;
@@ -19,7 +19,8 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
-import org.codehaus.jackson.map.ObjectMapper;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import net.loyintean.blog.rest.client.RestClientFactory;
 
