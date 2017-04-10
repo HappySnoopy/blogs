@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration monitorInterval="180"
-	packages="cn.youcredit.thread.common.log">
+<Configuration monitorInterval="180">
 
 	<properties>
 		<property name="LOG_HOME">C:/Users/Administrator/Desktop/log</property>
