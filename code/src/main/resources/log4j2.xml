@@ -86,11 +86,6 @@
 			<!-- <AppenderRef ref="Console" /> -->
 		</Root>
 
-		<!-- linjun 2016-07-12 kepler日志，按监控格式输出 -->
-		<Logger name="cn.youcredit.thread" level="INFO"
-			includeLocation="true" additivity="true">
-		</Logger>
-
 		<!-- 审计日志记录器 -->
 		<Logger name="AUDIT" additivity="false" includeLocation="true">
 			<AppenderRef ref="ThreadAuditRollingFile" />
