@@ -1,19 +1,19 @@
 package net.loyintean.blog.jms;
 
+import javax.annotation.Resource;
 import javax.jms.Queue;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class Producer {
 
-    @Autowired
+    @Resource
     private JmsTemplate jmsTemplate;
-    @Autowired
+    @Resource
     private Queue rediliverQueue;
-    @Autowired
+    @Resource
     private Queue concurrencyQueue;
 
     public void send_concurrency(String msg) {

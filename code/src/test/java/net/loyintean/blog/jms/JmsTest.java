@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * All Rights Reserved
  */
 package net.loyintean.blog.jms;
@@ -24,6 +24,7 @@ public class JmsTest {
 
     @Test
     public void test_concurrency() throws InterruptedException {
+
         for (int i = 0; i < 100; i++) {
             this.producer.send_concurrency("abc_" + i);
         }
@@ -33,12 +34,20 @@ public class JmsTest {
 
     @Test
     public void test_rediliver() throws InterruptedException {
+
         for (int i = 0; i < 100; i++) {
             this.producer.send_rediliver("abc_" + i);
         }
-
         // 为了保证所有重试都完成
         Thread.sleep(1000000000l);
+
+    }
+
+    @Test
+    public void test_kepler_server() throws InterruptedException {
+
+        Thread.sleep(1000000000l);
+
     }
 
 }

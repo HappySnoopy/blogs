@@ -28,11 +28,7 @@ public class Consumer implements MessageListener {
 
             System.out.println(threadName + ":" + text);
 
-            boolean sleep = this.r.nextBoolean();
-
-            if (sleep) {
-                throw new NullPointerException(threadName + ":" + text);
-            }
+            this.r.nextBoolean();
 
         } catch (JMSException e) {
             e.printStackTrace();
