@@ -2,33 +2,29 @@
 <Configuration monitorInterval="180">
 
 	<properties>
-		<property name="LOG_HOME">D:\apache-tomcat-9.0.0.M22\logs</property>
+		<property name="LOG_HOME">C:/logs</property>
 		<property name="AUDIT_PATTERN">
-			%-5p^|%d{yyyy-MM-dd
-			HH:mm:ss,SSS}^|thread^|%m%n
+			%-5p^|%d{yyyy-MM-dd HH:mm:ss,SSS}^|thread^|%m%n
 		</property>
 		<property name="blog_OUT_PATTERN">
-			%d{yyyy-MM-dd HH:mm:ss,SSS} (%t)[%C#%M:%L]
-			%-5p %m%n
+			%d{yyyy-MM-dd HH:mm:ss,SSS} (%t)[%C#%M:%L] %-5p %m%n
 		</property>
 		<property name="MONITOR_PATTERN">
-			%-5p^|%d{yyyy-MM-dd
-			HH:mm:ss,SSS}^|blog^|%C#%M:%L^|%m^|%t%n
+			%-5p^|%d{yyyy-MM-dd HH:mm:ss,SSS}^|blog^|%C#%M:%L^|%m^|%t%n
 		</property>
 		<property name="CONSOLE_MONITOR_PATTERN">
-			%-5p^|%d{yyyy-MM-dd
-			HH:mm:ss,SSS}^|blog^|%C#%M:%L^|-^|-^|-^|-^|%m^|%t%n
+			%-5p^|%d{yyyy-MM-dd HH:mm:ss,SSS}^|blog^|%C#%M:%L^|-^|-^|-^|-^|%m^|%t%n
 		</property>
 	</properties>
 	<Appenders>
-		<Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout pattern="${blog_OUT_PATTERN}" />
-		</Console>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${blog_OUT_PATTERN}" />
+        </Console>
 
 		<!-- 审计日志 -->
 		<RollingFile name="ThreadAuditRollingFile" fileName="${LOG_HOME}/hdfs_phoenix_thread.log"
 			immediateFlush="true" filePattern="${LOG_HOME}/hdfs_phoenix_thread.log.%d{yyyy-MM-dd}"
-			append="true" bufferedIO="false">
+			append="false" bufferedIO="false">
 			<PatternLayout pattern="${AUDIT_PATTERN}" />
 			<Filters>
 				<ThresholdFilter level="ERROR" onMatch="DENY"
@@ -45,7 +41,7 @@
 		<!-- linjun 2016-07-12 Keler异常日志，只输出error -->
 		<RollingFile name="blogErrorLog" fileName="${LOG_HOME}/blog.error.out"
 			immediateFlush="true" filePattern="${LOG_HOME}/blog.error.out.%d{yyyy-MM-dd}"
-			append="true" bufferedIO="false">
+			append="false" bufferedIO="false">
 			<PatternLayout pattern="${blog_OUT_PATTERN}" />
 			<Filters>
 				<ThresholdFilter level="WARN" onMatch="ACCEPT"
@@ -61,7 +57,7 @@
 		<!-- monitor用作监控，没有过滤级别 -->
 		<RollingFile name="blogMonitorLog" fileName="${LOG_HOME}/blog.monitor.log"
 			immediateFlush="true" filePattern="${LOG_HOME}/blog.monitor.log.%d{yyyy-MM-dd}"
-			append="true" bufferedIO="false">
+			append="false" bufferedIO="false">
 			<PatternLayout pattern="${MONITOR_PATTERN}" />
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1"
@@ -72,7 +68,7 @@
 		<!-- 对root日志增加监控输出 -->
 		<RollingFile name="RootMonitorLog" fileName="${LOG_HOME}/blog.monitor.log"
 			immediateFlush="true" filePattern="${LOG_HOME}/blog.monitor.log.%d{yyyy-MM-dd}"
-			append="true" bufferedIO="false">
+			append="false" bufferedIO="false">
 			<PatternLayout pattern="${CONSOLE_MONITOR_PATTERN}" />
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1"
@@ -90,9 +86,20 @@
 			<AppenderRef ref="Console" />
 		</Root>
 
+		<Logger name="net.loyintean.blog" additivity="false" level="INFO"
+			includeLocation="true">
+			<AppenderRef ref="RootMonitorLog" />
+		</Logger>
+		<Logger name="org.apache.activemq" additivity="true" level="INFO"
+			includeLocation="true">
+		</Logger>
+		<Logger name="org.springframework.jms" additivity="true" level="INFO"
+			includeLocation="true">
+		</Logger>
+		
 		<!-- 审计日志记录器 -->
-		<Logger name="net.loyintean.blog" additivity="true"
-			includeLocation="true" level="INFO">
+		<Logger name="AUDIT" additivity="false" includeLocation="true">
+			<AppenderRef ref="ThreadAuditRollingFile" />
 		</Logger>
 
 		<!-- 监控日志记录器 -->
@@ -101,5 +108,7 @@
 			<AppenderRef ref="blogErrorLog" />
 			<AppenderRef ref="blogMonitorLog" />
 		</Logger>
+		
+		
 	</Loggers>
 </Configuration>

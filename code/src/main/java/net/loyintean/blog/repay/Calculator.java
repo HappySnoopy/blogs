@@ -51,7 +51,7 @@ public class Calculator {
 
     private static List<Result4Repay> calculae(List<Result4Calculate> dtos) {
         RestClientFactory factory = new RestClientFactory();
-        factory.setUserName("10020865");
+        factory.setUserName("");
         factory.setPassWord("");
         ObjectMapper mapper = new ObjectMapper();
 
@@ -75,7 +75,7 @@ public class Calculator {
                         "")
                     .addPathVariable("lendId",
                         Integer.toString(dto.getLendId()))
-                    .addRequestParam("settleDate", "2017-06-01")
+                    .addRequestParam("settleDate", "2017-10-09")
                     .responseAs(String.class).get();
 
                 RestResult4Repay restResult;
@@ -228,8 +228,6 @@ public class Calculator {
                 }
                 xlsDto = new Result4Calculate();
                 // 循环列Cell
-                // 0学号 1姓名 2学院 3课程名 4 成绩
-                // for (int cellNum = 0; cellNum <=4; cellNum++) {
                 HSSFCell xh = hssfRow.getCell(0);
                 if (xh == null) {
                     continue;

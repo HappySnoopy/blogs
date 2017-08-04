@@ -1,5 +1,5 @@
 /**
- * Copyright(c) 2011-2017 by YouCredit Inc.(){}
+ * Copyright(c) 2011-2017 by  Inc.(){}
  * All Rights Reserved
  */
 package net.loyintean.blog.redislock.redisson;
@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
@@ -19,7 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @since 2017年6月16日
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = RedicConfig.class)
+@SpringBootTest(classes = RedicConfig.class)
 public class MainTest {
 
     @Resource

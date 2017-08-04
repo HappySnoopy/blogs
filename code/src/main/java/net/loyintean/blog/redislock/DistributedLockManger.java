@@ -1,5 +1,5 @@
 /**
- * Copyright(c) 2011-2017 by YouCredit Inc.
+ * Copyright(c) 2011-2017 by  Inc.
  * All Rights Reserved
  */
 package net.loyintean.blog.redislock;

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * All Rights Reserved
  */
 package net.loyintean.blog.repay;
@@ -155,6 +155,12 @@ public class Result4Calculate {
      * 分期信息
      */
     private List<Result4Calculate> plans;
+
+    private BigDecimal total;
+
+    private BigDecimal normalTotal;
+
+    private BigDecimal normalMgmtTotal;
 
     /**
      * 默认构造方法
@@ -578,6 +584,51 @@ public class Result4Calculate {
         }
         builder.append("]");
         return builder.toString();
+    }
+
+    /**
+     * @return the {@link #total}
+     */
+    public BigDecimal getTotal() {
+        return this.total;
+    }
+
+    /**
+     * @param total
+     *        the {@link #total} to set
+     */
+    public void setTotal(BigDecimal total) {
+        this.total = total;
+    }
+
+    /**
+     * @return the {@link #normalTotal}
+     */
+    public BigDecimal getNormalTotal() {
+        return this.normalTotal;
+    }
+
+    /**
+     * @param normalTotal
+     *        the {@link #normalTotal} to set
+     */
+    public void setNormalTotal(BigDecimal normalTotal) {
+        this.normalTotal = normalTotal;
+    }
+
+    /**
+     * @return the {@link #normalMgmtTotal}
+     */
+    public BigDecimal getNormalMgmtTotal() {
+        return this.normalMgmtTotal;
+    }
+
+    /**
+     * @param normalMgmtTotal
+     *        the {@link #normalMgmtTotal} to set
+     */
+    public void setNormalMgmtTotal(BigDecimal normalMgmtTotal) {
+        this.normalMgmtTotal = normalMgmtTotal;
     }
 
 }

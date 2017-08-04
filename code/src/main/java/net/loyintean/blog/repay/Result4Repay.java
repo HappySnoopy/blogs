@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * All Rights Reserved
  */
 package net.loyintean.blog.repay;
@@ -44,6 +44,10 @@ public class Result4Repay {
      */
 
     private Result4Calculate advance = new Result4Calculate();
+
+    private Result4Calculate canDoAdvanceA = new Result4Calculate();
+
+    private BigDecimal total;
 
     /**
      * @return the {@link #overdue}
@@ -153,5 +157,35 @@ public class Result4Repay {
         }
         builder.append("]");
         return builder.toString();
+    }
+
+    /**
+     * @return the {@link #total}
+     */
+    public BigDecimal getTotal() {
+        return this.total;
+    }
+
+    /**
+     * @param total
+     *        the {@link #total} to set
+     */
+    public void setTotal(BigDecimal total) {
+        this.total = total;
+    }
+
+    /**
+     * @return the {@link #canDoAdvanceA}
+     */
+    public Result4Calculate getCanDoAdvanceA() {
+        return this.canDoAdvanceA;
+    }
+
+    /**
+     * @param canDoAdvanceA
+     *        the {@link #canDoAdvanceA} to set
+     */
+    public void setCanDoAdvanceA(Result4Calculate canDoAdvanceA) {
+        this.canDoAdvanceA = canDoAdvanceA;
     }
 }

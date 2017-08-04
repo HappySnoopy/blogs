@@ -4,7 +4,7 @@
  */
 /**
  * @author linjun
- * @since 2017年6月26日
+ * @since 2017年7月10日
  *
  */
-package net.loyintean.blog.reserve;
+package net.loyintean.blog.dynamicenum;
