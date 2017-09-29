@@ -40,6 +40,9 @@ public class JmsBootApplication {
         //        return activeMQConnectionFactory;
         //        return new PooledConnectionFactory(activeMQConnectionFactory);
         //        return new SingleConnectionFactory(activeMQConnectionFactory);
-        return new CachingConnectionFactory(activeMQConnectionFactory);
+        CachingConnectionFactory factory = new CachingConnectionFactory(
+            activeMQConnectionFactory);
+        factory.setSessionCacheSize(100);
+        return factory;
     }
 }

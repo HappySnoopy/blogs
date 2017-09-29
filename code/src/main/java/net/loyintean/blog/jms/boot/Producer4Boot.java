@@ -3,8 +3,7 @@
  */
 package net.loyintean.blog.jms.boot;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.jms.Queue;
 
@@ -22,7 +21,7 @@ public class Producer4Boot {
     private static final Logger LOGGER = org.slf4j.LoggerFactory
         .getLogger(Producer4Boot.class);
 
-    public static final Map<String, String> MESSAGE_SET = new ConcurrentHashMap<>();
+    public static final AtomicInteger COUNTER = new AtomicInteger(0);
 
     @Autowired
     private JmsMessagingTemplate jmsMessagingTemplate;
@@ -32,7 +31,11 @@ public class Producer4Boot {
 
     public void send(String msg) {
         Producer4Boot.LOGGER.info("text send:{}", msg);
-        Producer4Boot.MESSAGE_SET.put(msg, msg);
+
+        //        int currentCount = Producer4Boot.COUNTER.getAndIncrement();
+
+        //        System.out.println("send count: " + currentCount);
+
         this.jmsMessagingTemplate.convertAndSend(this.queue, msg);
     }
 }

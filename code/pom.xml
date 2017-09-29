@@ -67,6 +67,24 @@
 			</exclusions>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-actuator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-actuator</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>log4j-over-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
@@ -123,7 +141,7 @@
 			<version>1.2</version>
 		</dependency>
 
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 		</dependency>
@@ -131,7 +149,7 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 		</dependency>
-
+ -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -191,9 +209,30 @@
 			<version>3.5.3-beta</version>
 		</dependency>
 
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j-impl</artifactId>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>log4j-over-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
 		</dependency>
 
 	</dependencies>

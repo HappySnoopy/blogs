@@ -1,5 +1,5 @@
 /**
- * Copyright(c) 2011-2017 by  Inc.
+ * Copyright(c) 2011-2017 by Inc.
  * All Rights Reserved
  */
 package net.loyintean.blog.jms.boot;
@@ -35,33 +35,31 @@ public class Jms4BootTest {
     public void test() {
         long start = System.currentTimeMillis();
 
-        IntStream.range(0, 10000).parallel().mapToObj(i -> "message_" + i)
-            .forEach(msg -> {
-                try {
-                    this.producer4Boot.send(msg);
-                } catch (Exception e) {
-                    System.out.println(
-                        "=============================" + e.getMessage());
-                    Jms4BootTest.FAIL_MESSAGE_SET.put(msg, e.getMessage());
-                }
+        IntStream.range(0, 1000).mapToObj(i -> "message_" + i).forEach(msg -> {
+            try {
+                this.producer4Boot.send(msg);
 
-            });
+                //                    Thread.sleep(5000l);
+
+            } catch (Exception e) {
+                System.out
+                    .println("=============================" + e.getMessage());
+                Jms4BootTest.FAIL_MESSAGE_SET.put(msg, e.getMessage());
+            }
+
+            //            System.out.println("=============================" + msg);
+
+        });
 
         long end = System.currentTimeMillis();
 
         System.out.println(this.activeMQConnectionFactory.getClass().getName()
             + " : " + (end - start));
 
-        while (true) {
-            System.out.println(Producer4Boot.MESSAGE_SET.size() + " : "
-                + Jms4BootTest.FAIL_MESSAGE_SET.size());
-            try {
-                Thread.sleep(10000l);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println(Producer4Boot.MESSAGE_SET + " : "
-                + Jms4BootTest.FAIL_MESSAGE_SET);
+        try {
+            Thread.sleep(500000l);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }
