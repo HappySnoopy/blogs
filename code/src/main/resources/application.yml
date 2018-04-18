@@ -1,0 +1,34 @@
+server:
+  port: 1224
+eureka:
+#  instance:
+#    hostname: localhost
+  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://10.255.33.207:8080/eureka,http://10.255.33.208:8080/eureka,http://10.255.33.209:8080/eureka
+      
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 500000
+        read-timeout: 500000
+        logger-level: full
+  hystrix:
+    enabled: true
+
+logging:
+  config: classpath:log4j2.xml
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+          
+ribbon:
+  eager-load:
+    enabled: true

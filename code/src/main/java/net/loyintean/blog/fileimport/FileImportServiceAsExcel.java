@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * All Rights Reserved
  */
 package net.loyintean.blog.fileimport;
@@ -11,8 +11,6 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import net.loyintean.blog.log.LF;
-
 import org.apache.poi.POIXMLException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Row;
@@ -22,6 +20,8 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import net.loyintean.blog.log.LF;
+
 /**
  * 导入excel的服务框架
  * <p>
@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
  * @author winters1224@163.com
  * @param <T>
  */
-class FileImportServiceAsExcel<T> implements FileImportService<T> {
+public class FileImportServiceAsExcel<T> implements FileImportService<T> {
     private static final Logger LOGGER = LoggerFactory
         .getLogger(FileImportServiceAsExcel.class);
 

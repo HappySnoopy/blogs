@@ -4,12 +4,9 @@
  */
 package net.loyintean.blog.jms.boot;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.IntStream;
 
 import javax.annotation.Resource;
-import javax.jms.ConnectionFactory;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,16 +23,11 @@ public class Jms4BootTest {
     @Resource
     private Producer4Boot producer4Boot;
 
-    @Resource
-    private ConnectionFactory activeMQConnectionFactory;
-
-    public static final Map<String, String> FAIL_MESSAGE_SET = new ConcurrentHashMap<>();
-
     @Test
     public void test() {
         long start = System.currentTimeMillis();
 
-        IntStream.range(0, 1000).mapToObj(i -> "message_" + i).forEach(msg -> {
+        IntStream.range(0, 10000).mapToObj(i -> "message_" + i).forEach(msg -> {
             try {
                 this.producer4Boot.send(msg);
 
@@ -44,7 +36,6 @@ public class Jms4BootTest {
             } catch (Exception e) {
                 System.out
                     .println("=============================" + e.getMessage());
-                Jms4BootTest.FAIL_MESSAGE_SET.put(msg, e.getMessage());
             }
 
             //            System.out.println("=============================" + msg);
@@ -53,8 +44,7 @@ public class Jms4BootTest {
 
         long end = System.currentTimeMillis();
 
-        System.out.println(this.activeMQConnectionFactory.getClass().getName()
-            + " : " + (end - start));
+        System.out.println(end - start);
 
         try {
             Thread.sleep(500000l);

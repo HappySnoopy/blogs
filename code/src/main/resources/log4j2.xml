@@ -101,5 +101,7 @@
 			<AppenderRef ref="blogErrorLog" />
 			<AppenderRef ref="blogMonitorLog" />
 		</Logger>
+
+
 	</Loggers>
 </Configuration>

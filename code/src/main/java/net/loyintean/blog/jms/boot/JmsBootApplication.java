@@ -4,10 +4,12 @@
 package net.loyintean.blog.jms.boot;
 
 import javax.jms.ConnectionFactory;
+import javax.jms.Destination;
 import javax.jms.Queue;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQQueue;
+import org.apache.activemq.command.ActiveMQTopic;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -32,17 +34,31 @@ public class JmsBootApplication {
     }
 
     @Bean
+    public Destination topic() {
+        return new ActiveMQTopic("VirtualTopic.spring.boot.test");
+
+    }
+
+    /*
+     * @Bean
+     * public Destination topicCustomer() {
+     * return new ActiveMQQueue(
+     * "Consumer.springboot.VirtualTopic.springboot.test");
+     * }
+     */
+    @Bean
     public ConnectionFactory activeMQConnectionFactory() {
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(
             ActiveMQConnectionFactory.DEFAULT_USER,
             ActiveMQConnectionFactory.DEFAULT_PASSWORD,
-            "failover:(tcp://127.0.0.1:61616,tcp://10.255.33.108:61616)?randomize=false");
+            "failover:(tcp://127.0.0.1:61616)");
         //        return activeMQConnectionFactory;
         //        return new PooledConnectionFactory(activeMQConnectionFactory);
         //        return new SingleConnectionFactory(activeMQConnectionFactory);
         CachingConnectionFactory factory = new CachingConnectionFactory(
             activeMQConnectionFactory);
         factory.setSessionCacheSize(100);
+
         return factory;
     }
 }
