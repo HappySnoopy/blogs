@@ -14,5 +14,5 @@ import net.loyintean.blog.sixgod.web.springmvc.BasicDbController4SpringMvc;
 @Controller
 @RequestMapping("/test1")
 public class TestController
-        extends BasicDbController4SpringMvc<String, String> {
+        extends BasicDbController4SpringMvc<String> {
 }

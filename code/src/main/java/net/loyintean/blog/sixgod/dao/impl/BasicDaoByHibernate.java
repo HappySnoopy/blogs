@@ -15,8 +15,8 @@ import net.loyintean.blog.sixgod.dto.IdDto;
  * @author winters1224@163.com
  * @param <I>
  */
-public class BasicDao4Hibernate<I extends IdDto<Serializable>>
-        extends BasicDaoAdapter<I, I> {
+public class BasicDaoByHibernate<I extends IdDto<Serializable>>
+        extends BasicDaoAdapter<I> {
 
     /**
      * hibernate的session工厂
@@ -29,9 +29,10 @@ public class BasicDao4Hibernate<I extends IdDto<Serializable>>
      * @see net.loyintean.blog.sixgod.dao.BasicUpdateDao#update(java.lang.Object)
      */
     @Override
-    public I update(I param) {
-        this.getCurrentSession().update(param);
-        return param;
+    public Integer update(I param) {
+         this.getCurrentSession().update(param);
+         // hibernate默认的update是按id更新的，这里默认为1
+         return 1;
     }
 
     /**
@@ -51,13 +52,13 @@ public class BasicDao4Hibernate<I extends IdDto<Serializable>>
      * @see net.loyintean.blog.sixgod.dao.BasicInsertDao#insert(java.lang.Object)
      */
     @Override
-    public I insert(I param) {
+    public Integer insert(I param) {
         if (param.getId() == null) {
             this.getCurrentSession().save(param);
         } else {
             this.getCurrentSession().merge(param);
         }
-        return param;
+        return 1;
     }
 
     /**
@@ -66,9 +67,9 @@ public class BasicDao4Hibernate<I extends IdDto<Serializable>>
      * @see net.loyintean.blog.sixgod.dao.BasicDeleteDao#delete(java.lang.Object)
      */
     @Override
-    public I delete(I param) {
+    public Integer delete(I param) {
         this.getCurrentSession().delete(param);
-        return param;
+        return 1;
     }
 
     /**

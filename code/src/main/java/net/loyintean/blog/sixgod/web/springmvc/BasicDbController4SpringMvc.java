@@ -15,11 +15,10 @@ import net.loyintean.blog.sixgod.web.BasicDbControllerAdapter;
 
 /**
  * @author winters1224@163.com
- * @param <I>
- * @param <O>
+ * @param <T>
  */
-public class BasicDbController4SpringMvc<I, O>
-        extends BasicDbControllerAdapter<I, O> {
+public class BasicDbController4SpringMvc<T>
+        extends BasicDbControllerAdapter<T> {
 
     /**
      * @see net.loyintean.blog.sixgod.web.BasicDbControllerAdapter#query(java.lang.Object)
@@ -27,8 +26,7 @@ public class BasicDbController4SpringMvc<I, O>
     @RequestMapping(method = RequestMethod.GET, path = "/")
     @ResponseBody
     @Override
-    public ResultDto<O> query(@RequestParam(required = false) I param) {
-        System.out.println("=================================");
+    public ResultDto<T> query(@RequestParam(required = false) T param) {
         return super.query(param);
     }
 
@@ -38,7 +36,7 @@ public class BasicDbController4SpringMvc<I, O>
     @RequestMapping(method = RequestMethod.POST, path = "/")
     @ResponseBody
     @Override
-    public ResultDto<O> save(@RequestParam(required = false) I param) {
+    public ResultDto<T> save(@RequestParam(required = false) T param) {
         return super.save(param);
     }
 
@@ -48,7 +46,7 @@ public class BasicDbController4SpringMvc<I, O>
     @RequestMapping(method = RequestMethod.PUT, path = "/")
     @ResponseBody
     @Override
-    public ResultDto<O> edit(@RequestParam(required = false) I param) {
+    public ResultDto<T> edit(@RequestParam(required = false) T param) {
         return super.edit(param);
     }
 
@@ -58,7 +56,7 @@ public class BasicDbController4SpringMvc<I, O>
     @RequestMapping(method = RequestMethod.DELETE, path = "/")
     @ResponseBody
     @Override
-    public ResultDto<O> remove(@RequestParam(required = false) I param) {
+    public ResultDto<T> remove(@RequestParam(required = false) T param) {
         return super.remove(param);
     }
 
@@ -68,8 +66,8 @@ public class BasicDbController4SpringMvc<I, O>
     @RequestMapping(method = RequestMethod.GET, path = "/list/")
     @ResponseBody
     @Override
-    public ResultDto4List<O> queryList(
-            @RequestParam(required = false) I param) {
+    public ResultDto4List<T> queryList(
+            @RequestParam(required = false) T param) {
         return super.queryList(param);
     }
 
@@ -79,8 +77,8 @@ public class BasicDbController4SpringMvc<I, O>
     @RequestMapping(method = RequestMethod.GET, path = "/paged/")
     @ResponseBody
     @Override
-    public ResultDto4PagedList<O> queryPagedList(
-            @RequestParam(required = false) I param) {
+    public ResultDto4PagedList<T> queryPagedList(
+            @RequestParam(required = false) T param) {
         return super.queryPagedList(param);
     }
 

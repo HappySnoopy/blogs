@@ -1,6 +1,5 @@
 /**
- * Copyright(c) 2011-2017 by  Inc.
- * All Rights Reserved
+ * Copyright(c) 2011-2017 by  Inc. All Rights Reserved
  */
 package net.loyintean.blog.serversentevent;
 
@@ -19,22 +18,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class ServerSentEventApplication extends SpringBootServletInitializer {
 
     /**
-     * 外置tomcat的初始化
-     *
-     * @author linjun
-     * @since 2017年7月3日
-     * @param application
-     * @return
-     * @see org.springframework.boot.web.support.SpringBootServletInitializer
-     *      #configure(org.springframework.boot.builder.SpringApplicationBuilder)
-     */
-    @Override
-    protected SpringApplicationBuilder configure(
-            SpringApplicationBuilder application) {
-        return application.sources(ServerSentEventApplication.class);
-    }
-
-    /**
      * 内置tomcat的初始化
      *
      * @author linjun
@@ -43,5 +26,19 @@ public class ServerSentEventApplication extends SpringBootServletInitializer {
      */
     public static void main(String[] args) {
         SpringApplication.run(ServerSentEventApplication.class, args);
+    }
+
+    /**
+     * 外置tomcat的初始化
+     *
+     * @author linjun
+     * @since 2017年7月3日
+     * @param application
+     * @return
+     */
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder
+                                                             application) {
+        return application.sources(ServerSentEventApplication.class);
     }
 }

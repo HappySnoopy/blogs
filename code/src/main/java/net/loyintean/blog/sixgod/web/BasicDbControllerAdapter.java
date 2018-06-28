@@ -23,11 +23,9 @@ import net.loyintean.blog.sixgod.service.impl.BasicDbServiceAdapter;
 
 /**
  * @author winters1224@163.com
- * @param <I>
- * @param <O>
  */
-public abstract class BasicDbControllerAdapter<I, O>
-        implements BasicDbController<I, O> {
+public abstract class BasicDbControllerAdapter<T>
+        implements BasicDbController<T,T> {
 
     /**
      * 日志
@@ -37,27 +35,28 @@ public abstract class BasicDbControllerAdapter<I, O>
     /**
      * 查询服务
      */
-    private BasicDbQueryService<I, O> basicDbQueryService = new BasicDbServiceAdapter<>();
+    private BasicDbQueryService<T,T> basicDbQueryService = new
+            BasicDbServiceAdapter<>();
     /**
      * 查询不分页列表服务
      */
-    private BasicDbQueryListService<I, O> basicDbQueryListService = new BasicDbServiceAdapter<>();
+    private BasicDbQueryListService<T,T> basicDbQueryListService = new BasicDbServiceAdapter<>();
     /**
      * 查询分页列表服务
      */
-    private BasicDbQueryPagedListService<I, O> basicDbQueryPagedListService = new BasicDbServiceAdapter<>();
+    private BasicDbQueryPagedListService<T,T> basicDbQueryPagedListService = new BasicDbServiceAdapter<>();
     /**
      * 新增服务
      */
-    private BasicDbSaveService<I, O> basicDbSaveService = new BasicDbServiceAdapter<>();
+    private BasicDbSaveService<T,T> basicDbSaveService = new BasicDbServiceAdapter<>();
     /**
      * 更新服务
      */
-    private BasicDbEditService<I, O> basicDbEditService = new BasicDbServiceAdapter<>();
+    private BasicDbEditService<T,T> basicDbEditService = new BasicDbServiceAdapter<>();
     /**
      * 删除服务
      */
-    private BasicDbRemoveService<I, O> basicDbRemoveService = new BasicDbServiceAdapter<>();
+    private BasicDbRemoveService<T,T> basicDbRemoveService = new BasicDbServiceAdapter<>();
 
     /**
      * 委托给 {@link #operate(Object, Function)}
@@ -65,7 +64,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      * @see net.loyintean.blog.sixgod.web.BasicDbController#query(java.lang.Object)
      */
     @Override
-    public ResultDto<O> query(I param) {
+    public ResultDto<T> query(T param) {
         return this.operate(param,
             queryParam -> this.basicDbQueryService.query(queryParam));
     }
@@ -76,7 +75,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      * @see net.loyintean.blog.sixgod.web.BasicDbController#save(java.lang.Object)
      */
     @Override
-    public ResultDto<O> save(I param) {
+    public ResultDto<T> save(T param) {
         return this.operate(param,
             queryParam -> this.basicDbSaveService.save(queryParam));
     }
@@ -87,7 +86,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      * @see net.loyintean.blog.sixgod.web.BasicDbController#edit(java.lang.Object)
      */
     @Override
-    public ResultDto<O> edit(I param) {
+    public ResultDto<T> edit(T param) {
         return this.operate(param,
             queryParam -> this.basicDbEditService.edit(queryParam));
     }
@@ -98,7 +97,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      * @see net.loyintean.blog.sixgod.web.BasicDbController#remove(java.lang.Object)
      */
     @Override
-    public ResultDto<O> remove(I param) {
+    public ResultDto<T> remove(T param) {
         return this.operate(param,
             queryParam -> this.basicDbRemoveService.remove(queryParam));
     }
@@ -110,12 +109,12 @@ public abstract class BasicDbControllerAdapter<I, O>
      * @param function
      * @return
      */
-    protected ResultDto<O> operate(I param, Function<I, O> function) {
+    protected ResultDto<T> operate(T param, Function<T,T> function) {
         BasicDbControllerAdapter.LOGGER.info("param:{}", param);
 
-        ResultDto<O> result = new ResultDto<>();
+        ResultDto<T> result = new ResultDto<>();
         try {
-            O queryResult = function.apply(param);
+            T queryResult = function.apply(param);
             BasicDbControllerAdapter.LOGGER.debug("param:{}, inner result:{}",
                 param, queryResult);
             result.setSuccess(true);
@@ -138,12 +137,12 @@ public abstract class BasicDbControllerAdapter<I, O>
      * @see net.loyintean.blog.sixgod.web.BasicDbController#queryList(java.lang.Object)
      */
     @Override
-    public ResultDto4List<O> queryList(I param) {
+    public ResultDto4List<T> queryList(T param) {
         BasicDbControllerAdapter.LOGGER.info("param:{}", param);
 
-        ResultDto4List<O> result = new ResultDto4List<>();
+        ResultDto4List<T> result = new ResultDto4List<>();
         try {
-            List<O> queryResult = this.basicDbQueryListService.queryList(param);
+            List<T> queryResult = this.basicDbQueryListService.queryList(param);
             BasicDbControllerAdapter.LOGGER.debug("param:{}, inner result:{}",
                 param, queryResult);
             result.setSuccess(true);
@@ -166,16 +165,16 @@ public abstract class BasicDbControllerAdapter<I, O>
      * @see net.loyintean.blog.sixgod.web.BasicDbController#queryPagedList(java.lang.Object)
      */
     @Override
-    public ResultDto4PagedList<O> queryPagedList(I param) {
+    public ResultDto4PagedList<T> queryPagedList(T param) {
         BasicDbControllerAdapter.LOGGER.info("param:{}", param);
 
-        ResultDto4PagedList<O> result = new ResultDto4PagedList<>();
+        ResultDto4PagedList<T> result = new ResultDto4PagedList<>();
         try {
             long totalCount = this.basicDbQueryPagedListService
                 .queryTotalCount(param);
 
             if (totalCount > 0L) {
-                List<O> queryResult = this.basicDbQueryListService
+                List<T> queryResult = this.basicDbQueryListService
                     .queryList(param);
                 BasicDbControllerAdapter.LOGGER
                     .debug("param:{}, inner result:{}", param, queryResult);
@@ -201,7 +200,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      *        the {@link #basicDbQueryService} to set
      */
     public void setBasicDbQueryService(
-            BasicDbQueryService<I, O> basicDbQueryService) {
+            BasicDbQueryService<T,T> basicDbQueryService) {
         this.basicDbQueryService = basicDbQueryService;
     }
 
@@ -210,7 +209,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      *        the {@link #basicDbQueryListService} to set
      */
     public void setBasicDbQueryListService(
-            BasicDbQueryListService<I, O> basicDbQueryListService) {
+            BasicDbQueryListService<T,T> basicDbQueryListService) {
         this.basicDbQueryListService = basicDbQueryListService;
     }
 
@@ -219,7 +218,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      *        the {@link #basicDbQueryPagedListService} to set
      */
     public void setBasicDbQueryPagedListService(
-            BasicDbQueryPagedListService<I, O> basicDbQueryPagedListService) {
+            BasicDbQueryPagedListService<T,T> basicDbQueryPagedListService) {
         this.basicDbQueryPagedListService = basicDbQueryPagedListService;
     }
 
@@ -228,7 +227,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      *        the {@link #basicDbSaveService} to set
      */
     public void setBasicDbSaveService(
-            BasicDbSaveService<I, O> basicDbSaveService) {
+            BasicDbSaveService<T,T> basicDbSaveService) {
         this.basicDbSaveService = basicDbSaveService;
     }
 
@@ -237,7 +236,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      *        the {@link #basicDbEditService} to set
      */
     public void setBasicDbEditService(
-            BasicDbEditService<I, O> basicDbEditService) {
+            BasicDbEditService<T,T> basicDbEditService) {
         this.basicDbEditService = basicDbEditService;
     }
 
@@ -246,8 +245,7 @@ public abstract class BasicDbControllerAdapter<I, O>
      *        the {@link #basicDbRemoveService} to set
      */
     public void setBasicDbRemoveService(
-            BasicDbRemoveService<I, O> basicDbRemoveService) {
+            BasicDbRemoveService<T,T> basicDbRemoveService) {
         this.basicDbRemoveService = basicDbRemoveService;
     }
-
 }

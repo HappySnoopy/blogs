@@ -3,6 +3,7 @@
  */
 package net.loyintean.blog.sixgod.service.impl;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -23,145 +24,146 @@ import net.loyintean.blog.sixgod.service.BasicDbQueryService;
 import net.loyintean.blog.sixgod.service.BasicDbRemoveService;
 import net.loyintean.blog.sixgod.service.BasicDbSaveService;
 
+import javax.annotation.Resource;
+
 /**
  * 基础数据库操作服务接口适配器
  * <p>
  * 原则上，只有数据库写操作开启了事务。
  *
  * @author winters1224@163.com
- * @param <I>
- *        接口入参数据类型
- * @param <O>
- *        接口出参数据类型
+ * @param <T> 同时用做入参和出参
  */
-public class BasicDbServiceAdapter<I, O>
-        implements BasicDbEditService<I, O>, BasicDbQueryListService<I, O>,
-        BasicDbQueryPagedListService<I, O>, BasicDbQueryService<I, O>,
-        BasicDbRemoveService<I, O>, BasicDbSaveService<I, O> {
+public class BasicDbServiceAdapter<T>
+        implements BasicDbEditService<T, T>, BasicDbQueryListService<T, T>,
+        BasicDbQueryPagedListService<T, T>, BasicDbQueryService<T, T>,
+        BasicDbRemoveService<T, T>, BasicDbSaveService<T, T> {
 
     /**
      * 日志
      */
     private static final Logger LOGGER = LoggerFactory
-        .getLogger(BasicDbServiceAdapter.class);
+            .getLogger(BasicDbServiceAdapter.class);
 
     /**
      * {@link #remove(Object)}
      */
-    private BasicDeleteDao<I, O> basicDeleteDao = new BasicDaoAdapter<>();
+    private BasicDeleteDao<T, Integer> basicDeleteDao;
     /**
      * {@link #save(Object)}
      */
-    private BasicInsertDao<I, O> basicInsertDao = new BasicDaoAdapter<>();
+    private BasicInsertDao<T, Integer> basicInsertDao;
     /**
      * {@link #query(Object)}
      */
-    private BasicSelectDao<I, O> basicSelectDao = new BasicDaoAdapter<>();
+    private BasicSelectDao<T, T> basicSelectDao;
     /**
      * {@link #queryList(Object)}
      */
-    private BasicSelectListDao<I, O> basicSelectListDao = new BasicDaoAdapter<>();
+    private BasicSelectListDao<T, T> basicSelectListDao;
     /**
      * {@link #queryPagedList(Object)}<br>
      * {@link #queryTotalCount(Object)}
      */
-    private BasicSelectPagedListDao<I, O> basicSelectPagedListDao = new BasicDaoAdapter<>();
+    private BasicSelectPagedListDao<T, T> basicSelectPagedListDao;
     /**
      * {@link #edit(Object)}
      */
-    private BasicUpdateDao<I, O> basicUpdateDao = new BasicDaoAdapter<>();
+    private BasicUpdateDao<T, Integer> basicUpdateDao;
 
     /**
-     * @see net.loyintean.blog.sixgod.service.BasicDbSaveService
-     *      #save(java.lang.Object)
+     * @param param
+     * @return
      */
     @Transactional
     @Override
-    public O save(I param) {
+    public T save(T param) {
         BasicDbServiceAdapter.LOGGER.info("save param:{}", param);
-        O result = this.basicInsertDao.insert(param);
+        Integer result = this.basicInsertDao.insert(param);
         BasicDbServiceAdapter.LOGGER.info("save param:{},result:{}", param,
-            result);
-        return result;
+                result);
+        return param;
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.service.BasicDbRemoveService
-     *      #remove(java.lang.Object)
+     * @param param
+     * @return
      */
     @Transactional
     @Override
-    public O remove(I param) {
+    public T remove(T param) {
         BasicDbServiceAdapter.LOGGER.info("remove param:{}", param);
-        O result = this.basicDeleteDao.delete(param);
+        Integer result = this.basicDeleteDao.delete(param);
         BasicDbServiceAdapter.LOGGER.info("remove param:{},result:{}", param,
-            result);
-        return result;
+                result);
+        return param;
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.service.BasicDbQueryService
-     *      #query(java.lang.Object)
+     * @param param
+     * @return
      */
     @Override
-    public O query(I param) {
+    public T query(T param) {
         BasicDbServiceAdapter.LOGGER.info("query param:{}", param);
-        O result = this.basicSelectDao.select(param);
+        T result = this.basicSelectDao.select(param);
         BasicDbServiceAdapter.LOGGER.info("query param:{},result:{}", param,
-            result);
+                result);
         return result;
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.service.BasicDbQueryListService
-     *      #queryList(java.lang.Object)
+     * 保证返回列表不为null
+     *
+     * @param param
+     * @return
      */
     @Override
-    public List<O> queryList(I param) {
+    public List<T> queryList(T param) {
         BasicDbServiceAdapter.LOGGER.info("queryList param:{}", param);
-        List<O> result = this.basicSelectListDao.selectList(param);
+        List<T> result = this.basicSelectListDao.selectList(param);
         BasicDbServiceAdapter.LOGGER.info("queryList param:{},result:{}", param,
-            result);
-        return result;
+                result);
+        return result == null ? Collections.emptyList() : result;
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.service.BasicDbEditService
-     *      #edit(java.lang.Object)
+     * @param param
+     * @return
      */
     @Transactional
     @Override
-    public O edit(I param) {
+    public T edit(T param) {
         BasicDbServiceAdapter.LOGGER.info("edit param:{}", param);
-        O result = this.basicUpdateDao.update(param);
+        Integer result = this.basicUpdateDao.update(param);
         BasicDbServiceAdapter.LOGGER.info("edit param:{},result:{}", param,
-            result);
-        return result;
+                result);
+        return param;
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.service.BasicDbQueryPagedListService
-     *      #queryTotalCount(java.lang.Object)
+     * @param param
+     * @return
      */
     @Override
-    public long queryTotalCount(I param) {
+    public long queryTotalCount(T param) {
         BasicDbServiceAdapter.LOGGER.info("queryTotalCount param:{}", param);
         long result = this.basicSelectPagedListDao.selectTotalCount(param);
-        BasicDbServiceAdapter.LOGGER.info("queryTotalCount param:{},result:{}",
-            param, result);
+        BasicDbServiceAdapter.LOGGER
+                .info("queryTotalCount param:{}," + "result:{}", param, result);
         return result;
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.service.BasicDbQueryPagedListService
-     *      #queryPagedList(java.lang.Object)
+     * @param param
+     * @return
      */
     @Override
-    public List<O> queryPagedList(I param) {
+    public List<T> queryPagedList(T param) {
         BasicDbServiceAdapter.LOGGER.info("queryPagedList param:{}", param);
-        List<O> result = this.basicSelectPagedListDao.selectList(param);
-        BasicDbServiceAdapter.LOGGER.info("queryPagedList param:{},result:{}",
-            param, result);
+        List<T> result = this.basicSelectPagedListDao.selectList(param);
+        BasicDbServiceAdapter.LOGGER
+                .info("queryPagedList param:{}," + "result:{}", param, result);
         return result;
     }
 
@@ -169,7 +171,7 @@ public class BasicDbServiceAdapter<I, O>
      * @param basicDeleteDao
      *        the {@link #basicDeleteDao} to set
      */
-    public void setBasicDeleteDao(BasicDeleteDao<I, O> basicDeleteDao) {
+    public void setBasicDeleteDao(BasicDeleteDao<T, Integer> basicDeleteDao) {
         this.basicDeleteDao = basicDeleteDao;
     }
 
@@ -177,7 +179,7 @@ public class BasicDbServiceAdapter<I, O>
      * @param basicInsertDao
      *        the {@link #basicInsertDao} to set
      */
-    public void setBasicInsertDao(BasicInsertDao<I, O> basicInsertDao) {
+    public void setBasicInsertDao(BasicInsertDao<T, Integer> basicInsertDao) {
         this.basicInsertDao = basicInsertDao;
     }
 
@@ -185,7 +187,7 @@ public class BasicDbServiceAdapter<I, O>
      * @param basicSelectDao
      *        the {@link #basicSelectDao} to set
      */
-    public void setBasicSelectDao(BasicSelectDao<I, O> basicSelectDao) {
+    public void setBasicSelectDao(BasicSelectDao<T, T> basicSelectDao) {
         this.basicSelectDao = basicSelectDao;
     }
 
@@ -194,7 +196,7 @@ public class BasicDbServiceAdapter<I, O>
      *        the {@link #basicSelectListDao} to set
      */
     public void setBasicSelectListDao(
-            BasicSelectListDao<I, O> basicSelectListDao) {
+            BasicSelectListDao<T, T> basicSelectListDao) {
         this.basicSelectListDao = basicSelectListDao;
     }
 
@@ -203,7 +205,7 @@ public class BasicDbServiceAdapter<I, O>
      *        the {@link #basicSelectPagedListDao} to set
      */
     public void setBasicSelectPagedListDao(
-            BasicSelectPagedListDao<I, O> basicSelectPagedListDao) {
+            BasicSelectPagedListDao<T, T> basicSelectPagedListDao) {
         this.basicSelectPagedListDao = basicSelectPagedListDao;
     }
 
@@ -211,7 +213,7 @@ public class BasicDbServiceAdapter<I, O>
      * @param basicUpdateDao
      *        the {@link #basicUpdateDao} to set
      */
-    public void setBasicUpdateDao(BasicUpdateDao<I, O> basicUpdateDao) {
+    public void setBasicUpdateDao(BasicUpdateDao<T, Integer> basicUpdateDao) {
         this.basicUpdateDao = basicUpdateDao;
     }
 

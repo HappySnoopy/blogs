@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="180">
+
+	<properties>
+		<property name="LOG_HOME">E:\logs</property>
+		<property name="blog_OUT_PATTERN">
+			%d [%C#%M:%L] %-5p %m%n
+		</property>
+	</properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${blog_OUT_PATTERN}" />
+		</Console>
+
+		<Async name="asyncConsole">
+			<AppenderRef ref="Console" />
+		</Async>
+	</Appenders>
+	<Loggers>
+
+		<!-- linjun 2016-07-12 根日志定位为WARN，确保不输出杂七杂八的日志 -->
+		<Root level="WARN" includeLocation="true">
+			<AppenderRef ref="Console" />
+		</Root>
+
+	</Loggers>
+</Configuration>

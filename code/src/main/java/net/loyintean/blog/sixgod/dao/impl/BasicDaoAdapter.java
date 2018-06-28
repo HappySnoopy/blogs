@@ -1,28 +1,24 @@
-/**
- * 
- * All Rights Reserved
+/*
+ * 宜人贷
+ * All rights reserved.
  */
 package net.loyintean.blog.sixgod.dao.impl;
 
-import java.util.List;
 
-import net.loyintean.blog.sixgod.dao.BasicDeleteDao;
-import net.loyintean.blog.sixgod.dao.BasicInsertDao;
-import net.loyintean.blog.sixgod.dao.BasicSelectDao;
-import net.loyintean.blog.sixgod.dao.BasicSelectListDao;
-import net.loyintean.blog.sixgod.dao.BasicSelectPagedListDao;
-import net.loyintean.blog.sixgod.dao.BasicUpdateDao;
+import net.loyintean.blog.sixgod.dao.*;
+
+import java.util.List;
 
 /**
  * 此适配器不实现任何方法，全部抛出 {@linkplain UnsupportedOperationException}
  *
+ * @param <T> 数据库交互类；同时封装有查询条件和查询结果
  * @author winters1224@163.com
- * @param <I>
- * @param <O>
  */
-public class BasicDaoAdapter<I, O> implements BasicDeleteDao<I, O>,
-        BasicInsertDao<I, O>, BasicSelectDao<I, O>, BasicSelectListDao<I, O>,
-        BasicSelectPagedListDao<I, O>, BasicUpdateDao<I, O> {
+public class BasicDaoAdapter<T> implements BasicDeleteDao<T, Integer>,
+        BasicInsertDao<T, Integer>, BasicSelectDao<T, T>,
+        BasicSelectListDao<T, T>, BasicSelectPagedListDao<T, T>,
+        BasicUpdateDao<T, Integer> {
 
     /**
      * 异常信息
@@ -30,66 +26,55 @@ public class BasicDaoAdapter<I, O> implements BasicDeleteDao<I, O>,
     private static final String EXCEPTION_MESSAGE = "默认实现类，不支持此方法。";
 
     /**
-     * @see net.loyintean.blog.sixgod.dao.BasicUpdateDao#update(java.lang.Object)
      */
     @Override
-    public O update(I param) {
-        throw new UnsupportedOperationException(
-            BasicDaoAdapter.EXCEPTION_MESSAGE);
+    public Integer update(T param) {
+        throw new UnsupportedOperationException(BasicDaoAdapter
+                .EXCEPTION_MESSAGE);
 
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.dao.BasicSelectPagedListDao
-     *      #selectTotalCount(java.lang.Object)
      */
     @Override
-    public long selectTotalCount(I param) {
-        throw new UnsupportedOperationException(
-            BasicDaoAdapter.EXCEPTION_MESSAGE);
+    public long selectTotalCount(T param) {
+        throw new UnsupportedOperationException(BasicDaoAdapter
+                .EXCEPTION_MESSAGE);
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.dao.BasicSelectListDao
-     *      #selectList(java.lang.Object)
      */
     @Override
-    public List<O> selectList(I param) {
-        throw new UnsupportedOperationException(
-            BasicDaoAdapter.EXCEPTION_MESSAGE);
+    public List<T> selectList(T param) {
+        throw new UnsupportedOperationException(BasicDaoAdapter
+                .EXCEPTION_MESSAGE);
 
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.dao.BasicSelectDao
-     *      #select(java.lang.Object)
      */
     @Override
-    public O select(I param) {
-        throw new UnsupportedOperationException(
-            BasicDaoAdapter.EXCEPTION_MESSAGE);
+    public T select(T param) {
+        throw new UnsupportedOperationException(BasicDaoAdapter
+                .EXCEPTION_MESSAGE);
 
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.dao.BasicInsertDao
-     *      #insert(java.lang.Object)
      */
     @Override
-    public O insert(I param) {
-        throw new UnsupportedOperationException(
-            BasicDaoAdapter.EXCEPTION_MESSAGE);
+    public Integer insert(T param) {
+        throw new UnsupportedOperationException(BasicDaoAdapter
+                .EXCEPTION_MESSAGE);
 
     }
 
     /**
-     * @see net.loyintean.blog.sixgod.dao.BasicDeleteDao
-     *      #delete(java.lang.Object)
      */
     @Override
-    public O delete(I param) {
-        throw new UnsupportedOperationException(
-            BasicDaoAdapter.EXCEPTION_MESSAGE);
+    public Integer delete(T param) {
+        throw new UnsupportedOperationException(BasicDaoAdapter
+                .EXCEPTION_MESSAGE);
 
     }
 

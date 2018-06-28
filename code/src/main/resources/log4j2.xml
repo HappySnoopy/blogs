@@ -2,7 +2,7 @@
 <Configuration monitorInterval="180">
 
 	<properties>
-		<property name="LOG_HOME">D:\apache-tomcat-9.0.0.M22\logs</property>
+		<property name="LOG_HOME">E:\logs</property>
 		<property name="AUDIT_PATTERN">
 			%-5p^|%d{yyyy-MM-dd
 			HH:mm:ss,SSS}^|thread^|%m%n

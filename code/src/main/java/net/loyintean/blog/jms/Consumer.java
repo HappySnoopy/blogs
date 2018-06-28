@@ -21,6 +21,7 @@ public class Consumer implements MessageListener {
     public void onMessage(Message message) {
 
         TextMessage textMessage = (TextMessage) message;
+        
 
         try {
             String threadName = Thread.currentThread().getName();
