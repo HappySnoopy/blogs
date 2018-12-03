@@ -2,7 +2,21 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/jms.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/rest/RestApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/cache/SpringConfig4Cache.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/eureka/EurekaServerApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/cache/CacheApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/jms/consumer/JmsConsumerApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/feign/FeignApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/jms/boot/JmsBootApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/serversentevent/ServerSentEventApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/jms/producer/JmsProducerApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/redislock/redisson/RedicConfig.java</file>
+        </fileset>
+      </configuration>
     </facet>
     <facet type="web" name="Web">
       <configuration>
@@ -233,5 +247,11 @@
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.htmlparser:htmlparser:2.1" level="project" />
     <orderEntry type="library" name="Maven: org.htmlparser:htmllexer:2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.rocketmq:rocketmq-client:4.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.rocketmq:rocketmq-common:4.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.rocketmq:rocketmq-remoting:4.3.2" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.51" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.rocketmq:rocketmq-logging:4.3.2" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-tcnative-boringssl-static:1.1.33.Fork26" level="project" />
   </component>
 </module>
