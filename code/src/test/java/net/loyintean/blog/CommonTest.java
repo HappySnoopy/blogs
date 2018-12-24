@@ -32,4 +32,13 @@ public class CommonTest {
         }
         System.out.println("end");
     }
+
+    @Test
+    public void test(){
+        String value = "175464815.2154354";
+
+        Double d = Double.parseDouble(value);
+
+        System.out.println(d.toString());
+    }
 }
