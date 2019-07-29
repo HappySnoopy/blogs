@@ -6,15 +6,14 @@ package net.loyintean.blog.jms.consumer;
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
 
+import net.loyintean.blog.serversentevent.ServerSentEventApplication;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.activemq.command.ActiveMQTopic;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.embedded
-        .ConfigurableEmbeddedServletContainer;
-import org.springframework.boot.context.embedded
-        .EmbeddedServletContainerCustomizer;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
@@ -28,7 +27,7 @@ import org.springframework.jms.connection.CachingConnectionFactory;
 @EnableJms
 @SpringBootApplication
 public class JmsConsumerApplication
-        implements EmbeddedServletContainerCustomizer {
+        extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(JmsConsumerApplication.class, args);
@@ -72,13 +71,16 @@ public class JmsConsumerApplication
     }
 
     /**
+     * 外置tomcat的初始化
+     *
      * @author linjun
-     * @since 2017年11月2日
-     * @param container
-     * @see org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer#customize(org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer)
+     * @since 2017年7月3日
+     * @param application
+     * @return
      */
     @Override
-    public void customize(ConfigurableEmbeddedServletContainer container) {
-        container.setPort(8081);
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder
+                                                         application) {
+        return application.sources(ServerSentEventApplication.class);
     }
 }

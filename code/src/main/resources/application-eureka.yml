@@ -8,7 +8,7 @@ eureka:
 #    fetchRegistry: false
 #    serviceUrl:
 #      defaultZone: http://10.255.33.207:8080/eureka,http://10.255.33.208:8080/eureka,http://10.255.33.209:8080/eureka
-      
+
 feign:
   client:
     config:
@@ -28,7 +28,7 @@ hystrix:
       execution:
         timeout:
           enabled: false
-          
+
 ribbon:
   eager-load:
     enabled: true
