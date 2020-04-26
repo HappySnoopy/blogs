@@ -3,12 +3,14 @@
  */
 package net.loyintean.blog.rest.server;
 
+import net.loyintean.blog.repay.Result4Calculate;
+import net.loyintean.blog.repay.Result4Repay;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.loyintean.blog.repay.Result4Repay;
+import java.math.BigDecimal;
 
 /**
  * @author linjun
@@ -23,13 +25,16 @@ public class TestController {
     public Result4Repay timeOut() {
 
         System.out.println("timeout start");
-        try {
-            Thread.sleep(1000000000000l);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Result4Repay result4Repay = new Result4Repay();
+        result4Repay.setOverdue(new Result4Calculate());
+        result4Repay.setCurrent(new Result4Calculate());
+        result4Repay.setAdvance(new Result4Calculate());
+        result4Repay.setBalance(BigDecimal.ZERO);
+        result4Repay.setFrozenBalance(BigDecimal.ZERO);
+        result4Repay.setTotal(BigDecimal.ZERO);
+        result4Repay.setCanDoAdvanceA(new Result4Calculate());
 
-        return null;
+        return result4Repay;
 
     }
 }
