@@ -1,48 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" version="4">
-  <component name="FacetManager">
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/jms.xml</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/rest/RestApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/cache/SpringConfig4Cache.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/eureka/EurekaServerApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/cache/CacheApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/jms/consumer/JmsConsumerApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/feign/FeignApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/jms/boot/JmsBootApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/serversentevent/ServerSentEventApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/jms/producer/JmsProducerApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/redislock/redisson/RedicConfig.java</file>
-        </fileset>
-        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/jms.xml</file>
-        </fileset>
-        <fileset id="fileset3" name="Spring Application Context (3)" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/scheduer/SchedulerApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/loyintean/blog/paramname/ParamNameApplication.java</file>
-        </fileset>
-      </configuration>
-    </facet>
-    <facet type="web" name="Web">
-      <configuration>
-        <webroots />
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-        </sourceRoots>
-      </configuration>
-    </facet>
-  </component>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

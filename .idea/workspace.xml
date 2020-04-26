@@ -23,451 +23,18 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb75aafb-6da7-4276-94e2-cbb7ac3b1f7c" name="Default" comment="拆分子模块，准备重构">
-      <change afterPath="$PROJECT_DIR$/code/blog-old/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/file/SqlGenerater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/file/SqlGeneraterByIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/databuilder/DataBuilderTest.java" afterDir="false" />
+    <list default="true" id="cb75aafb-6da7-4276-94e2-cbb7ac3b1f7c" name="Default" comment="解决编译问题">
+      <change afterPath="$PROJECT_DIR$/code/blog-old/blog-old.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_51.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_andrewoma_dexx_dexx_collections_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vlsi_compactmap_compactmap_1_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_lmax_disruptor_3_3_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_10_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_9_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_java8_9_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_9_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_10_5_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_12_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_24_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_24_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_24_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_24_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_24_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_24_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_tcnative_boringssl_static_1_1_33_Fork26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_24_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_24_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_24_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_1_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_stream_2_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_cache_cache_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_jms_javax_jms_api_2_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_activemq_activemq_broker_5_15_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_activemq_activemq_client_5_15_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_activemq_activemq_openwire_legacy_5_15_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_j2ee_management_1_1_spec_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_10_FINAL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_10_FINAL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_10_FINAL.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_rocketmq_rocketmq_client_4_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_rocketmq_rocketmq_common_4_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_rocketmq_rocketmq_logging_4_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_rocketmq_rocketmq_remoting_4_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_5_3_beta.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_fusesource_hawtbuf_hawtbuf_1_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_17_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_9_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_htmlparser_htmllexer_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_htmlparser_htmlparser_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_redisson_redisson_3_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_10_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_activemq_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j2_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_core_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_server_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_eureka_1_4_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_feign_1_4_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_1_4_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_0_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jms_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/advance/Apply.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/advance/Apply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/advance/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/advance/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/advancereserve/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/advancereserve/EmailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/advancereserve/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/advancereserve/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/bae/repay/Repayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/bae/repay/Repayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/cache/BasicOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/cache/BasicOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/cache/CacheApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/cache/CacheApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/cache/CacheErrorHandler4Retry.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/cache/CacheErrorHandler4Retry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/cache/CacheInterceptor4Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/cache/CacheInterceptor4Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/cache/SpringConfig4Cache.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/cache/SpringConfig4Cache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/cache/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/cache/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/cicadas/Forest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/cicadas/Forest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/cicadas/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/cicadas/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/databuilder/DataBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/databuilder/DataBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/databuilder/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/databuilder/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/druid/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/druid/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/druid/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/druid/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/dynamicenum/DayFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/dynamicenum/DayFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/dynamicenum/DynamicEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/dynamicenum/DynamicEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/dynamicenum/EnumBuster.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/dynamicenum/EnumBuster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/dynamicenum/ReflectionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/dynamicenum/ReflectionHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/dynamicenum/TestEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/dynamicenum/TestEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/dynamicenum/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/dynamicenum/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/eureka/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/eureka/EurekaServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/eureka/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/eureka/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/feign/AuthClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/AuthClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/feign/FeignApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/FeignApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/feign/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/file/CsvParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/file/CsvParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/file/FileCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/file/FileCopy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/file/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/file/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/file/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/file/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/fileimport/CellValueTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/fileimport/CellValueTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/fileimport/CellValueTransfer4Num.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/fileimport/CellValueTransfer4Num.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/fileimport/CellValueTransfer4Str.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/fileimport/CellValueTransfer4Str.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/fileimport/ExcelDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/fileimport/ExcelDataParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/fileimport/ExcelHeaderValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/fileimport/ExcelHeaderValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/fileimport/ExcelImportHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/fileimport/ExcelImportHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/fileimport/FileImportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/fileimport/FileImportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/fileimport/FileImportServiceAsExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/fileimport/FileImportServiceAsExcel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/filesize/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/filesize/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/filesize/Description.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/filesize/Description.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/filesize/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/filesize/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/forkjoin/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/forkjoin/Fibonacci.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/forkjoin/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/forkjoin/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/grouptree/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/grouptree/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/grouptree/GroupTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/grouptree/GroupTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/grouptree/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/grouptree/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/gson/ApplyConfimBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/gson/ApplyConfimBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/gson/ApplyConfimBeanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/gson/ApplyConfimBeanTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/ip138/Spider4Ip138.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/ip138/Spider4Ip138.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/ip138/Spider4Ip138Concurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/ip138/Spider4Ip138Concurrency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/ip138/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/ip138/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/ConcurrencyConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/ConcurrencyConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/boot/Consumer4Boot.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/boot/Consumer4Boot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/boot/JmsBootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/boot/JmsBootApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/boot/Producer4Boot.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/boot/Producer4Boot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/boot/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/boot/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/consumer/Consumer4Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/consumer/Consumer4Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/consumer/Consumer4Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/consumer/Consumer4Topic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/consumer/Consumer4VirtualTopic.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/consumer/Consumer4VirtualTopic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/consumer/JmsConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/consumer/JmsConsumerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/consumer/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/consumer/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/manage/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/manage/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/manage/LinjunDestinationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/manage/LinjunDestinationInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/manage/LinjunDetinationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/manage/LinjunDetinationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/manage/PlugIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/manage/PlugIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/manage/RemoveDestination.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/manage/RemoveDestination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/manage/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/manage/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/producer/JmsProducerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/producer/JmsProducerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/producer/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/producer/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/jms/producer/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/jms/producer/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/log/LF.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/log/LF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/log/LogFormatterHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/log/LogFormatterHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/overdue/OverdueCalculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/overdue/OverdueCalculate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/overdue/RestResult4OverdueCalculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/overdue/RestResult4OverdueCalculate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/overdue/XlsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/overdue/XlsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/overdue/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/overdue/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/paramname/Param.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/paramname/Param.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/paramname/ParamNameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/paramname/ParamNameApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/paramname/ParamNameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/paramname/ParamNameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/poetry/ChineseNewRhyme.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/poetry/ChineseNewRhyme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/poetry/FlatWaterRhyme.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/poetry/FlatWaterRhyme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/poetry/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/poetry/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/poetry/Rhyme.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/poetry/Rhyme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/poetry/RhymeChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/poetry/RhymeChooser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/poetry/WordForestFormalRhyme.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/poetry/WordForestFormalRhyme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/poetry/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/poetry/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/profile/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/profile/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/redislock/DistributedLockManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/redislock/DistributedLockManger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/redislock/redisson/AquiredLockWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/redislock/redisson/AquiredLockWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/redislock/redisson/DistributedLocker.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/redislock/redisson/DistributedLocker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/redislock/redisson/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/redislock/redisson/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/redislock/redisson/RedicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/redislock/redisson/RedicConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/redislock/redisson/RedisLocker.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/redislock/redisson/RedisLocker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/redislock/redisson/RedissonConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/redislock/redisson/RedissonConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/redislock/redisson/UnableToAquireLockException.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/redislock/redisson/UnableToAquireLockException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/repay/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/repay/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/repay/RestResult4Repay.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/repay/RestResult4Repay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/repay/Result4Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/repay/Result4Calculate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/repay/Result4Repay.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/repay/Result4Repay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/repay/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/repay/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/reserve/ReserveRepay.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/reserve/ReserveRepay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/reserve/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/reserve/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/RestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/RestApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/RetryConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/RetryConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/client/RestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/client/RestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/client/RestClient4Async.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/client/RestClient4Async.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/client/RestClient4Retry.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/client/RestClient4Retry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/client/RestClient4Wrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/client/RestClient4Wrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/client/RestClientAsDefault.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/client/RestClientAsDefault.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/client/RestClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/client/RestClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/client/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/client/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/exception/RetryFailOverTimesException.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/exception/RetryFailOverTimesException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/exception/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/exception/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rest/server/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rest/server/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rocketmq/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rocketmq/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/rocketmq/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/rocketmq/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/scheduer/FatherScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/scheduer/FatherScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/scheduer/SchedulerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/scheduer/SchedulerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/scheduer/SonSchedulerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/scheduer/SonSchedulerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/scheduer/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/scheduer/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/serversentevent/BlogSseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/serversentevent/BlogSseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/serversentevent/ServerSentEventApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/serversentevent/ServerSentEventApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/serversentevent/SseControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/serversentevent/SseControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/serversentevent/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/serversentevent/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/serversentevent/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/serversentevent/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/BasicDeleteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/BasicDeleteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/BasicInsertDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/BasicInsertDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/BasicSelectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/BasicSelectDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/BasicSelectListDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/BasicSelectListDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/BasicSelectPagedListDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/BasicSelectPagedListDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/BasicUpdateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/BasicUpdateDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/impl/BasicDaoAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/impl/BasicDaoAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/impl/BasicDaoByHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/impl/BasicDaoByHibernate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/impl/BasicDaoByMyBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/impl/BasicDaoByMyBatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/impl/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/impl/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dao/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dao/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dto/IdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dto/IdDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dto/ResultDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dto/ResultDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dto/ResultDto4List.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dto/ResultDto4List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dto/ResultDto4PagedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dto/ResultDto4PagedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/dto/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/dto/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/service/BasicDbEditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/service/BasicDbEditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/service/BasicDbQueryListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/service/BasicDbQueryListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/service/BasicDbQueryPagedListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/service/BasicDbQueryPagedListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/service/BasicDbQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/service/BasicDbQueryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/service/BasicDbRemoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/service/BasicDbRemoveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/service/BasicDbSaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/service/BasicDbSaveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/service/impl/BasicDbServiceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/service/impl/BasicDbServiceAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/service/impl/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/service/impl/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/service/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/service/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/web/BasicDbController.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/web/BasicDbController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/web/BasicDbControllerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/web/BasicDbControllerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/web/springmvc/BasicDbController4SpringMvc.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/web/springmvc/BasicDbController4SpringMvc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/sixgod/web/springmvc/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/sixgod/web/springmvc/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/standard/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/standard/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/standard/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/standard/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/task/BaseTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/task/BaseTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/task/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/task/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/test/TestUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/test/TestUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/SheduleByExecutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/SheduleByExecutorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/SheduleByTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/SheduleByTimer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/ThreadByCallable.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/ThreadByCallable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/ThreadByForkJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/ThreadByForkJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/ThreadByRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/ThreadByRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/ThreadByThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/ThreadByThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/ThreadLocah4ThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/ThreadLocah4ThreadPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/ThreadLocal4SubThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/ThreadLocal4SubThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/ThreadPoolByExecutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/ThreadPoolByExecutorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/ThreadWithThreadLocal.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/ThreadWithThreadLocal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/ThreadWithWait.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/ThreadWithWait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/basic/TrafficLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/basic/TrafficLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/thread/communication/CommunicationBySynchornized.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/thread/communication/CommunicationBySynchornized.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/transform/FromVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/transform/FromVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/transform/ToVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/transform/ToVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/transform/Transform.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/transform/Transform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/transform/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/transform/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/zk/lock/DistributedLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/zk/lock/DistributedLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/zk/lock/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/zk/lock/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/net/loyintean/blog/zk/lock/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/zk/lock/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/resources/application-eureka.yml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/resources/application-eureka.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/resources/jms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/resources/jms.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/CommonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/CommonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/cache/BasicOperatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/cache/BasicOperatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/feign/AuthClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/feign/AuthClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/fileimport/ExcelModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/fileimport/ExcelModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/fileimport/FileImportServiceAsExcelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/fileimport/FileImportServiceAsExcelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/fileimport/test.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/fileimport/test.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/fileimport/test_blank_row.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/fileimport/test_blank_row.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/fileimport/test_wrong_header.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/fileimport/test_wrong_header.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/fileimport/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/fileimport/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/jms/JmsMainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/jms/JmsMainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/jms/JmsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/jms/JmsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/jms/boot/Jms4BootTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/jms/boot/Jms4BootTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/log/Log4jTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/log/Log4jTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/number/NumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/number/NumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/poetry/NodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/poetry/NodeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/rest/client/RestClient4AsyncTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/rest/client/RestClient4AsyncTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/rest/client/RestClient4RetryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/rest/client/RestClient4RetryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/rest/client/RestClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/rest/client/RestClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/sixgod/SpringMvcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/sixgod/SpringMvcTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/sixgod/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/sixgod/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/sixgod/web/FirstController.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/sixgod/web/FirstController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog/sixgod/web/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/blog/sixgod/web/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/leetcode/BinaryTreeRightSideView.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/leetcode/BinaryTreeRightSideView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/leetcode/PeekingIteratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/leetcode/PeekingIteratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/leetcode/PopulatingNextRightPointersInEachNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/leetcode/PopulatingNextRightPointersInEachNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/leetcode/PrintFoobarAlternately.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/leetcode/PrintFoobarAlternately.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/leetcode/PrintInOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/leetcode/PrintInOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/java/net/loyintean/leetcode/PrintZeroEvenOdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/java/net/loyintean/leetcode/PrintZeroEvenOdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/resources/log4j2.component.properties" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/resources/log4j2.component.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/src/test/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/src/test/resources/log4j2.xml" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/code/target/" />
+    <ignored path="$PROJECT_DIR$/code/blog-old/target/" />
+    <ignored path="out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -496,6 +63,19 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -506,6 +86,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>feign</find>
+      <find>openfei</find>
+      <find>10.131.16.40</find>
+      <find>openfeign</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -514,6 +102,16 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/code/pom.xml" />
+        <option value="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/AuthClient.java" />
+        <option value="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/FeignApplication.java" />
+        <option value="$PROJECT_DIR$/code/.gitignore" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -530,6 +128,22 @@
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="blog" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="blog" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectId" id="1U60JOSuf5hJkiuzo1Uc2iH9oFx" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -555,7 +169,68 @@
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <showMembers ProjectPane="false" />
+      <autoscrollToSource ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="blog" type="58d84e3e:PackageViewProjectNode" />
+              <item name="blog" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="blog" type="58d84e3e:PackageViewProjectNode" />
+              <item name="blog" type="616d4139:PackageViewModuleNode" />
+              <item name="net.loyintean.blog" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="blog" type="58d84e3e:PackageViewProjectNode" />
+              <item name="blog" type="616d4139:PackageViewModuleNode" />
+              <item name="net.loyintean.blog" type="1f31426a:PackageElementNode" />
+              <item name="bae.repay" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="blog" type="58d84e3e:PackageViewProjectNode" />
+              <item name="blog" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="code" type="cbb8eebc:String" user="code" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -579,7 +254,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -625,11 +300,14 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.DataBuilderTest.test">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -735,22 +413,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.ParamNameApplication" />
-      <item itemvalue="Spring Boot.RestApplication" />
-      <item itemvalue="Spring Boot.CacheApplication" />
       <item itemvalue="JUnit.BinaryTreeRightSideView.test" />
       <item itemvalue="JUnit.ApplyConfimBeanTest.test" />
       <item itemvalue="JUnit.DataBuilderTest.test" />
+      <item itemvalue="Spring Boot.ParamNameApplication" />
+      <item itemvalue="Spring Boot.RestApplication" />
+      <item itemvalue="Spring Boot.CacheApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -892,6 +570,51 @@
     <option name="localTasksCounter" value="12" />
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31857318" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Structure" order="6" weight="0.39583334" />
+      <window_info id="Maven Projects" order="7" weight="0.3289225" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Run Dashboard" weight="0.3295099" />
+      <window_info anchor="bottom" id="SonarLint" order="0" weight="0.3298687" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32932165" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49630997" weight="0.5954119" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.3998906" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50369006" side_tool="true" weight="0.5119917" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.39624608" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49351853" weight="0.34619394" />
+      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Reviews" order="16" />
+      <window_info anchor="bottom" id="Maven" order="17" weight="0.49530762" />
+      <window_info anchor="right" id="Codota" />
+      <window_info anchor="right" id="News Feed" order="0" />
+      <window_info anchor="right" id="Database" order="1" show_stripe_button="false" weight="0.3291506" />
+      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" show_stripe_button="false" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" show_stripe_button="false" weight="0.32978722" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -901,6 +624,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -944,6 +673,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://E:/m2/repository/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE-sources.jar!/org/springframework/web/client/RestTemplate.java</url>
           <line>723</line>
+          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -962,6 +692,83 @@
       </expression>
     </expressions>
   </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/code/src/main/java/com/company/system/business/user/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/blog-old/blog-old.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4265" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="28" selection-start-column="28" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-openfeign/1.4.4.RELEASE/spring-cloud-starter-openfeign-1.4.4.RELEASE.jar!/META-INF/maven/org.springframework.cloud/spring-cloud-starter-openfeign/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-482" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-core/1.4.4.RELEASE/spring-cloud-netflix-core-1.4.4.RELEASE.jar!/org/springframework/cloud/netflix/feign/FeignClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/blog-old/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/AuthClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/FeignApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+  </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
@@ -978,7 +785,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring</last-edited>
+          <last-edited>Spring (blog-old)|Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -990,6 +797,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Python 3.7 interpreter library</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1013,11 +821,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|blog</last-edited>
+          <last-edited>blog</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1037,6 +846,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: org.springframework:spring-core:5.1.8.RELEASE</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
