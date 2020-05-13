@@ -1,4 +1,4 @@
-package net.loyintean.leetcode;
+package net.loyintean.blog.leetcode;
 
 import org.junit.Test;
 

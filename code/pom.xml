@@ -6,6 +6,7 @@
     <name>blog</name>
     <modules>
         <module>blog-old</module>
+        <module>leetcode</module>
     </modules>
 
     <groupId>net.loyintean</groupId>
