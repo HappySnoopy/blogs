@@ -19,6 +19,8 @@ public class PatternMatchingLcciTest {
         assertFalse(solution.patternMatching("", "x"));
         assertTrue(solution.patternMatching("bbb", "xxxxxx"));
         assertFalse(solution.patternMatching("bbbaa", "xxxxxxy"));
+        assertFalse(
+                solution.patternMatching("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "p"));
 
     }
 }
