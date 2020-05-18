@@ -1,6 +1,5 @@
-package net.loyintean.springmvcbase.bean;
+package net.loyintean.springmvcbase.common.bean;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -14,18 +13,30 @@ import java.io.Serializable;
  * @author 林俊 <junlin8@creditease.cn>
  * @date 2020 -05-18
  */
-@AllArgsConstructor
 @Data
 public abstract class BaseResult<T> implements Serializable {
 
-    public static final String SUCCESS = "0000";
+    protected static final String CODE_SUCCESS = "0000";
 
+    protected static final String MSG_SUCCESS = "调用成功";
+
+    /** The Data. */
+    protected T data;
     /** The Code. */
     private String code;
     /** The Message. */
     private String message;
-    /** The Data. */
-    private T data;
+
+    protected BaseResult(T data) {
+        super();
+        this.code = CODE_SUCCESS;
+        this.message = MSG_SUCCESS;
+        this.data = data;
+    }
+
+    public boolean isSuccess() {
+        return CODE_SUCCESS.equals(code);
+    }
 
     /**
      * To string string.
