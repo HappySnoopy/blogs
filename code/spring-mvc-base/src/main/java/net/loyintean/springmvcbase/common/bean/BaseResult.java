@@ -30,6 +30,14 @@ public abstract class BaseResult implements Serializable {
         this.message = MSG_SUCCESS;
     }
 
+
+    protected BaseResult(String c, String m) {
+        super();
+        this.code = c;
+        this.message = m;
+    }
+
+
     public boolean isSuccess() {
         return CODE_SUCCESS.equals(code);
     }

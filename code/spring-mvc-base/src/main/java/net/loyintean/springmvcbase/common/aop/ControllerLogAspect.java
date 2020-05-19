@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.Delegate;
 import lombok.extern.slf4j.Slf4j;
+import net.loyintean.springmvcbase.common.exception.BizException;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -19,9 +20,9 @@ import java.util.stream.Stream;
 /**
  * The type ControllerLogAspect.
  * <p>
- * TODO linjun 2020-05-18  找个接口把各种Mapping注解统一起来
+ * DONE 2020-05-18  找个接口把各种Mapping注解统一起来
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2020 -05-18
  */
 @Aspect
@@ -120,19 +121,34 @@ public class ControllerLogAspect {
         joinPoint.getTarget();
         joinPoint.getArgs();
         Object result = null;
-        Throwable e = null;
+        Optional<Throwable> e = Optional.empty();
         try {
             result = joinPoint.proceed();
             return result;
         } catch (Throwable throwable) {
-            e = throwable;
-            throw e;
+            e = Optional.of(throwable);
+            throw throwable;
         } finally {
             long end = System.currentTimeMillis();
 
-            log.info("访问路径：{}; 类和方法：{}#{}(), 参数：{}, 结果:{}, 用时:{} ms, 异常（可能有）:{}", parseUrl(joinPoint, mapping),
-                    joinPoint.getTarget().getClass(), joinPoint.getSignature().getName(), parseArgs(joinPoint), result,
-                    (end - start), e);
+            if (e.isPresent()) {
+
+                if (e.filter(t -> t instanceof BizException).isPresent()) {
+                    log.warn("访问路径：{}; 类和方法：{}#{}(), 参数：{}, 结果:{}, 用时:{} ms，发生业务异常。", parseUrl(joinPoint, mapping),
+                            joinPoint.getTarget().getClass(), joinPoint.getSignature().getName(), parseArgs(joinPoint),
+                            result, end - start, e.get());
+                } else {
+                    log.error("访问路径：{}; 类和方法：{}#{}(), 参数：{}, 结果:{}, 用时:{} ms，发生系统异常。", parseUrl(joinPoint, mapping),
+                            joinPoint.getTarget().getClass(), joinPoint.getSignature().getName(), parseArgs(joinPoint),
+                            result, end - start, e.get());
+                }
+
+            } else {
+                // 没有异常，用info
+                log.info("访问路径：{}; 类和方法：{}#{}(), 参数：{}, 结果:{}, 用时:{} ms", parseUrl(joinPoint, mapping),
+                        joinPoint.getTarget().getClass(), joinPoint.getSignature().getName(), parseArgs(joinPoint),
+                        result, end - start);
+            }
         }
 
     }
@@ -184,8 +200,8 @@ public class ControllerLogAspect {
                 // 这是最常见的情况
                 // 类上面和方法上面都配置了
                 final Set<String> finalUrlOnClass = uriOnClass;
-                uriBuilder
-                        .append(uriOnMethod.stream().flatMap(m -> finalUrlOnClass.stream().map(c -> combineUrl(c, m))).collect(Collectors.joining(";")));
+                uriBuilder.append(uriOnMethod.stream().flatMap(m -> finalUrlOnClass.stream().map(c -> combineUrl(c, m)))
+                        .collect(Collectors.joining(";")));
             } else if (!urlOnClassEmpty) {
                 // 这种稍微少见一点：类上配置了，方法上没有配置
                 uriBuilder.append(String.join(";", uriOnClass));
