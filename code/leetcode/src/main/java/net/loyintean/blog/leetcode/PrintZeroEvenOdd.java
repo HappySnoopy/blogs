@@ -7,7 +7,7 @@ import java.util.function.IntConsumer;
 /**
  * https://leetcode-cn.com/problems/print-zero-even-odd/
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2020 -04-24
  */
 public class PrintZeroEvenOdd {
@@ -46,7 +46,7 @@ public class PrintZeroEvenOdd {
     /**
      * The type ZeroEvenOdd.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -04-24
      */
     private class ZeroEvenOdd {

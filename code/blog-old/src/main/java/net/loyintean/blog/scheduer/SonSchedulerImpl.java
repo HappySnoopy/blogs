@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * The type Son scheduler.
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2019 -07-29
  */
 @Component

@@ -7,7 +7,7 @@ import java.util.Queue;
 /**
  * https://leetcode-cn.com/problems/binary-tree-right-side-view/submissions/
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2020 -04-22
  */
 class BinaryTreeRightSideView {
@@ -15,7 +15,7 @@ class BinaryTreeRightSideView {
     /**
      * The type Solution.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -04-22
      */
     static class Solution {
@@ -133,7 +133,7 @@ class BinaryTreeRightSideView {
     /**
      * The type Solution1.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-13
      */
     static class Solution1 extends Solution {
@@ -181,7 +181,7 @@ class BinaryTreeRightSideView {
     /**
      * The type Solution2.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-13
      */
     static class Solution2 extends Solution {
@@ -240,7 +240,7 @@ class BinaryTreeRightSideView {
     /**
      * The type TreeNode.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -04-22
      */
     static class TreeNode {

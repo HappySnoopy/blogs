@@ -5,7 +5,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * https://leetcode-cn.com/problems/print-in-order/
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2020 -04-24
  */
 public class PrintInOrder {
@@ -14,7 +14,7 @@ public class PrintInOrder {
     /**
      * The type Foo.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -04-24
      */
     private class Foo {

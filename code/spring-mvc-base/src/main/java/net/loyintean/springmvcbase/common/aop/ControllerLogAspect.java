@@ -131,18 +131,16 @@ public class ControllerLogAspect {
         } finally {
             long end = System.currentTimeMillis();
 
-            if (e.isPresent()) {
-
-                if (e.filter(t -> t instanceof BizException).isPresent()) {
-                    log.warn("访问路径：{}; 类和方法：{}#{}(), 参数：{}, 结果:{}, 用时:{} ms，发生业务异常。", parseUrl(joinPoint, mapping),
-                            joinPoint.getTarget().getClass(), joinPoint.getSignature().getName(), parseArgs(joinPoint),
-                            result, end - start, e.get());
-                } else {
-                    log.error("访问路径：{}; 类和方法：{}#{}(), 参数：{}, 结果:{}, 用时:{} ms，发生系统异常。", parseUrl(joinPoint, mapping),
-                            joinPoint.getTarget().getClass(), joinPoint.getSignature().getName(), parseArgs(joinPoint),
-                            result, end - start, e.get());
-                }
-
+            if (e.filter(t -> t instanceof BizException).isPresent()) {
+                // 有业务异常
+                log.warn("访问路径：{}; 类和方法：{}#{}(), 参数：{}, 结果:{}, 用时:{} ms，发生业务异常。", parseUrl(joinPoint, mapping),
+                        joinPoint.getTarget().getClass(), joinPoint.getSignature().getName(), parseArgs(joinPoint),
+                        result, end - start, e.get());
+            } else if (e.isPresent()) {
+                // 有非业务异常，即有系统异常
+                log.error("访问路径：{}; 类和方法：{}#{}(), 参数：{}, 结果:{}, 用时:{} ms，发生系统异常。", parseUrl(joinPoint, mapping),
+                        joinPoint.getTarget().getClass(), joinPoint.getSignature().getName(), parseArgs(joinPoint),
+                        result, end - start, e.get());
             } else {
                 // 没有异常，用info
                 log.info("访问路径：{}; 类和方法：{}#{}(), 参数：{}, 结果:{}, 用时:{} ms", parseUrl(joinPoint, mapping),
@@ -269,7 +267,6 @@ public class ControllerLogAspect {
     /**
      * The interface Mapping.
      *
-     * @author 林俊 <junlin8@creditease.cn>
      * @date 2020 -05-18
      */
     private interface Mapping {
@@ -291,7 +288,7 @@ public class ControllerLogAspect {
     /**
      * The type Mapping4Request.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-18
      */
     @AllArgsConstructor(access = AccessLevel.PRIVATE)
@@ -304,7 +301,7 @@ public class ControllerLogAspect {
     /**
      * The type Mapping4PostRequest.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-18
      */
     @AllArgsConstructor(access = AccessLevel.PRIVATE)
@@ -317,7 +314,7 @@ public class ControllerLogAspect {
     /**
      * The type Mapping4GetRequest.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-18
      */
     @AllArgsConstructor(access = AccessLevel.PRIVATE)
@@ -330,7 +327,7 @@ public class ControllerLogAspect {
     /**
      * The type Mapping4PutRequest.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-18
      */
     @AllArgsConstructor(access = AccessLevel.PRIVATE)
@@ -343,7 +340,7 @@ public class ControllerLogAspect {
     /**
      * The type Mapping4DeleteRequest.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-18
      */
     @AllArgsConstructor(access = AccessLevel.PRIVATE)
@@ -356,7 +353,7 @@ public class ControllerLogAspect {
     /**
      * The type Mapping4PatchRequest.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-18
      */
     private static class Mapping4PatchRequest implements Mapping {

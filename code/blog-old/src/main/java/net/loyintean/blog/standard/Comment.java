@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 /**
  * 处理代码中的行尾注释
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2019 -11-20
  */
 public class Comment {

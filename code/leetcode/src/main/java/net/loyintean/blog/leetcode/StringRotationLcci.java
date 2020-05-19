@@ -3,7 +3,7 @@ package net.loyintean.blog.leetcode;
 /**
  * https://leetcode-cn.com/problems/string-rotation-lcci/
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2020 -05-15
  */
 public class StringRotationLcci {
@@ -21,7 +21,7 @@ public class StringRotationLcci {
      * <p>
      * 你能只调用一次检查子串的方法吗？
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-15
      */
     class Solution {

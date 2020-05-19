@@ -11,7 +11,7 @@ import java.util.Objects;
  * 链接：https://leetcode-cn.com/problems/pattern-matching-lcci
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2020 -05-14
  * @see <a href="https://leetcode-cn.com/problems/pattern-matching-lcci/">模式匹配</a>
  */
@@ -20,7 +20,7 @@ public class PatternMatchingLcci {
     /**
      * The type Solution.
      *
-     * @author 林俊 <junlin8@creditease.cn>
+     * @author Snoopy
      * @date 2020 -05-14
      */
     class Solution {

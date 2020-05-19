@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 /**
  * https://leetcode-cn.com/problems/print-foobar-alternately/
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2020 -04-24
  */
 public class PrintFoobarAlternately {

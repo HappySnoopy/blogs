@@ -5,7 +5,7 @@ package net.loyintean.blog.leetcode;
  * <p>
  * 请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2020 -05-14
  * @see <a href="https://leetcode-cn.com/problems/delete-node-in-a-linked-list/>删除链表中的节点</a>
  */

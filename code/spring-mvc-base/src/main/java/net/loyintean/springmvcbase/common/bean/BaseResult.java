@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * The type Result.
  *
- * @author 林俊 <junlin8@creditease.cn>
+ * @author Snoopy
  * @date 2020 -05-18
  */
 @Data
