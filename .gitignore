@@ -4,3 +4,8 @@
 /code/target
 /code/.settings
 /.idea
+"E:\\logs/"
+leetcode/target/generated-sources/
+leetcode/target/generated-test-sources/
+spring-mvc-base/target/generated-sources/
+spring-mvc-base/target/generated-test-sources/

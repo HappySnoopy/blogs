@@ -6,7 +6,9 @@ import org.apache.commons.lang3.RandomUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,27 +29,11 @@ import java.util.stream.Stream;
 public class DataBuilder<T> {
 
     private static final Logger log = LoggerFactory.getLogger(DataBuilder.class);
-    private static final Map<Predicate<Field>, Function<Field, Object>> global = new LinkedHashMap<>();
-
-    static {
-        global.put(field -> Integer.class.equals(field.getType()), field -> RandomUtils.nextInt());
-        global.put(field -> Long.class.equals(field.getType()), field -> RandomUtils.nextLong());
-        global.put(field -> String.class.equals(field.getType()), field -> RandomStringUtils.randomAlphabetic(16));
-        global.put(field -> Boolean.class.equals(field.getType()), field -> RandomUtils.nextBoolean());
-        global.put(field -> field.getType().isEnum(), field -> {
-            // 如果是枚举，随机选一个
-            @SuppressWarnings("rawtypes")
-            List<Enum> enumList = EnumUtils.getEnumList((Class<Enum>) field.getType());
-            return enumList.get(RandomUtils.nextInt(0, enumList.size()));
-        });
-    }
 
     /**
      * 要构建的数据实例
      */
     private T target;
-    private Map<Predicate<Field>, Function<Field, Object>> byName = new LinkedHashMap<>();
-    private Map<Predicate<Field>, Function<Field, Object>> byType = new LinkedHashMap<>();
 
     /**
      * @param targetClz the target clz
@@ -71,6 +57,39 @@ public class DataBuilder<T> {
         return new DataBuilder<>(targetClz);
     }
 
+
+    private static final Map<Predicate<Field>, Function<Field, Object>> GLOBAL = new LinkedHashMap<>();
+
+    static {
+        GLOBAL.put(field -> Integer.class.equals(field.getType()), field -> RandomUtils.nextInt());
+        GLOBAL.put(field -> Long.class.equals(field.getType()), field -> RandomUtils.nextLong());
+        GLOBAL.put(field -> String.class.equals(field.getType()), field -> RandomStringUtils.randomAlphabetic(16));
+        GLOBAL.put(field -> Boolean.class.equals(field.getType()), field -> RandomUtils.nextBoolean());
+        GLOBAL.put(field -> field.getType().isEnum(), field -> {
+            // 如果是枚举，随机选一个
+            @SuppressWarnings("rawtypes")
+            List<Enum> enumList = EnumUtils.getEnumList((Class<Enum>) field.getType());
+            return enumList.get(RandomUtils.nextInt(0, enumList.size()));
+        });
+
+        // 加一个垫底的。只要有默认构造方法，就用DataBuilder递归式地构造构造一个出来
+        GLOBAL.put(field -> {
+            Constructor<?> constructor = field.getType().getConstructors()[0];
+
+            try {
+                constructor.newInstance();
+                return true;
+            } catch (IllegalAccessException | InstantiationException | InvocationTargetException e) {
+                return false;
+            }
+
+        }, field -> DataBuilder.of(field.getDeclaringClass()).build());
+
+    }
+
+    private Map<Predicate<Field>, Function<Field, Object>> byName = new LinkedHashMap<>();
+    private Map<Predicate<Field>, Function<Field, Object>> byType = new LinkedHashMap<>();
+
     /**
      * Do build.
      *
@@ -78,7 +97,7 @@ public class DataBuilder<T> {
      */
     private void doBuild(Field field) {
 
-        Object value = Stream.of(byName, byType, global)
+        Object value = Stream.of(byName, byType, GLOBAL)
                 .flatMap(m -> m.entrySet().stream())
                 .filter(e -> e.getKey().test(field))
                 .map(e -> e.getValue().apply(field))
