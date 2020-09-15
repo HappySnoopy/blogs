@@ -6,9 +6,7 @@ import org.apache.commons.lang3.RandomUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -73,17 +71,8 @@ public class DataBuilder<T> {
         });
 
         // 加一个垫底的。只要有默认构造方法，就用DataBuilder递归式地构造构造一个出来
-        GLOBAL.put(field -> {
-            Constructor<?> constructor = field.getType().getConstructors()[0];
-
-            try {
-                constructor.newInstance();
-                return true;
-            } catch (IllegalAccessException | InstantiationException | InvocationTargetException e) {
-                return false;
-            }
-
-        }, field -> DataBuilder.of(field.getDeclaringClass()).build());
+        GLOBAL.put(field -> field.getType().getConstructors()[0].getParameterCount() == 0,
+                field -> DataBuilder.of(field.getDeclaringClass()).build());
 
     }
 
@@ -138,8 +127,13 @@ public class DataBuilder<T> {
         return this;
     }
 
-    public DataBuilder<T> registry(Class<?> fieldName, Function<Field, Object> mapper) {
-        byName.put(f -> f.getType().equals(fieldName), mapper);
+    public DataBuilder<T> registry(Class<?> fieldType, Function<Field, Object> mapper) {
+        byName.put(f -> f.getType().equals(fieldType), mapper);
+        return this;
+    }
+
+    public DataBuilder<T> registry(String fieldName, Object value) {
+        byName.put(f -> f.getName().equals(fieldName), f -> value);
         return this;
     }
 }
