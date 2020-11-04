@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="BuildServerSettings">
     <option name="LOGIN" value="" />
     <option name="SERVER_URL" value="http://buildserver" />
@@ -23,19 +41,18 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb75aafb-6da7-4276-94e2-cbb7ac3b1f7c" name="Default" comment="解决编译问题">
-      <change afterPath="$PROJECT_DIR$/code/blog-old/blog-old.iml" afterDir="false" />
+    <list default="true" id="cb75aafb-6da7-4276-94e2-cbb7ac3b1f7c" name="Default" comment="父子继承关系的一个样例">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/blog-old/blog-old.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/blog-old.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/blog.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/code/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/spring-mvc-base/springmvcbase.iml" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/code/target/" />
-    <ignored path="$PROJECT_DIR$/code/blog-old/target/" />
-    <ignored path="out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,36 +80,16 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="package-info" />
         <option value="JUnit4 Test Class" />
+        <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>feign</find>
-      <find>openfei</find>
-      <find>10.131.16.40</find>
-      <find>openfeign</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -103,23 +100,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/code/pom.xml" />
-        <option value="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/AuthClient.java" />
-        <option value="$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/FeignApplication.java" />
-        <option value="$PROJECT_DIR$/code/.gitignore" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="alwaysUpdateSnapshots" value="true" />
-        <option name="mavenHome" value="E:/software/apache-maven-3.5.3" />
+        <option name="mavenHome" value="/Applications/apache-maven-3.6.1" />
         <option name="printErrorStackTraces" value="true" />
-        <option name="userSettingsFile" value="E:\software\apache-maven-3.5.3\conf\settings.xml" />
+        <option name="userSettingsFile" value="/Applications/apache-maven-3.6.1/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -128,22 +115,6 @@
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="blog" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="blog" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
   </component>
   <component name="ProjectId" id="1U60JOSuf5hJkiuzo1Uc2iH9oFx" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -172,67 +143,12 @@
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <flattenPackages ProjectPane="false" />
-      <showMembers ProjectPane="false" />
-      <autoscrollToSource ProjectPane="false" />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="blog" type="58d84e3e:PackageViewProjectNode" />
-              <item name="blog" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="blog" type="58d84e3e:PackageViewProjectNode" />
-              <item name="blog" type="616d4139:PackageViewModuleNode" />
-              <item name="net.loyintean.blog" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="blog" type="58d84e3e:PackageViewProjectNode" />
-              <item name="blog" type="616d4139:PackageViewModuleNode" />
-              <item name="net.loyintean.blog" type="1f31426a:PackageElementNode" />
-              <item name="bae.repay" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="blog" type="58d84e3e:PackageViewProjectNode" />
-              <item name="blog" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="code" type="cbb8eebc:String" user="code" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -242,44 +158,54 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/code/.gitignore" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/code/src/test/java/net/loyintean/blog" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/code/blog-old/src/test" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/code/blog-old" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="net.loyintean.blog.scheduer" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="net.loyintean.test" />
       <recent name="net.loyintean.blog.databuilder" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="net.loyintean.test" />
       <recent name="net.loyintean.blog.gson" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code/blog-old" />
+      <recent name="$PROJECT_DIR$/code/leetcode" />
+      <recent name="$PROJECT_DIR$/code/spring-mvc-base" />
+      <recent name="$PROJECT_DIR$/code/serial-num" />
+      <recent name="E:\git\blog\code\blog-old\src\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="net.loyintean.blog.standard" />
       <recent name="net.loyintean.blog.databuilder" />
       <recent name="net.loyintean.blog.gson" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\git\blog\code\blog-old\src\test" />
-      <recent name="E:\git\blog\code\blog-old\src\main\resources" />
-      <recent name="E:\git\blog\code\blog-old\src\main\java" />
-      <recent name="E:\git\blog\code\blog-old\src" />
-      <recent name="E:\git\blog\code\src\test\java\net\loyintean" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="net.loyintean.blog.scheduer" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code/serial-num" />
+      <recent name="$PROJECT_DIR$/code" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -288,29 +214,24 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
-  <component name="RunManager" selected="JUnit.DataBuilderTest.test">
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
+  <component name="RunManager" selected="Application.DynamicEnum">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    <configuration name="DynamicEnum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.loyintean.blog.dynamicenum.DynamicEnum" />
+      <module name="blog-old" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.loyintean.blog.dynamicenum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -355,6 +276,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DataBuilderTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loy-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.loyintean.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.loyintean.test" />
+      <option name="MAIN_CLASS_NAME" value="net.loyintean.test.DataBuilderTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataBuilderTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="blogold" />
       <extension name="coverage">
@@ -379,19 +317,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CacheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="blog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.loyintean.blog.cache.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="net.loyintean.blog.cache.CacheApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ParamNameApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="blog" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="net.loyintean.blog.paramname.ParamNameApplication" />
@@ -400,15 +325,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="blog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.loyintean.blog.rest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="net.loyintean.blog.rest.RestApplication" />
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -423,31 +344,33 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.DynamicEnum" />
       <item itemvalue="JUnit.BinaryTreeRightSideView.test" />
       <item itemvalue="JUnit.ApplyConfimBeanTest.test" />
       <item itemvalue="JUnit.DataBuilderTest.test" />
+      <item itemvalue="JUnit.DataBuilderTest.test (1)" />
       <item itemvalue="Spring Boot.ParamNameApplication" />
-      <item itemvalue="Spring Boot.RestApplication" />
-      <item itemvalue="Spring Boot.CacheApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DataBuilderTest.test (1)" />
+        <item itemvalue="Application.DynamicEnum" />
         <item itemvalue="JUnit.DataBuilderTest.test" />
         <item itemvalue="JUnit.ApplyConfimBeanTest.test" />
         <item itemvalue="JUnit.BinaryTreeRightSideView.test" />
-        <item itemvalue="Spring Boot.CacheApplication" />
-        <item itemvalue="Spring Boot.RestApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -489,6 +412,29 @@
       <workItem from="1583143679415" duration="584000" />
       <workItem from="1587100264898" duration="862000" />
       <workItem from="1587868024400" duration="2454000" />
+      <workItem from="1594718379176" duration="1509000" />
+      <workItem from="1594784793556" duration="2704000" />
+      <workItem from="1594807726458" duration="890000" />
+      <workItem from="1594882872976" duration="157000" />
+      <workItem from="1594883407196" duration="250000" />
+      <workItem from="1594883707949" duration="23000" />
+      <workItem from="1594883746689" duration="1385000" />
+      <workItem from="1596167124242" duration="2302000" />
+      <workItem from="1596371197710" duration="4269000" />
+      <workItem from="1596432229784" duration="19061000" />
+      <workItem from="1597332028968" duration="1504000" />
+      <workItem from="1597382399356" duration="2312000" />
+      <workItem from="1597408776935" duration="4916000" />
+      <workItem from="1599356404100" duration="520000" />
+      <workItem from="1599551134763" duration="1990000" />
+      <workItem from="1599809886818" duration="9723000" />
+      <workItem from="1601356825556" duration="1031000" />
+      <workItem from="1602645672868" duration="105000" />
+      <workItem from="1602645797725" duration="3871000" />
+      <workItem from="1604381231725" duration="784000" />
+      <workItem from="1604384198322" duration="9000" />
+      <workItem from="1604384224948" duration="2038000" />
+      <workItem from="1604397191569" duration="3331000" />
     </task>
     <task id="LOCAL-00001" summary="爬取IP138数据的单线程版本">
       <created>1543653003948</created>
@@ -567,53 +513,50 @@
       <option name="project" value="LOCAL" />
       <updated>1587870500310</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="解决编译问题：可以直接使用中央仓库或者阿里云">
+      <created>1587910345714</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587910345716</updated>
+    </task>
+    <task id="LOCAL-00013" summary="父子继承关系的一个样例">
+      <created>1594783220477</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1594783220477</updated>
+    </task>
+    <task id="LOCAL-00014" summary="测试用的DataBuilder类">
+      <created>1597410898324</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597410898324</updated>
+    </task>
+    <task id="LOCAL-00015" summary="父子继承关系的一个样例">
+      <created>1599642485165</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1599642485165</updated>
+    </task>
+    <task id="LOCAL-00016" summary="重复请求处理AOP">
+      <created>1600063498074</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1600063498074</updated>
+    </task>
+    <task id="LOCAL-00017" summary="父子继承关系的一个样例">
+      <created>1600139073003</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1600139073003</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31857318" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Structure" order="6" weight="0.39583334" />
-      <window_info id="Maven Projects" order="7" weight="0.3289225" />
-      <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Run Dashboard" weight="0.3295099" />
-      <window_info anchor="bottom" id="SonarLint" order="0" weight="0.3298687" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32932165" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49630997" weight="0.5954119" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3998906" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50369006" side_tool="true" weight="0.5119917" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.39624608" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49351853" weight="0.34619394" />
-      <window_info anchor="bottom" id="Spring" order="13" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Reviews" order="16" />
-      <window_info anchor="bottom" id="Maven" order="17" weight="0.49530762" />
-      <window_info anchor="right" id="Codota" />
-      <window_info anchor="right" id="News Feed" order="0" />
-      <window_info anchor="right" id="Database" order="1" show_stripe_button="false" weight="0.3291506" />
-      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="3" show_stripe_button="false" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" show_stripe_button="false" weight="0.32978722" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -624,12 +567,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -662,10 +599,98 @@
     <MESSAGE value="代码规范处理：行尾注释" />
     <MESSAGE value="leetcode几道题目" />
     <MESSAGE value="拆分子模块，准备重构" />
-    <option name="LAST_COMMIT_MESSAGE" value="拆分子模块，准备重构" />
+    <MESSAGE value="解决编译问题：可以直接使用中央仓库或者阿里云" />
+    <MESSAGE value="测试用的DataBuilder类" />
+    <MESSAGE value="重复请求处理AOP" />
+    <MESSAGE value="父子继承关系的一个样例" />
+    <option name="LAST_COMMIT_MESSAGE" value="父子继承关系的一个样例" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="439" y="189" key="#Notifications" timestamp="1597408949083">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="439" y="189" key="#Notifications/0.0.1680.1050@0.0.1680.1050" timestamp="1597408949083" />
+    <state x="439" y="189" key="#Project_Structure" timestamp="1604456016816">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="439" y="189" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1604456016816" />
+    <state x="558" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604457957728">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="558" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604457957728" />
+    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1604398021516">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604398021516" />
+    <state x="581" y="390" width="564" height="304" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604456794249">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="581" y="390" width="564" height="304" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1680.1050@0.0.1680.1050" timestamp="1604456794249" />
+    <state x="577" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597410775977">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="577" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597410775977" />
+    <state x="459" y="28" width="1680" height="1028" key="CommitChangelistDialog2" timestamp="1600143093920">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="459" y="28" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600143093920" />
+    <state x="0" y="22" width="1680" height="1028" key="CommitChangelistDialog2/0.22.1680.1028@0.22.1680.1028" timestamp="1597410897849" />
+    <state width="1638" height="278" key="GridCell.Tab.0.bottom" timestamp="1604458332218">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="278" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1604458332218" />
+    <state width="1638" height="278" key="GridCell.Tab.0.center" timestamp="1604458332217">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="278" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1604458332217" />
+    <state width="1638" height="278" key="GridCell.Tab.0.left" timestamp="1604458332216">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="278" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1604458332216" />
+    <state width="1638" height="278" key="GridCell.Tab.0.right" timestamp="1604458332218">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="278" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1604458332218" />
+    <state x="0" y="0" width="1680" height="1050" key="SettingsEditor" timestamp="1604458381845">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="0" y="0" width="1680" height="1050" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1604458381845" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1600143099889">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1600143099889" />
+    <state x="635" y="310" key="chooseDestDirectoryDialog" timestamp="1604457455273">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="635" y="310" key="chooseDestDirectoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1604457455273" />
+    <state x="618" y="258" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1597410122651">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="618" y="258" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597410122651" />
+    <state x="496" y="266" width="687" height="518" key="find.popup" timestamp="1604384957513">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="496" y="266" width="687" height="518" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604384957513" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1604384885230">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604384885230" />
+    <state x="233" y="146" key="new project wizard" timestamp="1604386544277">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="233" y="146" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1604386544277" />
+    <state x="504" y="247" key="run.anything.popup" timestamp="1597409507866">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="504" y="247" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597409507866" />
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604457580630">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604457580630" />
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.22.1680.1028@0.22.1680.1028" timestamp="1604455160722" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -673,15 +698,10 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://E:/m2/repository/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE-sources.jar!/org/springframework/web/client/RestTemplate.java</url>
           <line>723</line>
-          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -691,171 +711,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/src/main/java/com/company/system/business/user/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/blog-old/blog-old.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4265" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="28" selection-start-column="28" selection-end-column="28" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-openfeign/1.4.4.RELEASE/spring-cloud-starter-openfeign-1.4.4.RELEASE.jar!/META-INF/maven/org.springframework.cloud/spring-cloud-starter-openfeign/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-482" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-core/1.4.4.RELEASE/spring-cloud-netflix-core-1.4.4.RELEASE.jar!/org/springframework/cloud/netflix/feign/FeignClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/blog-old/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/AuthClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/blog-old/src/main/java/net/loyintean/blog/feign/FeignApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring (blog-old)|Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Python 3.7 interpreter library</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>blog</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: org.springframework:spring-core:5.1.8.RELEASE</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

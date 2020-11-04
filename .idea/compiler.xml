@@ -7,13 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="blog-old" />
-        <module name="blogold" />
+        <module name="leetcode" />
+        <module name="spring-mvc-base" />
+        <module name="loy-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="blog" target="1.8" />
       <module name="blog-old" target="1.8" />
-      <module name="blogold" target="1.8" />
+      <module name="leetcode" target="1.8" />
+      <module name="loy-test" target="1.8" />
+      <module name="spring-mvc-base" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -21,6 +25,9 @@
       <module name="blog" options="" />
       <module name="blog-old" options="-parameters" />
       <module name="blogold" options="-parameters" />
+      <module name="leetcode" options="-parameters" />
+      <module name="loy-test" options="-parameters" />
+      <module name="spring-mvc-base" options="-parameters" />
     </option>
   </component>
 </project>

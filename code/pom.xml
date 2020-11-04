@@ -8,6 +8,7 @@
         <module>blog-old</module>
         <module>leetcode</module>
         <module>spring-mvc-base</module>
+        <module>loy-test</module>
     </modules>
 
     <groupId>net.loyintean</groupId>
