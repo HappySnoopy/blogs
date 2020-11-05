@@ -41,17 +41,19 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb75aafb-6da7-4276-94e2-cbb7ac3b1f7c" name="Default" comment="父子继承关系的一个样例">
+    <list default="true" id="cb75aafb-6da7-4276-94e2-cbb7ac3b1f7c" name="Default" comment="修正项目结构和模块配置">
+      <change afterPath="$PROJECT_DIR$/code/serial-num/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/utils/SerialNumUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/web/SerialNumApacheRequestInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/web/SerialNumFeignRequestInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/web/SerialNumFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/web/SerialNumOkHttpInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/blog-old/blog-old.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/blog-old.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/blog.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/code/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/spring-mvc-base/springmvcbase.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -435,6 +437,7 @@
       <workItem from="1604384198322" duration="9000" />
       <workItem from="1604384224948" duration="2038000" />
       <workItem from="1604397191569" duration="3331000" />
+      <workItem from="1604458336558" duration="5158000" />
     </task>
     <task id="LOCAL-00001" summary="爬取IP138数据的单线程版本">
       <created>1543653003948</created>
@@ -555,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600139073003</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="修正项目结构和模块配置">
+      <created>1604458454660</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1604458454660</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +613,8 @@
     <MESSAGE value="测试用的DataBuilder类" />
     <MESSAGE value="重复请求处理AOP" />
     <MESSAGE value="父子继承关系的一个样例" />
-    <option name="LAST_COMMIT_MESSAGE" value="父子继承关系的一个样例" />
+    <MESSAGE value="修正项目结构和模块配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正项目结构和模块配置" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -621,10 +632,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="558" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604457957728" />
-    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1604398021516">
+    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1604481871290">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604398021516" />
+    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604481871290" />
+    <state x="457" y="182" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1604458600309">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="457" y="182" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1604458600309" />
     <state x="581" y="390" width="564" height="304" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604456794249">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -633,10 +648,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="577" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597410775977" />
-    <state x="459" y="28" width="1680" height="1028" key="CommitChangelistDialog2" timestamp="1600143093920">
+    <state x="459" y="28" width="1680" height="1028" key="CommitChangelistDialog2" timestamp="1604567944783">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="459" y="28" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600143093920" />
+    <state x="459" y="28" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1604567944783" />
     <state x="0" y="22" width="1680" height="1028" key="CommitChangelistDialog2/0.22.1680.1028@0.22.1680.1028" timestamp="1597410897849" />
     <state width="1638" height="278" key="GridCell.Tab.0.bottom" timestamp="1604458332218">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -658,10 +673,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="0" y="0" width="1680" height="1050" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1604458381845" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1600143099889">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1604458467017">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1600143099889" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1604458467017" />
     <state x="635" y="310" key="chooseDestDirectoryDialog" timestamp="1604457455273">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -678,18 +693,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604384885230" />
-    <state x="233" y="146" key="new project wizard" timestamp="1604386544277">
+    <state x="233" y="146" key="new project wizard" timestamp="1604458518627">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="233" y="146" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1604386544277" />
+    <state x="233" y="146" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1604458518627" />
     <state x="504" y="247" key="run.anything.popup" timestamp="1597409507866">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="504" y="247" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597409507866" />
-    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604457580630">
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604461323044">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604457580630" />
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604461323044" />
     <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.22.1680.1028@0.22.1680.1028" timestamp="1604455160722" />
   </component>
   <component name="XDebuggerManager">

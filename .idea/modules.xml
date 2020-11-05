@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/code/blog-old/blog-old.iml" filepath="$PROJECT_DIR$/code/blog-old/blog-old.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/code/leetcode/leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/loy-test/loy-test.iml" filepath="$PROJECT_DIR$/code/loy-test/loy-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/serial-num/serial-num.iml" filepath="$PROJECT_DIR$/code/serial-num/serial-num.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/spring-mvc-base/spring-mvc-base.iml" filepath="$PROJECT_DIR$/code/spring-mvc-base/spring-mvc-base.iml" />
     </modules>
   </component>

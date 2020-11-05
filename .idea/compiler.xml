@@ -10,6 +10,7 @@
         <module name="leetcode" />
         <module name="spring-mvc-base" />
         <module name="loy-test" />
+        <module name="serial-num" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -17,6 +18,7 @@
       <module name="blog-old" target="1.8" />
       <module name="leetcode" target="1.8" />
       <module name="loy-test" target="1.8" />
+      <module name="serial-num" target="1.8" />
       <module name="spring-mvc-base" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -27,6 +29,7 @@
       <module name="blogold" options="-parameters" />
       <module name="leetcode" options="-parameters" />
       <module name="loy-test" options="-parameters" />
+      <module name="serial-num" options="-parameters" />
       <module name="spring-mvc-base" options="-parameters" />
     </option>
   </component>

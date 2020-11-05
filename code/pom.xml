@@ -9,6 +9,7 @@
         <module>leetcode</module>
         <module>spring-mvc-base</module>
         <module>loy-test</module>
+        <module>serial-num</module>
     </modules>
 
     <groupId>net.loyintean</groupId>
