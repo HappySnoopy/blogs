@@ -41,19 +41,13 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb75aafb-6da7-4276-94e2-cbb7ac3b1f7c" name="Default" comment="修正项目结构和模块配置">
-      <change afterPath="$PROJECT_DIR$/code/serial-num/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/utils/SerialNumUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/web/SerialNumApacheRequestInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/web/SerialNumFeignRequestInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/web/SerialNumFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/web/SerialNumOkHttpInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="cb75aafb-6da7-4276-94e2-cbb7ac3b1f7c" name="Default" comment="提交SerialNum模块的部分代码">
+      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/message/SerialNum4AmqpListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/message/SerialNum4JmsListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/message/SerialNumMessageListner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/blog-old/blog-old.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/blog-old/blog-old.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/serial-num/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/serial-num/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/utils/SerialNumUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/code/serial-num/src/main/java/net/loyintean/serialnum/utils/SerialNumUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,9 +172,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="net.loyintean.blog.scheduer" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="net.loyintean.test" />
       <recent name="net.loyintean.blog.databuilder" />
@@ -193,6 +184,10 @@
       <recent name="net.loyintean.test" />
       <recent name="net.loyintean.blog.gson" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code/serial-num" />
+      <recent name="$PROJECT_DIR$/code" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/code/blog-old" />
       <recent name="$PROJECT_DIR$/code/leetcode" />
@@ -201,13 +196,13 @@
       <recent name="E:\git\blog\code\blog-old\src\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.loyintean.serialnum.message" />
       <recent name="net.loyintean.blog.standard" />
       <recent name="net.loyintean.blog.databuilder" />
       <recent name="net.loyintean.blog.gson" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/code/serial-num" />
-      <recent name="$PROJECT_DIR$/code" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="net.loyintean.blog.scheduer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -437,7 +432,8 @@
       <workItem from="1604384198322" duration="9000" />
       <workItem from="1604384224948" duration="2038000" />
       <workItem from="1604397191569" duration="3331000" />
-      <workItem from="1604458336558" duration="5158000" />
+      <workItem from="1604458336558" duration="5492000" />
+      <workItem from="1604884464406" duration="8600000" />
     </task>
     <task id="LOCAL-00001" summary="爬取IP138数据的单线程版本">
       <created>1543653003948</created>
@@ -565,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604458454660</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="提交SerialNum模块的部分代码">
+      <created>1604567980725</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1604567980725</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,7 +617,8 @@
     <MESSAGE value="重复请求处理AOP" />
     <MESSAGE value="父子继承关系的一个样例" />
     <MESSAGE value="修正项目结构和模块配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正项目结构和模块配置" />
+    <MESSAGE value="提交SerialNum模块的部分代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交SerialNum模块的部分代码" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -632,10 +636,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="558" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604457957728" />
-    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1604481871290">
+    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1605169179535">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1604481871290" />
+    <state x="653" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1605169179535" />
     <state x="457" y="182" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1604458600309">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -644,14 +648,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="581" y="390" width="564" height="304" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1680.1050@0.0.1680.1050" timestamp="1604456794249" />
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605169762860">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1605169762860" />
     <state x="577" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597410775977">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="577" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597410775977" />
-    <state x="459" y="28" width="1680" height="1028" key="CommitChangelistDialog2" timestamp="1604567944783">
+    <state x="459" y="28" width="1680" height="1028" key="CommitChangelistDialog2" timestamp="1605169733676">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="459" y="28" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1604567944783" />
+    <state x="459" y="28" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1605169733676" />
     <state x="0" y="22" width="1680" height="1028" key="CommitChangelistDialog2/0.22.1680.1028@0.22.1680.1028" timestamp="1597410897849" />
     <state width="1638" height="278" key="GridCell.Tab.0.bottom" timestamp="1604458332218">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -669,14 +677,22 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="278" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1604458332218" />
+    <state x="378" y="187" key="Maven.ArtifactSearchDialog" timestamp="1605057458796">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="378" y="187" key="Maven.ArtifactSearchDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1605057458796" />
     <state x="0" y="0" width="1680" height="1050" key="SettingsEditor" timestamp="1604458381845">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="0" y="0" width="1680" height="1050" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1604458381845" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1604458467017">
+    <state width="536" height="445" key="SwitcherDM" timestamp="1605168052684">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1604458467017" />
+    <state width="536" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1605168052684" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1604969878665">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1604969878665" />
     <state x="635" y="310" key="chooseDestDirectoryDialog" timestamp="1604457455273">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -701,10 +717,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="504" y="247" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597409507866" />
-    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604461323044">
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605168899051">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604461323044" />
+    <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605168899051" />
     <state x="503" y="231" width="672" height="678" key="search.everywhere.popup/0.22.1680.1028@0.22.1680.1028" timestamp="1604455160722" />
   </component>
   <component name="XDebuggerManager">
