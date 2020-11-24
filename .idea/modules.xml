@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/code/blog.iml" filepath="$PROJECT_DIR$/code/blog.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/blog-old/blog-old.iml" filepath="$PROJECT_DIR$/code/blog-old/blog-old.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/exec-time/exec-time.iml" filepath="$PROJECT_DIR$/code/exec-time/exec-time.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/code/leetcode/leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/loy-test/loy-test.iml" filepath="$PROJECT_DIR$/code/loy-test/loy-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/serial-num/serial-num.iml" filepath="$PROJECT_DIR$/code/serial-num/serial-num.iml" />
