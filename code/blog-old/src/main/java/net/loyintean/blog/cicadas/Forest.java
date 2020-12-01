@@ -8,14 +8,14 @@ import java.util.Arrays;
 /**
  * 森林里有知了，有鸟。
  *
- * @author linjun
+ * @author Snoopy
  * @since 2017年8月28日
  */
 public class Forest {
     /**
      * 繁殖周期上限。
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年8月28日
      */
     private static final int PERIOD_LIMIT = 20;
@@ -28,7 +28,7 @@ public class Forest {
      * 1. 如果当季是自己的繁殖季(繁殖周期%当前年数==0)，那么知了数量翻倍 <br>
      * 2. 如果当季是鸟类的繁殖季，那么知了期末数量=翻倍后数量-鸟类期初数量*2<br>
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年8月28日
      */
     private static final long[] cicadases = new long[Forest.PERIOD_LIMIT + 1];
@@ -42,15 +42,15 @@ public class Forest {
      * 1.1 如果还有知了，那么鸟类期末数量=鸟类期初数量+知了数量
      * 1.2 如果没有知了，那么鸟类期末数量=鸟类期初数量/2
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年8月28日
      */
     private static final long[] birds = new long[Forest.PERIOD_LIMIT + 1];
 
     /**
-     * @author linjun
-     * @since 2017年8月28日
      * @param args
+     * @author Snoopy
+     * @since 2017年8月28日
      */
     public static void main(String[] args) {
 
@@ -128,7 +128,7 @@ public class Forest {
     }
 
     /**
-     * @author linjun
+     * @author Snoopy
      * @since 2017年8月28日
      */
     private static void init() {

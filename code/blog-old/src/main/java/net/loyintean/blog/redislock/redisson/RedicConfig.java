@@ -10,9 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年6月16日
- *
  */
 @SpringBootApplication
 public class RedicConfig {

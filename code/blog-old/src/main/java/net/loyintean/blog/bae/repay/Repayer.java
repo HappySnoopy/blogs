@@ -19,7 +19,7 @@ import java.util.*;
 /**
  * 解析Excel，发起还款。
  *
- * @author linjun
+ * @author Snoopy
  */
 public class Repayer {
 
@@ -32,8 +32,8 @@ public class Repayer {
     }
 
     /**
-     * @author linjun
      * @param args
+     * @author Snoopy
      */
     public static void main(String[] args) {
 
@@ -62,8 +62,8 @@ public class Repayer {
     }
 
     /**
-     * @author linjun
      * @param repayList
+     * @author Snoopy
      */
     private static void doRepay(List<RepayDto> repayList) {
 
@@ -97,8 +97,8 @@ public class Repayer {
     /**
      * 从文件中获取数据
      *
-     * @author linjun
      * @return
+     * @author Snoopy
      */
     private static List<RepayDto> parstFromFile(String path) {
         // 根文件是educationRepayList
@@ -115,9 +115,9 @@ public class Repayer {
     }
 
     /**
-     * @author linjun
      * @param f
      * @return
+     * @author Snoopy
      */
     private static List<RepayDto> parseFromFile(File f) {
 

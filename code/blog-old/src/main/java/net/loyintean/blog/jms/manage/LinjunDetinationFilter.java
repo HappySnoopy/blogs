@@ -7,17 +7,17 @@ import org.apache.activemq.broker.region.Destination;
 import org.apache.activemq.broker.region.DestinationFilter;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年11月1日
  */
-public class LinjunDetinationFilter extends DestinationFilter {
+public class SnoopyDetinationFilter extends DestinationFilter {
 
     /**
      * @param next
      */
-    public LinjunDetinationFilter(Destination next) {
+    public SnoopyDetinationFilter(Destination next) {
         super(next);
-        FileUtils.write("new LinjunDetinationFilter");
+        FileUtils.write("new SnoopyDetinationFilter");
     }
 
 }

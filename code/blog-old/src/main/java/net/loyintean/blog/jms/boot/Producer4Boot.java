@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import javax.jms.Destination;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月11日
  */
 @Service

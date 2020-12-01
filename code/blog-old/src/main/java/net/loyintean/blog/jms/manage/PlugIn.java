@@ -7,16 +7,16 @@ import org.apache.activemq.broker.Broker;
 import org.apache.activemq.broker.BrokerPlugin;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年10月30日
  */
 public class PlugIn implements BrokerPlugin {
     /**
-     * @author linjun
-     * @since 2017年10月30日
      * @param b
      * @return
+     * @author Snoopy
      * @see org.apache.activemq.broker.BrokerPlugin#installPlugin(org.apache.activemq.broker.Broker)
+     * @since 2017年10月30日
      */
     @Override
     public Broker installPlugin(Broker b) {

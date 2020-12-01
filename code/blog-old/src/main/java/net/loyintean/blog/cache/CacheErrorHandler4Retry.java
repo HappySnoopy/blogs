@@ -16,7 +16,7 @@ import java.util.stream.Stream;
  * <p>
  * 不会对读缓存操作进行重试
  *
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月27日
  */
 public class CacheErrorHandler4Retry implements CacheErrorHandler {
@@ -24,7 +24,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
     /**
      * 日志
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      */
     private static final Logger LOGGER = LoggerFactory
@@ -33,7 +33,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
     /**
      * 重试次数
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      */
     private int retryTimes = 3;
@@ -41,7 +41,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
     /**
      * 重试步进时间（单位：秒）
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      */
     private long retryStep = 100l;
@@ -51,7 +51,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
      * <p>
      * 默认为null，意为全都要重试
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      */
     private Class<Throwable>[] includs;
@@ -61,20 +61,20 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
      * <p>
      * 默认为null，意为全都要重试
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      */
     private Class<Throwable>[] excluds;
 
     /**
-     * @author linjun
-     * @since 2017年9月27日
      * @param exception
      * @param cache
      * @param key
+     * @author Snoopy
      * @see org.springframework.cache.interceptor.CacheErrorHandler
-     *      #handleCacheGetError(java.lang.RuntimeException,
-     *      org.springframework.cache.Cache, java.lang.Object)
+     * #handleCacheGetError(java.lang.RuntimeException,
+     * org.springframework.cache.Cache, java.lang.Object)
+     * @since 2017年9月27日
      */
     @Override
     public void handleCacheGetError(RuntimeException exception, Cache cache,
@@ -86,15 +86,15 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
      * 发生异常后，重试若干次
      * {@inheritDoc}
      *
-     * @author linjun
-     * @since 2017年9月27日
      * @param exception
      * @param cache
      * @param key
      * @param value
+     * @author Snoopy
      * @see org.springframework.cache.interceptor.CacheErrorHandler
-     *      #handleCachePutError(java.lang.RuntimeException,
-     *      org.springframework.cache.Cache, java.lang.Object, java.lang.Object)
+     * #handleCachePutError(java.lang.RuntimeException,
+     * org.springframework.cache.Cache, java.lang.Object, java.lang.Object)
+     * @since 2017年9月27日
      */
     @Override
     public void handleCachePutError(RuntimeException exception, Cache cache,
@@ -106,7 +106,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
     }
 
     /**
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      * @param exception
      * @param cache
@@ -125,7 +125,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
     }
 
     /**
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      * @param exception
      * @param cache
@@ -144,7 +144,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
     /**
      * 实际上的重试操作
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      * @param cacheWriter
      */
@@ -163,7 +163,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
     /**
      * 是否包含在需要重试的异常类中
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      * @param e
      * @return {@link #includs}为null，或者入参e是{@link #includs}中某个类/接口的子类
@@ -177,7 +177,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
     /**
      * 是否包含在不需要重试的异常类中
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      * @param e
      * @return {@link #excluds}非null，并且入参e是{@link #excluds}中某个类/接口的子类
@@ -228,7 +228,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
     /**
      * 写缓存操作接口
      *
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月27日
      */
     interface CacheWriter {
@@ -236,7 +236,7 @@ public class CacheErrorHandler4Retry implements CacheErrorHandler {
         /**
          * 执行实际写入操作
          *
-         * @author linjun
+         * @author Snoopy
          * @since 2017年9月27日
          */
         void write();

@@ -13,9 +13,9 @@ import javax.annotation.Resource;
 
 /**
  * 测试类
- * TODO linjun 2017-06-16
+ * TODO Snoopy 2017-06-16
  *
- * @author linjun
+ * @author Snoopy
  * @since 2017年6月16日
  */
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -53,9 +53,9 @@ public class MainTest {
         private int y;
 
         /**
-         * @author linjun
-         * @since 2017年6月16日
+         * @author Snoopy
          * @see java.lang.Runnable#run()
+         * @since 2017年6月16日
          */
         @Override
         public void run() {

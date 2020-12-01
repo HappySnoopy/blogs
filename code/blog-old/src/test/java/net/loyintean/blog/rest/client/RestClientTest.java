@@ -9,9 +9,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月22日
- *
  */
 public class RestClientTest {
 

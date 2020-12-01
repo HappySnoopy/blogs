@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 import java.util.stream.IntStream;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月11日
  */
 @RunWith(SpringJUnit4ClassRunner.class)

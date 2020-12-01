@@ -7,7 +7,7 @@ package net.loyintean.blog.zk.lock;
 import org.junit.Test;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月21日
  */
 public class MainTest {
@@ -48,9 +48,9 @@ public class MainTest {
         private static int y;
 
         /**
-         * @author linjun
-         * @since 2017年6月16日
+         * @author Snoopy
          * @see java.lang.Runnable#run()
+         * @since 2017年6月16日
          */
         @Override
         public void run() {

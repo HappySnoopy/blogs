@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年8月2日
  */
 public class EmailSender {
@@ -26,10 +26,10 @@ public class EmailSender {
     private static final ObjectMapper mapper = new ObjectMapper();
 
     /**
-     * @author linjun
-     * @since 2017年8月2日
      * @param args
      * @throws JsonProcessingException
+     * @author Snoopy
+     * @since 2017年8月2日
      */
     public static void main(String[] args) throws JsonProcessingException {
 

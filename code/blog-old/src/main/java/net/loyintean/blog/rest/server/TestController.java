@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.math.BigDecimal;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月22日
  */
 @RestController

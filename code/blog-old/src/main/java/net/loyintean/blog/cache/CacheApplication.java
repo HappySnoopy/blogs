@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月27日
  */
 @SpringBootApplication
@@ -16,9 +16,9 @@ import org.springframework.cache.annotation.EnableCaching;
 class CacheApplication {
 
     /**
-     * @author linjun
-     * @since 2017年9月27日
      * @param args
+     * @author Snoopy
+     * @since 2017年9月27日
      */
     public static void main(String[] args) {
         SpringApplication.run(CacheApplication.class, args);

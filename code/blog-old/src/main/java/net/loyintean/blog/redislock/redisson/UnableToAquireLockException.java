@@ -5,14 +5,13 @@
 package net.loyintean.blog.redislock.redisson;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年6月16日
- *
  */
 public class UnableToAquireLockException extends RuntimeException{
 
     /**
-     * @author linjun
+     * @author Snoopy
      * @since 2017年6月16日
      */
     private static final long serialVersionUID = -2746389319139202292L;

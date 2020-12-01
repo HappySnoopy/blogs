@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年11月1日
  */
 public class FileUtils {

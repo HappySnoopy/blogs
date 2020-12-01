@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 中华新韵
  *
- * @author linjun
+ * @author Snoopy
  * @since 2018年2月5日
  */
 class ChineseNewRhyme implements Rhyme {
@@ -110,10 +110,10 @@ class ChineseNewRhyme implements Rhyme {
     }
 
     /**
-     * @author linjun
-     * @since 2018年2月5日
      * @return
+     * @author Snoopy
      * @see net.loyintean.blog.poetry.Rhyme#getRhymeName()
+     * @since 2018年2月5日
      */
     @Override
     public String getRhymeName() {

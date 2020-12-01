@@ -19,7 +19,7 @@ public class SchedulerApplication implements ApplicationContextInitializer {
      * 内置tomcat的初始化
      *
      * @param args
-     * @author linjun
+     * @author Snoopy
      * @since 2017年6月20日
      */
     public static void main(String[] args) {

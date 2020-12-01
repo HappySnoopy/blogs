@@ -10,13 +10,12 @@ import java.util.concurrent.FutureTask;
  * 与Runnable相比，Callable提供了一个有返回值的方法。<br>
  * 借此可以简化主线程与子线程之间的通信：主线程可以更方便的获取到子线程的执行结果，而不必繁琐的wait/notify或各类同步数据容器。<br>
  * 不过，Callable也还是需要借助Future/FutureTask等接口/类，来真正的“返回”自己的处理结果。<br>
- * 
+ *
  * <p>
  * {@link FutureTask}的代码很值得一看。这个类很好的诠释了组合（其中组合了一个Callable）和继承（当然在这里是子接口继承父接口、类实现子接口）。<br>
  * 组合与继承，这是面向设计中的基本思路。
- * 
- * @author linjun
  *
+ * @author Snoopy
  */
 public class ThreadByCallable implements Callable<String> {
 

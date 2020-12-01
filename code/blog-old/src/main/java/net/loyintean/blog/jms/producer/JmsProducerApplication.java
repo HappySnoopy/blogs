@@ -18,7 +18,7 @@ import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月11日
  */
 @EnableJms

@@ -21,7 +21,7 @@ import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月11日
  */
 @EnableJms
@@ -73,10 +73,10 @@ public class JmsConsumerApplication
     /**
      * 外置tomcat的初始化
      *
-     * @author linjun
-     * @since 2017年7月3日
      * @param application
      * @return
+     * @author Snoopy
+     * @since 2017年7月3日
      */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder

@@ -17,7 +17,7 @@ import java.util.TimerTask;
 /**
  * 自动移除限制的Destination
  *
- * @author linjun
+ * @author Snoopy
  * @since 2017年10月30日
  */
 public class RemoveDestination extends BrokerFilter {
@@ -38,7 +38,7 @@ public class RemoveDestination extends BrokerFilter {
     public void start() throws Exception {
         super.start();
 
-        // DONE linjun 2017-11-01 改为定时调度
+        // DONE Snoopy 2017-11-01 改为定时调度
         this.timer.schedule(new TimerTask() {
 
             @Override
@@ -58,7 +58,7 @@ public class RemoveDestination extends BrokerFilter {
             Destination destination = entry.getValue();
 
             // 无人监听了
-            // DONE linjun 2017-11-01 只处理queue，不处理topic
+            // DONE Snoopy 2017-11-01 只处理queue，不处理topic
             if (destination.getDestinationStatistics().getConsumers()
                 .getCount() == 0) {
                 ActiveMQDestination activeMQDestination = entry.getKey();

@@ -2,9 +2,8 @@ package net.loyintean.blog.thread.communication;
 
 /**
  * 使用Synchronized关键字来做各种同步
- * 
- * @author linjun
  *
+ * @author Snoopy
  */
 public class CommunicationBySynchornized {
 

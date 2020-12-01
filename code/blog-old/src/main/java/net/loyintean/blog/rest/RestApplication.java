@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月22日
  */
 @SpringBootApplication

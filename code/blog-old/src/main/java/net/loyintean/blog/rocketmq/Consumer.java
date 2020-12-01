@@ -12,7 +12,7 @@ public class Consumer {
 
         //声明并初始化一个consumer
         //需要一个consumer group名字作为构造方法的参数，
-        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("linjun-test");
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("Snoopy-test");
 
         consumer.setNamesrvAddr("10.141.11.41::9876;10.141.11.42:9876");
 
@@ -22,7 +22,7 @@ public class Consumer {
         //CONSUME_FROM_TIMESTAMP 从某个时间点开始消费，和setConsumeTimestamp()配合使用，默认是半个小时以前
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
         //设置consumer所订阅的Topic和Tag，*代表全部的Tag
-        consumer.subscribe("linjun-test", "A");
+        consumer.subscribe("Snoopy-test", "A");
 
         //设置一个Listener，主要进行消息的逻辑处理
         consumer.registerMessageListener((MessageListenerConcurrently) (msgs, context) -> {

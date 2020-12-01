@@ -5,8 +5,8 @@ import java.util.TimerTask;
 
 /**
  * 演示Timer/TimerTask的几种问题
- * 
- * @author linjun
+ *
+ * @author Snoopy
  */
 public class SheduleByTimer {
 

@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 /**
  * 韵脚选择器
  *
- * @author linjun
+ * @author Snoopy
  * @since 2018年2月5日
  */
 public class RhymeChooser {
@@ -38,9 +38,9 @@ public class RhymeChooser {
     }
 
     /**
-     * @author linjun
-     * @since 2018年2月5日
      * @param args
+     * @author Snoopy
+     * @since 2018年2月5日
      */
     public static void main(String[] args) {
         RhymeChooser chooser = new RhymeChooser();

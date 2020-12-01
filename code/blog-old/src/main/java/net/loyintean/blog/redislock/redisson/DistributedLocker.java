@@ -5,7 +5,7 @@
 package net.loyintean.blog.redislock.redisson;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年6月16日
  */
 public interface DistributedLocker {
@@ -25,15 +25,17 @@ public interface DistributedLocker {
     <T> T lock(String resourceName, AquiredLockWorker<T> worker)
             throws UnableToAquireLockException, Exception;
 
-    /**带超时
-     * @author linjun
-     * @since 2017年6月16日
+    /**
+     * 带超时
+     *
      * @param resourceName
      * @param worker
      * @param lockTime
      * @return
      * @throws UnableToAquireLockException
      * @throws Exception
+     * @author Snoopy
+     * @since 2017年6月16日
      */
     <T> T lock(String resourceName, AquiredLockWorker<T> worker, int lockTime)
             throws UnableToAquireLockException, Exception;

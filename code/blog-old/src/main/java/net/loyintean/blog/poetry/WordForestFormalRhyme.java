@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 词林正韵
  *
- * @author linjun
+ * @author Snoopy
  * @since 2018年2月5日
  */
 class WordForestFormalRhyme implements Rhyme {
@@ -123,10 +123,10 @@ class WordForestFormalRhyme implements Rhyme {
     }
 
     /**
-     * @author linjun
-     * @since 2018年2月5日
      * @return
+     * @author Snoopy
      * @see net.loyintean.blog.poetry.Rhyme#getRhymeName()
+     * @since 2018年2月5日
      */
     @Override
     public String getRhymeName() {

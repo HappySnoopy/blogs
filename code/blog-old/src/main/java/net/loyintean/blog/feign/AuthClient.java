@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2018年4月18日
  */
 @FeignClient("thread-auth")

@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class Result4Calculate {
 
-    // [start] linjun 2016-11-4 标志信息
+    // [start] Snoopy 2016-11-4 标志信息
     /*
      * 这部分信息可以用于标志一期还款计划表
      */
@@ -49,9 +49,9 @@ public class Result4Calculate {
      */
 
     private Date repayDate;
-    // [end] linjun 2016-11-4 标志信息
+    // [end] Snoopy 2016-11-4 标志信息
 
-    // [start] linjun 2016-11-4 金额数据
+    // [start] Snoopy 2016-11-4 金额数据
     /**
      * 账户余额
      */
@@ -131,9 +131,9 @@ public class Result4Calculate {
      */
     private BigDecimal inAdvanceLiquidated = BigDecimal.ZERO;
 
-    // [end] linjun 2016-11-4 金额数据
+    // [end] Snoopy 2016-11-4 金额数据
 
-    // [start] linjun 2016-4-5 其它补充数据
+    // [start] Snoopy 2016-4-5 其它补充数据
     /*
      * 个别试算中需要补充的数据
      */
@@ -149,7 +149,7 @@ public class Result4Calculate {
      * 结清日
      */
     private Date settleDate;
-    // [end] linjun 2016-4-5 其它补充数据
+    // [end] Snoopy 2016-4-5 其它补充数据
 
     /**
      * 分期信息

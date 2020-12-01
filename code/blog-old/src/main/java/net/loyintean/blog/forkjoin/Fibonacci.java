@@ -8,13 +8,13 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月28日
  */
 public class Fibonacci extends RecursiveTask<Integer> {
 
     /**
-     * @author linjun
+     * @author Snoopy
      * @since 2017年9月28日
      */
     private static final long serialVersionUID = 5166412444799644347L;
@@ -26,9 +26,9 @@ public class Fibonacci extends RecursiveTask<Integer> {
     }
 
     /**
-     * @author linjun
-     * @since 2017年9月28日
+     * @author Snoopy
      * @see java.util.concurrent.RecursiveAction#compute()
+     * @since 2017年9月28日
      */
     @Override
     protected Integer compute() {

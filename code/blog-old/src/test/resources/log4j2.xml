@@ -18,9 +18,9 @@
 	</Appenders>
 	<Loggers>
 
-		<!-- linjun 2016-07-12 根日志定位为WARN，确保不输出杂七杂八的日志 -->
+		<!-- Snoopy 2016-07-12 根日志定位为WARN，确保不输出杂七杂八的日志 -->
 		<Root level="WARN" includeLocation="true">
-			<AppenderRef ref="Console" />
+			<AppenderRef ref="Console"/>
 		</Root>
 
 	</Loggers>

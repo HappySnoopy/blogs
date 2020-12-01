@@ -1,8 +1,13 @@
 /**
  * All Rights Reserved
+ *
+ * @author Snoopy
+ * @author Snoopy
+ * @since 2017年9月28日
+ * @since 2017年9月28日
  */
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月28日
  *
  */

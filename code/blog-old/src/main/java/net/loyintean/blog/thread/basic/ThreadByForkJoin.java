@@ -16,8 +16,8 @@ public class ThreadByForkJoin {
 
 /**
  * 用ForkJoin的方式计算斐波那契数列
- * 
- * @author linjun
+ *
+ * @author Snoopy
  */
 class FibTask extends RecursiveTask<Integer> {
 

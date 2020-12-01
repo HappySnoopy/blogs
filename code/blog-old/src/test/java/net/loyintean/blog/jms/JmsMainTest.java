@@ -5,15 +5,15 @@
 package net.loyintean.blog.jms;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年5月10日
  */
 public class JmsMainTest {
 
     /**
-     * @author linjun
-     * @since 2017年5月10日
      * @param args
+     * @author Snoopy
+     * @since 2017年5月10日
      */
     public static void main(String[] args) {
 

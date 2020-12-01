@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年10月23日
  */
 public class GroupTree {
@@ -49,10 +49,10 @@ public class GroupTree {
     }
 
     /**
-     * @author linjun
-     * @since 2017年10月23日
      * @param root
      * @throws IOException
+     * @author Snoopy
+     * @since 2017年10月23日
      */
     private static void toFile(Group root) throws IOException {
 
@@ -114,10 +114,10 @@ public class GroupTree {
     }
 
     /**
-     * @author linjun
-     * @since 2017年10月23日
      * @param args
      * @throws IOException
+     * @author Snoopy
+     * @since 2017年10月23日
      */
     public static void main(String[] args) throws IOException {
 

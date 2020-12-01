@@ -5,7 +5,7 @@
 package net.loyintean.blog.redislock;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年6月16日
  */
 public class DistributedLockManger {}

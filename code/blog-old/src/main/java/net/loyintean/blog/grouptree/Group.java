@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年10月23日
  */
 public class Group {
@@ -70,10 +70,10 @@ public class Group {
     }
 
     /**
-     * @author linjun
-     * @since 2017年10月23日
      * @return
+     * @author Snoopy
      * @see java.lang.Object#toString()
+     * @since 2017年10月23日
      */
     @Override
     public String toString() {

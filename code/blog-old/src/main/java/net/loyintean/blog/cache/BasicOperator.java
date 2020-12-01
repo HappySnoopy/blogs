@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 /**
  * 被缓存的基础操作
  *
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月27日
  */
 @Service

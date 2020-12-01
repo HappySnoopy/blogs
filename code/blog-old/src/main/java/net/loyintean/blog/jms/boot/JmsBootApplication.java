@@ -17,7 +17,7 @@ import javax.jms.Destination;
 import javax.jms.Queue;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月11日
  */
 @EnableJms

@@ -19,7 +19,7 @@ public class Producer {
             String[] args) throws MQClientException, RemotingException, InterruptedException, MQBrokerException {
 
         // 还可以指定一个RPCHook，用于在发送请求和接收响应时做点处理。
-        DefaultMQProducer defaultMQProducer = new DefaultMQProducer("linjun-test");
+        DefaultMQProducer defaultMQProducer = new DefaultMQProducer("Snoopy-test");
 
         //设置NameServer地址,此处应改为实际NameServer地址，多个地址之间用；分隔
         //NameServer的地址必须有，但是也可以通过环境变量的方式设置，不一定非得写死在代码里
@@ -31,7 +31,7 @@ public class Producer {
         defaultMQProducer.start();
 
         // 发送一条消息
-        Message message = new Message("linjun-test", "B", "linjun ceshi RocketMq".getBytes());
+        Message message = new Message("Snoopy-test", "B", "Snoopy ceshi RocketMq".getBytes());
 
         SendResult sendResult = defaultMQProducer.send(message);
         System.out.println(sendResult);

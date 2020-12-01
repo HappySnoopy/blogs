@@ -9,7 +9,7 @@ import org.springframework.jms.core.JmsTemplate;
 import javax.jms.Destination;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月11日
  */
 public class Producer {

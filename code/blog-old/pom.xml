@@ -246,7 +246,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <!-- linjun 2017-10-11 默认是3.0.1 -->
+            <!-- Snoopy 2017-10-11 默认是3.0.1 -->
             <version>4.0.0</version><!--$NO-MVN-MAN-VER$ -->
             <scope>provided</scope>
         </dependency>

@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月10日
  */
 public class DynamicEnum {
@@ -26,9 +26,9 @@ public class DynamicEnum {
         .getReflectionFactory();
 
     /**
-     * @author linjun
-     * @since 2017年7月10日
      * @param args
+     * @author Snoopy
+     * @since 2017年7月10日
      */
     public static void main(String[] args) {
 

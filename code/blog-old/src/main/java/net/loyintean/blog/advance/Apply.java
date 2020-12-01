@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年5月22日
  */
 public class Apply {
@@ -116,7 +116,7 @@ public class Apply {
 
     /**
      * @param args
-     * @author linjun
+     * @author Snoopy
      * @since 2017年5月22日
      */
     public static void main(String[] args) {

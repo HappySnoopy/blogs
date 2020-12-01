@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年8月1日
  */
 @WebServlet("/")

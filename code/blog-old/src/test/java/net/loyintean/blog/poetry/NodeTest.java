@@ -7,14 +7,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2018年2月5日
  */
 public class NodeTest {
     private Node n;
 
     /**
-     * @author linjun
+     * @author Snoopy
      * @since 2018年2月5日
      */
     @Before

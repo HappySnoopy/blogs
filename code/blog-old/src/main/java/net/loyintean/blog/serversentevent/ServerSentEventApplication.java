@@ -10,7 +10,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年8月1日
  */
 @SpringBootApplication
@@ -20,9 +20,9 @@ public class ServerSentEventApplication extends SpringBootServletInitializer {
     /**
      * 内置tomcat的初始化
      *
-     * @author linjun
-     * @since 2017年6月20日
      * @param args
+     * @author Snoopy
+     * @since 2017年6月20日
      */
     public static void main(String[] args) {
         SpringApplication.run(ServerSentEventApplication.class, args);
@@ -31,10 +31,10 @@ public class ServerSentEventApplication extends SpringBootServletInitializer {
     /**
      * 外置tomcat的初始化
      *
-     * @author linjun
-     * @since 2017年7月3日
      * @param application
      * @return
+     * @author Snoopy
+     * @since 2017年7月3日
      */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder

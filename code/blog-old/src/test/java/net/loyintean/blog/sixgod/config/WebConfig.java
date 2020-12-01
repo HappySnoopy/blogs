@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.util.List;
 
 /**
- * @author linjun
+ * @author Snoopy
  */
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {

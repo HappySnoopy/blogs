@@ -9,15 +9,15 @@ import java.nio.file.Paths;
 import java.util.stream.Stream;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年11月28日
  */
 public class FileReader {
 
     /**
-     * @author linjun
-     * @since 2017年11月28日
      * @param args
+     * @author Snoopy
+     * @since 2017年11月28日
      */
     public static void main(String[] args) {
         Path path = Paths.get(

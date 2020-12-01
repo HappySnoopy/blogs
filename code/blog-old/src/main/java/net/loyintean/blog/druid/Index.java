@@ -6,9 +6,8 @@ package net.loyintean.blog.druid;
 import net.loyintean.blog.rest.client.RestClientFactory;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月25日
- *
  */
 public class Index {
 
@@ -19,9 +18,9 @@ public class Index {
     }
 
     /**
-     * @author linjun
-     * @since 2017年9月25日
      * @param args
+     * @author Snoopy
+     * @since 2017年9月25日
      */
     public static void main(String[] args) {
         try {

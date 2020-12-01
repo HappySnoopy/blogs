@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2018年2月5日
  */
 public class Node {
@@ -44,10 +44,10 @@ public class Node {
     /**
      * 获取韵脚
      *
-     * @author linjun
-     * @since 2018年2月5日
      * @param i
      * @return
+     * @author Snoopy
+     * @since 2018年2月5日
      */
     public String getRhyme(int i) {
         return this.nodes.get(i % this.nodes.size());

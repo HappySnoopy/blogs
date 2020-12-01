@@ -7,8 +7,8 @@ package net.loyintean.blog.redislock.redisson;
 /**
  * 得到锁之后的回调接口
  *
- * @author linjun
  * @param <T>
+ * @author Snoopy
  * @since 2017年6月16日
  */
 public interface AquiredLockWorker<T> {

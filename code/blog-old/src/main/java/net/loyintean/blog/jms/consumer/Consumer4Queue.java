@@ -8,7 +8,7 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月11日
  */
 @Service

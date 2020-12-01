@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Role;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年9月27日
  */
 @Configuration

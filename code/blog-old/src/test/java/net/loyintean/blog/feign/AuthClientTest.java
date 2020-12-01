@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2018年4月18日
  */
 @RunWith(SpringRunner.class)

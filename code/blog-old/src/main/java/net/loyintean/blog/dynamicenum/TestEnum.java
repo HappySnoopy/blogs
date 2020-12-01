@@ -5,7 +5,7 @@
 package net.loyintean.blog.dynamicenum;
 
 /**
- * @author linjun
+ * @author Snoopy
  * @since 2017年7月10日
  */
 public enum TestEnum {

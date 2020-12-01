@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 平水韵
  *
- * @author linjun
+ * @author Snoopy
  * @since 2018年2月5日
  */
 class FlatWaterRhyme implements Rhyme {
@@ -112,10 +112,10 @@ class FlatWaterRhyme implements Rhyme {
     }
 
     /**
-     * @author linjun
-     * @since 2018年2月5日
      * @return
+     * @author Snoopy
      * @see net.loyintean.blog.poetry.Rhyme#getRhymeName()
+     * @since 2018年2月5日
      */
     @Override
     public String getRhymeName() {
