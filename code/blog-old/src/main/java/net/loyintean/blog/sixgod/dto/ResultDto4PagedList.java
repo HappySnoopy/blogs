@@ -9,9 +9,8 @@ package net.loyintean.blog.sixgod.dto;
  * <p>
  * 除列表数据外，还需要提供总数据量
  *
- * @author winters1224@163.com
- * @param <T>
- *        列表元素数据类型
+ * @param <T> 列表元素数据类型
+ * @author Snoopy
  */
 public class ResultDto4PagedList<T> extends ResultDto4List<T> {
     /**

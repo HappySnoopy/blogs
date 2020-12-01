@@ -1,7 +1,7 @@
 /**
  * All Rights Reserved
  */
-package net.loyintean.blog.fileimport;
+package net.loyintean.fileimportor.impl;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
@@ -12,10 +12,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
-public abstract class CellValueTransfer4Str implements CellValueTransfer {
+public abstract class CellValueTransfer4Str implements FileImportServiceAsExcel.CellValueTransfer {
     /**
+     *
      */
     @Override
     public Object getValue(Cell cell) {
@@ -42,7 +43,7 @@ class CellValueTransfer4Str2Int extends CellValueTransfer4Str {
 class CellValueTransfer4Str2Str extends CellValueTransfer4Str {
     @Override
     protected Object parseValue(String value) {
-        // winters1224@163.com 2016-01-19 THREAD-9904 排除空格的干扰。
+        // Snoopy 2016-01-19 THREAD-9904 排除空格的干扰。
         return StringUtils.trim(value);
     }
 
@@ -52,7 +53,7 @@ class CellValueTransfer4Str2Date extends CellValueTransfer4Str {
 
     /**
      * 按最长匹配开始尝试。<br>
-     * winters1224@163.com 2016-01-19 THREAD-9904 增加一种格式
+     * Snoopy 2016-01-19 THREAD-9904 增加一种格式
      */
     private static final String[] FORMAT = new String[] {
         "yyyy-MM-dd HH:mm:ss.S", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd",

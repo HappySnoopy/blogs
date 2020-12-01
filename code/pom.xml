@@ -11,6 +11,7 @@
         <module>loy-test</module>
         <module>serial-num</module>
         <module>exec-time</module>
+        <module>file-importor</module>
     </modules>
 
     <groupId>net.loyintean</groupId>
@@ -27,6 +28,14 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>net.loyintean</groupId>
+                <artifactId>loy-test</artifactId>
+                <scope>test</scope>
+                <version>${project.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -52,6 +61,20 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.18.12</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>3.10-FINAL</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.9.4</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

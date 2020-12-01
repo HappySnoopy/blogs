@@ -1,6 +1,5 @@
-package net.loyintean.blog.fileimport;
+package net.loyintean.fileimportor.impl;
 
-import net.loyintean.blog.log.LF;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -12,7 +11,7 @@ import java.util.List;
 /**
  * validate the headers while importing excel file
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 interface ExcelHeaderValidator {
 
@@ -43,7 +42,7 @@ interface ExcelHeaderValidator {
 class ExcelHeaderValidatorByName implements ExcelHeaderValidator {
 
     private static final Logger LOGGER = LoggerFactory
-        .getLogger(ExcelHeaderValidatorByName.class);
+            .getLogger(ExcelHeaderValidatorByName.class);
 
     /**
      * 表头的映射列表。要求excel中表头全部是文本格式。
@@ -75,23 +74,23 @@ class ExcelHeaderValidatorByName implements ExcelHeaderValidator {
                 String name = cell.getStringCellValue();
 
                 ExcelHeaderValidatorByName.LOGGER.debug(
-                    LF.ns("row.getRowNum()"), row.getRowNum());
+                        "row.getRowNum():{}", row.getRowNum());
 
                 // 取第RowNum行的第cellIndex列
                 String validName = this.headerList.get(row.getRowNum()).get(
-                    cellIndex);
+                        cellIndex);
 
                 ExcelHeaderValidatorByName.LOGGER.debug(
-                    LF.ns("cellIndex", "validName", "name"), cellIndex,
-                    validName, name);
+                        "cellIndex:{}, validName:{}, name:{}", cellIndex,
+                        validName, name);
 
                 // 如果二者不相等，则抛出异常
                 if (!StringUtils.equals(validName, name)) {
                     ExcelHeaderValidatorByName.LOGGER.error(
-                        LF.ns("msg", "cellIndex", "validName", "name"),
-                        "表头取值错误！", cellIndex, validName, name);
+                            "msg:{} cellIndex:{}, validName:{}, name:{}",
+                            "表头取值错误！", cellIndex, validName, name);
                     throw new RuntimeException("表头取值错误！应为[" + validName
-                        + "]，实为[" + name + "]");
+                            + "]，实为[" + name + "]");
                 }
             }
             // 步进
@@ -104,8 +103,9 @@ class ExcelHeaderValidatorByName implements ExcelHeaderValidator {
         this.headerList = headerList;
     }
 
-    /*
+    /**
      * (non-Javadoc)
+     *
      * @see net.loyintean.blog.fileimport.ExcelHeaderValidator#getHeaderRownum()
      */
     @Override

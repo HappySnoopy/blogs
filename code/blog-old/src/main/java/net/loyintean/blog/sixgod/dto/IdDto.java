@@ -9,8 +9,8 @@ import java.io.Serializable;
 /**
  * 带id的dto基础接口定义
  *
- * @author winters1224@163.com
  * @param <T>
+ * @author Snoopy
  */
 public interface IdDto<T extends Serializable> {
 

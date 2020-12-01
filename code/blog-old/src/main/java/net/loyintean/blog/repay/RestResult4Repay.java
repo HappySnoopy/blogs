@@ -5,7 +5,7 @@
 package net.loyintean.blog.repay;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class RestResult4Repay {
     private boolean success;

@@ -4,7 +4,7 @@
 package net.loyintean.blog.rest.client;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 abstract class RestClient4Wrapper implements RestClient {
 

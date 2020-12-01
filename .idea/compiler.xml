@@ -10,6 +10,7 @@
         <module name="serial-num" />
         <module name="spring-mvc-base" />
         <module name="blog-old" />
+        <module name="file-importor" />
         <module name="exec-time" />
         <module name="loy-test" />
       </profile>
@@ -18,6 +19,7 @@
       <module name="blog" target="1.8" />
       <module name="blog-old" target="1.8" />
       <module name="exec-time" target="1.8" />
+      <module name="file-importor" target="1.8" />
       <module name="leetcode" target="1.8" />
       <module name="loy-test" target="1.8" />
       <module name="serial-num" target="1.8" />
@@ -30,6 +32,7 @@
       <module name="blog-old" options="-parameters" />
       <module name="blogold" options="-parameters" />
       <module name="exec-time" options="-parameters" />
+      <module name="file-importor" options="-parameters" />
       <module name="leetcode" options="-parameters" />
       <module name="loy-test" options="-parameters" />
       <module name="serial-num" options="-parameters" />

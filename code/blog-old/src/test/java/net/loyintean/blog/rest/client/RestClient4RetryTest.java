@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class RestClient4RetryTest {
     @Test

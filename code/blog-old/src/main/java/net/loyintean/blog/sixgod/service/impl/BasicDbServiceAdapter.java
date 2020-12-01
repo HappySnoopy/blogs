@@ -17,8 +17,8 @@ import java.util.List;
  * <p>
  * 原则上，只有数据库写操作开启了事务。
  *
- * @author winters1224@163.com
  * @param <T> 同时用做入参和出参
+ * @author Snoopy
  */
 public class BasicDbServiceAdapter<T>
         implements BasicDbEditService<T, T>, BasicDbQueryListService<T, T>,

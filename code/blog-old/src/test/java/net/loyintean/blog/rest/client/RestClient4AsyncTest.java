@@ -9,7 +9,7 @@ import org.junit.Test;
 import java.util.concurrent.*;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class RestClient4AsyncTest {
     @Test

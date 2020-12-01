@@ -11,8 +11,8 @@ import org.hibernate.SessionFactory;
 import java.io.Serializable;
 
 /**
- * @author winters1224@163.com
  * @param <I>
+ * @author Snoopy
  */
 public class BasicDaoByHibernate<I extends IdDto<Serializable>>
         extends BasicDaoAdapter<I> {

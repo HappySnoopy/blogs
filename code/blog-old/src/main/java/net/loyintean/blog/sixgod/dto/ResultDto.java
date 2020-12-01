@@ -8,9 +8,8 @@ import java.io.Serializable;
 /**
  * 操作结果
  *
- * @author winters1224@163.com
- * @param <T>
- *        操作返回数据的类型
+ * @param <T> 操作返回数据的类型
+ * @author Snoopy
  */
 public class ResultDto<T> implements Serializable {
 

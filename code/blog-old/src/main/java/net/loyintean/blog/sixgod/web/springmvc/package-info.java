@@ -1,9 +1,10 @@
 /**
- * 
  * All Rights Reserved
+ *
+ * @author Snoopy
  */
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  *
  */
 package net.loyintean.blog.sixgod.web.springmvc;

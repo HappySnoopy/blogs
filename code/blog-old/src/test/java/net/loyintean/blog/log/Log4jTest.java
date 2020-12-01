@@ -12,7 +12,7 @@ import org.slf4j.MDC;
 import java.util.stream.IntStream;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class Log4jTest {
 

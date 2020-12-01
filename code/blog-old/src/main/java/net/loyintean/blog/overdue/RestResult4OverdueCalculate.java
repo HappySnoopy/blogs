@@ -5,8 +5,7 @@
 package net.loyintean.blog.overdue;
 
 /**
- * @author winters1224@163.com
- *
+ * @author Snoopy
  */
 public class RestResult4OverdueCalculate {
 

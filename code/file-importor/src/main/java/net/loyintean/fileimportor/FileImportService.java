@@ -2,19 +2,20 @@
  * 
  * All Rights Reserved
  */
-package net.loyintean.blog.fileimport;
+package net.loyintean.fileimportor;
 
 import java.util.List;
 
 /**
- * @author winters1224@163.com
- * @param <T>
- *        从导入文件中解析出来的数据类
+ * @param <T> 从导入文件中解析出来的数据类
+ * @author Snoopy
  */
 public interface FileImportService<T> {
 
     /**
      * 由指定用户user导入文件file
+     *
+     * TODO linjun 2020-12-01 考虑使用InputStreamn。更节约内存。
      *
      * @param file
      *        导入文件。为了兼容各种文件类型（File，MultipartFile，InputStream等，使用更底层的字节数组。
@@ -27,7 +28,7 @@ public interface FileImportService<T> {
     /**
      * 导入并解析文件时才需要使用的标记类接口。
      *
-     * @author winters1224@163.com
+     * @author Snoopy
      */
     interface ImportFromFile {
 

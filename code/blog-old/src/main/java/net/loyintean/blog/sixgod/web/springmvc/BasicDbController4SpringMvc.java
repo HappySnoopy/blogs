@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author winters1224@163.com
  * @param <T>
+ * @author Snoopy
  */
 public class BasicDbController4SpringMvc<T>
         extends BasicDbControllerAdapter<T> {

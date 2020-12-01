@@ -13,7 +13,7 @@ import java.util.List;
  * 此适配器不实现任何方法，全部抛出 {@linkplain UnsupportedOperationException}
  *
  * @param <T> 数据库交互类；同时封装有查询条件和查询结果
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class BasicDaoAdapter<T> implements BasicDeleteDao<T, Integer>,
         BasicInsertDao<T, Integer>, BasicSelectDao<T, T>,

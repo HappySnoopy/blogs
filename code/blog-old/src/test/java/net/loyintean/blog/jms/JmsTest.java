@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 
 @ContextConfiguration("/jms.xml")

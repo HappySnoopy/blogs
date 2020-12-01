@@ -13,7 +13,7 @@ import java.util.List;
  * <p>
  * 字段是否返回视JsonView而定
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class Result4Calculate {
 

@@ -8,7 +8,7 @@ package net.loyintean.blog.rest.exception;
  * <p>
  * 如果重试超过次数限制，仍然没有成功，则返回此异常
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class RetryFailOverTimesException extends RuntimeException {
 

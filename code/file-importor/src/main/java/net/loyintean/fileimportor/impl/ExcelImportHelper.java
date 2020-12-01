@@ -2,9 +2,8 @@
  * 
  * All Rights Reserved
  */
-package net.loyintean.blog.fileimport;
+package net.loyintean.fileimportor.impl;
 
-import net.loyintean.blog.log.LF;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.slf4j.Logger;
@@ -17,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 class ExcelImportHelper {
     private static final Logger LOGGER = LoggerFactory
@@ -26,36 +25,7 @@ class ExcelImportHelper {
     /**
      * 数组长度为6，处理各个cellType
      */
-    private final Map<String, CellValueTransfer>[] transers;
-
-    private class TransferMap extends HashMap<String, CellValueTransfer> {
-        private static final long serialVersionUID = 5355242374583108179L;
-
-        public TransferMap(int capability) {
-            super(capability);
-        }
-
-        /**
-         * 返回null的转换器。
-         * <p>
-         * 当transers中没有获取到正常的转换器时，将使用它来直接返回null
-         */
-        private CellValueTransfer initTransfer = new CellValueTransfer() {
-            @Override
-            public Object getValue(Cell cell) {
-                return null;
-            }
-        };
-
-        @Override
-        public CellValueTransfer get(Object key) {
-            if (this.containsKey(key)) {
-                return super.get(key);
-            } else {
-                return this.initTransfer;
-            }
-        }
-    }
+    private final Map<String, FileImportServiceAsExcel.CellValueTransfer>[] transers;
 
     /**
      * 初始化 {@link #transers}。
@@ -66,7 +36,7 @@ class ExcelImportHelper {
         this.transers = new HashMap[6];
 
         // CELL_TYPE_NUMERIC
-        Map<String, CellValueTransfer> transferMap4Num = new TransferMap(11);
+        Map<String, FileImportServiceAsExcel.CellValueTransfer> transferMap4Num = new TransferMap(11);
         // -> Integer
         transferMap4Num.put(Integer.class.getName(),
             new CellValueTransfer4Num2Int());
@@ -82,7 +52,7 @@ class ExcelImportHelper {
         this.transers[Cell.CELL_TYPE_NUMERIC] = transferMap4Num;
 
         // CELL_TYPE_STRING
-        Map<String, CellValueTransfer> transferMap4Str = new TransferMap(11);
+        Map<String, FileImportServiceAsExcel.CellValueTransfer> transferMap4Str = new TransferMap(11);
         // -> Integer
         transferMap4Str.put(Integer.class.getName(),
             new CellValueTransfer4Str2Int());
@@ -129,43 +99,42 @@ class ExcelImportHelper {
      * @return 返回cell中的数据。其类型视instance.fieldName的类型和cell的cellType而定。
      *         <p>
      *         不保证非null
-     * @throws ServiceException
      */
     protected Object fillField(Object instance, String fieldName, Cell cell) {
 
-        Class<?> claz = null;
+        Class<?> claz;
         try {
             claz = PropertyUtils.getPropertyType(instance, fieldName);
         } catch (IllegalAccessException | InvocationTargetException
                 | NoSuchMethodException e) {
             ExcelImportHelper.LOGGER.error(
-                LF.ns("instance.class", "exceptionMessage"),
-                instance.getClass(), e.getMessage(), e);
+                    "instance.class:{}, exceptionMessage:{}",
+                    instance.getClass(), e.getMessage(), e);
             throw new RuntimeException("无法获取字段" + fieldName + "的正确类型！", e);
         }
 
-        ExcelImportHelper.LOGGER.debug(LF.ns("cellType", "fieldName", "claz"),
-            cell.getCellType(), fieldName, claz);
-        CellValueTransfer transfer = this.transers[cell.getCellType()].get(claz
-            .getName());
+        ExcelImportHelper.LOGGER.debug("cellType:{}, fieldName:{}, claz:{}",
+                cell.getCellType(), fieldName, claz);
+        FileImportServiceAsExcel.CellValueTransfer transfer = this.transers[cell.getCellType()].get(claz
+                .getName());
 
         Object value = transfer.getValue(cell);
-        ExcelImportHelper.LOGGER.debug(LF.ns("claz", "transfer", "value"),
-            claz, transfer, value);
+        ExcelImportHelper.LOGGER.debug("cellType:{}, fieldName:{}, value:{}",
+                claz, transfer, value);
 
         try {
             PropertyUtils.setProperty(instance, fieldName, value);
         } catch (IllegalAccessException | InvocationTargetException
                 | NoSuchMethodException e) {
             ExcelImportHelper.LOGGER.error(
-                LF.ns("instance", "fieldName", "value", "exceptionMessage"),
-                instance, fieldName, value, e.getMessage(), e);
+                    "cellType:{}, fieldName:{}, value:{}, ex.message:{}",
+                    instance, fieldName, value, e.getMessage(), e);
             throw new RuntimeException("无法为字段" + fieldName + "设值：" + value
                 + "！", e);
         }
 
-        ExcelImportHelper.LOGGER.debug(LF.ns("fieldName", "value"), fieldName,
-            value);
+        ExcelImportHelper.LOGGER.debug("fieldName:{},value:{}", fieldName,
+                value);
         return value;
     }
 
@@ -174,7 +143,7 @@ class ExcelImportHelper {
      *
      * @param transersMap
      */
-    public void setTransers4Numeric(Map<String, CellValueTransfer> transersMap) {
+    public void setTransers4Numeric(Map<String, FileImportServiceAsExcel.CellValueTransfer> transersMap) {
         this.transers[Cell.CELL_TYPE_NUMERIC].putAll(transersMap);
     }
 
@@ -183,7 +152,7 @@ class ExcelImportHelper {
      *
      * @param transersMap
      */
-    public void setTransers4String(Map<String, CellValueTransfer> transersMap) {
+    public void setTransers4String(Map<String, FileImportServiceAsExcel.CellValueTransfer> transersMap) {
         this.transers[Cell.CELL_TYPE_STRING].putAll(transersMap);
     }
 
@@ -192,7 +161,7 @@ class ExcelImportHelper {
      *
      * @param transersMap
      */
-    public void setTransers4Formula(Map<String, CellValueTransfer> transersMap) {
+    public void setTransers4Formula(Map<String, FileImportServiceAsExcel.CellValueTransfer> transersMap) {
         this.transers[Cell.CELL_TYPE_FORMULA].putAll(transersMap);
     }
 
@@ -201,7 +170,7 @@ class ExcelImportHelper {
      *
      * @param transersMap
      */
-    public void setTransers4Blank(Map<String, CellValueTransfer> transersMap) {
+    public void setTransers4Blank(Map<String, FileImportServiceAsExcel.CellValueTransfer> transersMap) {
         this.transers[Cell.CELL_TYPE_BLANK].putAll(transersMap);
     }
 
@@ -210,7 +179,7 @@ class ExcelImportHelper {
      *
      * @param transersMap
      */
-    public void setTransers4Boolean(Map<String, CellValueTransfer> transersMap) {
+    public void setTransers4Boolean(Map<String, FileImportServiceAsExcel.CellValueTransfer> transersMap) {
         this.transers[Cell.CELL_TYPE_BOOLEAN].putAll(transersMap);
     }
 
@@ -219,8 +188,32 @@ class ExcelImportHelper {
      *
      * @param transersMap
      */
-    public void setTransers4Error(Map<String, CellValueTransfer> transersMap) {
+    public void setTransers4Error(Map<String, FileImportServiceAsExcel.CellValueTransfer> transersMap) {
         this.transers[Cell.CELL_TYPE_ERROR].putAll(transersMap);
+    }
+
+    private class TransferMap extends HashMap<String, FileImportServiceAsExcel.CellValueTransfer> {
+        private static final long serialVersionUID = 5355242374583108179L;
+
+        public TransferMap(int capability) {
+            super(capability);
+        }
+
+        /**
+         * 返回null的转换器。
+         * <p>
+         * 当transers中没有获取到正常的转换器时，将使用它来直接返回null
+         */
+        private FileImportServiceAsExcel.CellValueTransfer initTransfer = cell -> null;
+
+        @Override
+        public FileImportServiceAsExcel.CellValueTransfer get(Object key) {
+            if (this.containsKey(key)) {
+                return super.get(key);
+            } else {
+                return this.initTransfer;
+            }
+        }
     }
 
 }

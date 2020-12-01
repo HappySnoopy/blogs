@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
  * <p>
  * 为了简化代码中的使用，使用简写类名“LF”。全名是LogFormatter
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class LF {
 
@@ -136,7 +136,7 @@ public class LF {
     /**
      * “绳索”类
      *
-     * @author winters1224@163.com
+     * @author Snoopy
      */
     private static class Cord {
         private String key;
@@ -185,7 +185,7 @@ public class LF {
     /**
      * “绳索”的线程容器
      *
-     * @author winters1224@163.com
+     * @author Snoopy
      */
     private static class ThreadLocalCord extends ThreadLocal<Cord> {
         /**

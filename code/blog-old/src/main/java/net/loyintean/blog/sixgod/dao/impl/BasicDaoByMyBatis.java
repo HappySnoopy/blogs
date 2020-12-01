@@ -17,7 +17,7 @@ import java.util.List;
  * <p>
  * MyBatis的Mapper-id：入参类全名+"."+执行的方法名<br> 如：test.order.bean.Order.select
  *
- * @author winters1224@163.com
+ * @author Snoopy
  * @since 2018年5月25日
  */
 @Repository

@@ -6,7 +6,7 @@ package net.loyintean.blog.rest;
 /**
  * 重试相关配置
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class RetryConfiguration {
 

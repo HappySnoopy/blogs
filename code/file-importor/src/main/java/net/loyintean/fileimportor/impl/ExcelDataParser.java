@@ -2,10 +2,9 @@
  * 
  * All Rights Reserved
  */
-package net.loyintean.blog.fileimport;
+package net.loyintean.fileimportor.impl;
 
-import net.loyintean.blog.fileimport.FileImportService.ImportFromFile;
-import net.loyintean.blog.log.LF;
+import net.loyintean.fileimportor.FileImportService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -17,7 +16,7 @@ import java.util.List;
 /**
  * parse a row into java Pojo.
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 interface ExcelDataParser {
 
@@ -72,12 +71,12 @@ class ExcelDataParserByFieldName implements ExcelDataParser {
             instance = this.claz.newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             ExcelDataParserByFieldName.LOGGER
-                .error(LF.ns("claz"), this.claz, e);
+                    .error("claz:{}", this.claz, e);
             throw new RuntimeException("无法获取" + this.claz + "的实例！", e);
         }
         int cellNumber = row.getPhysicalNumberOfCells();
         ExcelDataParserByFieldName.LOGGER
-            .debug(LF.ns("cellNumber"), cellNumber);
+                .debug("cellNumber:{}", cellNumber);
 
         int cellIndex = 0;
         Cell cell = row.getCell(cellIndex);
@@ -86,8 +85,8 @@ class ExcelDataParserByFieldName implements ExcelDataParser {
         while (cellIndex < cellNumber) {
             // cell为空，或者配置的字段名为空时，不中断循环，而是继续步进
             String fieldName = this.fieldNames.get(cellIndex);
-            ExcelDataParserByFieldName.LOGGER.debug(LF.ns("filedName"),
-                fieldName);
+            ExcelDataParserByFieldName.LOGGER.debug("filedName:{} ",
+                    fieldName);
 
             if (StringUtils.isNotBlank(fieldName) && cell != null) {
                 // 取出当前行、当前列的数据，所映射到的字段名
@@ -101,12 +100,12 @@ class ExcelDataParserByFieldName implements ExcelDataParser {
         }
         if (allCellBlank) {
             instance = null;
-        } else if (instance instanceof ImportFromFile) {
-            ExcelDataParserByFieldName.LOGGER.debug(LF.ns("instance.class"),
-                instance.getClass());
-            ImportFromFile importFromFileInstance = (ImportFromFile) instance;
+        } else if (instance instanceof FileImportService.ImportFromFile) {
+            ExcelDataParserByFieldName.LOGGER.debug("instance.class:{}",
+                    instance.getClass());
+            FileImportService.ImportFromFile importFromFileInstance = (FileImportService.ImportFromFile) instance;
             importFromFileInstance.setInfo(row.getSheet().getSheetName(),
-                row.getRowNum(), params);
+                    row.getRowNum(), params);
 
             // 能正常返回则instance非null
             assert instance.getClass() != null;
@@ -114,11 +113,6 @@ class ExcelDataParserByFieldName implements ExcelDataParser {
         return instance;
     }
 
-    /*
-     * (non-Javadoc)
-     * @see
-     * net.loyintean.blog.fileimport.ExcelDataParser#setCellList(java.util.List)
-     */
     @Override
     public void setFieldNames(List<String> fieldNames) {
         this.fieldNames = fieldNames;

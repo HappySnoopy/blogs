@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 带重试操作的rest客户端
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 class RestClient4Retry extends RestClient4Wrapper {
     /**
@@ -90,7 +90,7 @@ class RestClient4Retry extends RestClient4Wrapper {
      * <p>
      * 内部接口，用来定义重试的实际操作
      *
-     * @author winters1224@163.com
+     * @author Snoopy
      */
     @FunctionalInterface
     private interface RetryCallback<T> {

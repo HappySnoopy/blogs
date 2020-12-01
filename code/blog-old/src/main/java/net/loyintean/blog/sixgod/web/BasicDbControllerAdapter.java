@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.function.Function;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public abstract class BasicDbControllerAdapter<T>
         implements BasicDbController<T,T> {

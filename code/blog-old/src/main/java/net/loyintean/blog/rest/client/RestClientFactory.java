@@ -28,7 +28,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class RestClientFactory {
 

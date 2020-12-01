@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  * <p>
  * 默认结果全部为0
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class Result4Repay {
 

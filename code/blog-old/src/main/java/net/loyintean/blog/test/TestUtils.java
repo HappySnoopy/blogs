@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class TestUtils {
 

@@ -1,7 +1,7 @@
 /**
  * All Rights Reserved
  */
-package net.loyintean.blog.fileimport;
+package net.loyintean.fileimportor.impl;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
@@ -9,11 +9,12 @@ import org.apache.poi.ss.usermodel.DateUtil;
 import java.math.BigDecimal;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
-public abstract class CellValueTransfer4Num implements CellValueTransfer {
+public abstract class CellValueTransfer4Num implements FileImportServiceAsExcel.CellValueTransfer {
 
     /**
+     *
      */
     @Override
     public Object getValue(Cell cell) {
@@ -51,7 +52,7 @@ class CellValueTransfer4Num2Str extends CellValueTransfer4Num {
 
 }
 
-class CellValueTransfer4Num2Date implements CellValueTransfer {
+class CellValueTransfer4Num2Date implements FileImportServiceAsExcel.CellValueTransfer {
 
     @Override
     public Object getValue(Cell cell) {

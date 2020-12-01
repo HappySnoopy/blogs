@@ -12,7 +12,7 @@ import java.util.concurrent.Future;
 /**
  * 用于异步操作的rest客户端
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class RestClient4Async extends RestClient4Wrapper {
 
@@ -60,7 +60,7 @@ public class RestClient4Async extends RestClient4Wrapper {
         return result;
     }
 
-    // winters1224@163.com 2016-04-05 很惊讶，返回类型不一样，居然没有出现编译问题？
+    // Snoopy 2016-04-05 很惊讶，返回类型不一样，居然没有出现编译问题？
     /**
      * @param url
      * @return

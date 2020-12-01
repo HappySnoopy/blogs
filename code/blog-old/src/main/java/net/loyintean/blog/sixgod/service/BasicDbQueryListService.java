@@ -7,9 +7,9 @@ package net.loyintean.blog.sixgod.service;
 import java.util.List;
 
 /**
- * @author winters1224@163.com
  * @param <I> 接口入参数据类型
  * @param <O> 接口出参数据类型
+ * @author Snoopy
  */
 public interface BasicDbQueryListService<I, O> {
     /**

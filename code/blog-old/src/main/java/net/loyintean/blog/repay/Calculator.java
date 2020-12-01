@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
 /**
- * @author winters1224@163.com
+ * @author Snoopy
  */
 public class Calculator {
 

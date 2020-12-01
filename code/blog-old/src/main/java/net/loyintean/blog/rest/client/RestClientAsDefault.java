@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * 线程安全
  *
- * @author winters1224@163.com
+ * @author Snoopy
  */
 class RestClientAsDefault implements RestClient {
     /**
