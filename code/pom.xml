@@ -12,6 +12,7 @@
         <module>serial-num</module>
         <module>exec-time</module>
         <module>file-importor</module>
+        <module>utils</module>
     </modules>
 
     <groupId>net.loyintean</groupId>

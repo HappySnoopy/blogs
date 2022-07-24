@@ -2,16 +2,18 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="leetcode" />
         <module name="serial-num" />
+        <module name="exec-time" />
+        <module name="utils" />
         <module name="spring-mvc-base" />
         <module name="blog-old" />
         <module name="file-importor" />
-        <module name="exec-time" />
+        <module name="leetcode" />
         <module name="loy-test" />
       </profile>
     </annotationProcessing>
@@ -24,6 +26,7 @@
       <module name="loy-test" target="1.8" />
       <module name="serial-num" target="1.8" />
       <module name="spring-mvc-base" target="1.8" />
+      <module name="utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -37,6 +40,7 @@
       <module name="loy-test" options="-parameters" />
       <module name="serial-num" options="-parameters" />
       <module name="spring-mvc-base" options="-parameters" />
+      <module name="utils" options="-parameters" />
     </option>
   </component>
 </project>

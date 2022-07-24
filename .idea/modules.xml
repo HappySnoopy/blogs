@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/code/loy-test/loy-test.iml" filepath="$PROJECT_DIR$/code/loy-test/loy-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/serial-num/serial-num.iml" filepath="$PROJECT_DIR$/code/serial-num/serial-num.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/spring-mvc-base/spring-mvc-base.iml" filepath="$PROJECT_DIR$/code/spring-mvc-base/spring-mvc-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/utils/utils.iml" filepath="$PROJECT_DIR$/code/utils/utils.iml" />
     </modules>
   </component>
 </project>

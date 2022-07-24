@@ -8,6 +8,8 @@ public class DataBuilderTest {
 
     @Test
     public void test() {
+
+
         TestData date = DataBuilder.of(TestData.class).build();
         assertNotNull(date.str);
         assertNotNull(date.i);
